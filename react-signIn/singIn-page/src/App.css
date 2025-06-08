@@ -1,0 +1,264 @@
+.describe {
+
+    width: 1100px;
+    height: 100vh;
+    position: relative;
+    background: var(--sec, #123258);
+}
+
+.title {
+    width: 574px;
+    height: 73px;
+    top: 113px;
+    left: 60px;
+    position: absolute;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.describe>.description {
+    width: 574px;
+    height: 76px;
+    top: 189px;
+    left: 60px;
+    position: relative;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.describe>.bottom-img {
+    position: relative;
+    width: 100%;
+    bottom: -354px;
+}
+
+.signIn-card {
+    width: 826px;
+    height: 100vh;
+    position: relative;
+    background: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    min-height: 600px;
+    /* Ensures the card has a minimum height */
+    overflow: hidden;
+}
+
+.logo {
+    width: 96px;
+    height: 120px;
+    position: absolute;
+    top: 50px;
+
+}
+
+.signIn-card h2 {
+    width: 265px;
+    height: 45px;
+    position: absolute;
+    top: 222px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #1B1B1B;
+
+}
+
+.signIn-card .signIn-description {
+    width: 296px;
+    height: 21px;
+    position: absolute;
+    top: 278px;
+    opacity: 0.5;
+
+}
+
+.signIn-card .signIn-form {
+    position: absolute;
+    width: 400px;
+    height: 219px;
+    top: 329px;
+
+}
+
+.signIn-form>input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 74px;
+    font-size: 16px;
+}
+
+input:valid {
+    border: 3px solid #123258;
+}
+
+.signIn-button {
+    display: inline-block;
+    width: 400px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+    border: #1FA2D0 1px solid;
+    border-radius: 50px;
+    padding: 20px 141px;
+    background: linear-gradient(to left, #0E5185, #1FA2D0);
+    color: #FFFFFF;
+}
+
+.signIn-button:hover {
+    cursor: pointer;
+
+
+}
+
+.forgot-password {
+    top: 119px;
+    left: 270px;
+    position: absolute;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27.77px;
+    letter-spacing: 0%;
+    text-align: right;
+    color: #333333;
+}
+
+.forgot-password:hover {
+    cursor: pointer;
+    color: #1FA2D0;
+}
+
+.lines-or-card {
+    width: 100%;
+    height: 18px;
+    position: relative;
+    top: 225px;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 325px;
+    height: 1px;
+    border: 1px solid #000;
+    opacity: 4%;
+}
+
+.lines-or-card>p {
+    opacity: 50%;
+}
+
+.loginWithGoogle {
+    width: 400px;
+    height: 52px;
+    position: relative;
+    top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F3F3;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.loginWithGoogle .google-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.loginWithGoogle>p {
+    color: #1B1B1B;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.21px;
+    vertical-align: middle;
+
+}
+
+.signUp {
+    width: 197px;
+    height: 28px;
+    position: relative;
+    top: 300px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27.77px;
+    letter-spacing: 0%;
+
+}
+
+.signUp span {
+    color: rgba(44, 88, 178, 0.859);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signIn {
+    top: 300px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27.77px;
+    letter-spacing: 0%;
+    position: relative;
+    color: #1B1B1B;
+}
+
+.signIn span {
+    color: rgba(44, 88, 178, 0.859);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-wrapper input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 74px;
+    font-size: 16px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    color: #0E5185;
+    cursor: pointer;
+}
