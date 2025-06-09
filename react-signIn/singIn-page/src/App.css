@@ -1,7 +1,7 @@
 .describe {
 
-    width: 1100px;
-    height: 100vh;
+    width: 826px;
+    height: 100%;
     position: relative;
     background: var(--sec, #123258);
 }
@@ -38,14 +38,14 @@
 }
 
 .describe>.bottom-img {
-    position: relative;
+    position: absolute;
     width: 100%;
-    bottom: -354px;
+    bottom: 0%;
 }
 
 .signIn-card {
-    width: 826px;
-    height: 100vh;
+    width: 614px;
+    height: 100%;
     position: relative;
     background: #FFFFFF;
     text-align: center;
@@ -259,4 +259,38 @@
   height: 20px;          /* Fixed height */
   object-fit: contain;   /* Keeps image inside bounds */
   cursor: pointer;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .signIn-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .signIn-card h2 {
+    font-size: 28px;
+  }
+
+  .signIn-card .signIn-description {
+    font-size: 14px;
+  }
+
+  .signIn-form>input {
+    font-size: 14px;
+  }
+
+  .signIn-button {
+    width: 100%;
+  }
+
+  .loginWithGoogle {
+    width: 100%;
+  }
+
+  .signUp,
+  .signIn {
+    font-size: 12px;
+  }
 }
