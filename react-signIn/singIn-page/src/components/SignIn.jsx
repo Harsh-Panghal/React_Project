@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo.png';
-import googleLogo from '../assets/g1.png';
+import logo from '../assets/logo.svg';
+import googleLogo from '../assets/g1.svg';
 import PasswordInput from '../components/PasswordInput.jsx'; // Adjusted casing to match folder name
 
 function SignIn({ switchToSignUp }) {

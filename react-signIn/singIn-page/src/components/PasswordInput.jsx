@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import eyeIcon from "../assets/eye-icon.svg";
+import eyeSlashIcon from "../assets/eye-icon-slash.svg"; // use PNG or SVG as you have
 
 function PasswordInput({ placeholder }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,8 +16,9 @@ function PasswordInput({ placeholder }) {
         placeholder={placeholder}
         required
       />
-      <FontAwesomeIcon
-        icon={showPassword ? faEyeSlash : faEye}
+      <img
+        src={showPassword ? eyeSlashIcon : eyeIcon}
+        alt="Toggle password"
         className="eye-icon"
         onClick={toggleVisibility}
       />
