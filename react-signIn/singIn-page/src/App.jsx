@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import bottomImg from './assets/bottom-img.png';
+import bottomImg from './assets/bottom-img.svg';
 import SignIn from './Components/SignIn.jsx';
 import SignUp from './Components/SignUp.jsx';
 
