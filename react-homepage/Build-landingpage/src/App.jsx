@@ -1,33 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import logo from './assets/logo.svg';
+import addIcon from './assets/add-icon.svg';
+import histIcon from './assets/history-icon.svg';
+import quesIcon from './assets/questionmark-icon.svg';
+import setIcon from './assets/setting-icon.svg';
+import mainImg from './assets/main-img.svg';
+import threelinesIcon from './assets/parallel-icon.svg';
+import dbIcon from './assets/contdb-icon.svg';
+import bellIcon from './assets/bell-icon.svg';
+import picIcon from './assets/pic-icon.svg';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="sidebar-card">
+      <div className="card1">
+        <img src={logo} alt="Logo"  className='logo'/>
+        <img src={addIcon} alt="Add" className='addicon' />
+        <img src={histIcon} alt="History" className='histicon' />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="card2">
+        <img src={quesIcon} alt="Questions" className='quesicon' />
+        <img src={setIcon} alt="Settings" className='seticon' />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
+    <div className="main-card">
+      <img src={mainImg} alt="Main" className='mainimg' />
+      <div className="sub-main-card">
+        <header>
+          <div className="header-card1">
+            <img src={threelinesIcon} alt="parallel three lines" className='threelinesicon' />
+            <img src={dbIcon} alt="database" className='dbicon' />
+          </div>
+          <div className="header-card2">
+            <img src={bellIcon} alt="bell" className='bellicon' />
+            <img src={picIcon} alt="picture" className='picicon' />
+            <span>Alessio</span>
+          </div>
+        </header>
+        <div className="content-grid">
+          
+        </div>
+      </div>
+    </div>
     </>
   )
 }
