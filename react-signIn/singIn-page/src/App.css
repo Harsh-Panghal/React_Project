@@ -252,45 +252,94 @@
 }
 
 .eye-icon {
-  position: absolute;
-  right: 10px;
-  top: 20%;
-  width: 20px;           /* Fixed width */
-  height: 20px;          /* Fixed height */
-  object-fit: contain;   /* Keeps image inside bounds */
-  cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    width: 20px;
+    /* Fixed width */
+    height: 20px;
+    /* Fixed height */
+    object-fit: contain;
+    /* Keeps image inside bounds */
+    cursor: pointer;
 }
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
-  .signIn-card {
-    width: 100%;
-    padding: 20px;
-  }
+@media screen and (max-width: 426px) {
+    .describe {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-  .signIn-card h2 {
-    font-size: 28px;
-  }
+    .describe>.title,
+    .description {
+        display: none;
+    }
 
-  .signIn-card .signIn-description {
-    font-size: 14px;
-  }
+    .signIn-card {
+        position: absolute;
+        top: 75px;
+        width: 350px;
+        height: 695px;
+        border-radius: 6px;
+        left: 36px;
+    }
 
-  .signIn-form>input {
-    font-size: 14px;
-  }
+    .signIn-card>.logo {
+        width: 64px;
+        height: 80px;
+        top: 30px;
+    }
 
-  .signIn-button {
-    width: 100%;
-  }
+    .signIn-card>h2 {
+        width: 168px;
+        height: 28px;
+        font-size: 24px;
+        font-weight: 700;
+        top: 135px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: center;
+    }
 
-  .loginWithGoogle {
-    width: 100%;
-  }
+    .signIn-card>.signIn-description {
+        width: 230px;
+        height: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        top: 175px;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
 
-  .signUp,
-  .signIn {
-    font-size: 12px;
-  }
+    .signIn-card>.signIn-form {
+        width: 286px;
+        height: 219px;
+        top: 235px;
+    }
+
+    .signIn-card>.signIn-form>p {
+        width: 113px;
+        height: 28px;
+        font-size: 14px;
+        font-weight: 400;
+        left: 173px;
+    }
+    .signIn-card>.signIn-form>button{
+        width: 286px;
+        padding: 20px 100px;
+    }
+    .signIn-card .lines-or-card{
+        top: 178px;
+    }
+    .signIn-card .loginWithGoogle {
+        top:210px;
+        width: 286px;
+
+    }
+    .signIn-card .signUp {
+        top: 251px;
+    }
 }

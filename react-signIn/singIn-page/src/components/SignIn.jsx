@@ -7,7 +7,7 @@ function SignIn({ switchToSignUp }) {
   return (
     <div className="signIn-card">
       <img src={logo} alt="Logo" className="logo" />
-      <h2>Sign In</h2>
+      <h2>Sign In account</h2>
       <p className="signIn-description">Enter your data to enter your account</p>
       <form className="signIn-form">
         <input type="email" placeholder=" Enter Email" required />
