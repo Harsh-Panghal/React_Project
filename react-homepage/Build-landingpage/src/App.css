@@ -319,6 +319,7 @@ header img:hover {
     font-size: 35px;
     font-weight: 600;
     background: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
