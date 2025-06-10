@@ -4,10 +4,10 @@ import dbIcon from '../assets/contdb-icon.svg';
 import bellIcon from '../assets/bell-icon.svg';
 import picIcon from '../assets/pic-icon.svg';
 
-const Header = () => (
+const Header = ({ onToggleSidebar }) => (
   <header>
     <div className="header-card1">
-      <img src={threelinesIcon} alt="Menu" className='threelinesicon' />
+      <img src={threelinesIcon} alt="Menu" className='threelinesicon' onClick={onToggleSidebar} />
       <img src={dbIcon} alt="Database" className='dbicon' />
     </div>
     <div className="header-card2">
