@@ -7,6 +7,145 @@
     overflow: hidden;
 }
 
+.expanded-sidebar {
+    width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.expandedsidebar-card1 {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 60%;
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expandedsidebar-card1>.logo-title {
+    width: 100%;
+    height: 45px;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-title>img {
+    width: 36px;
+    height: 45px;
+}
+
+.logo-title>.title {
+    height: 21px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(27, 27, 27, 1);
+    margin-left: 1rem;
+}
+
+.logo-title .title+span {
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+    margin-left: 4px;
+    color: rgba(139, 139, 139, 1);
+    font-weight: 500;
+}
+
+.expandedsidebar-card1>.newchaticon {
+    margin-top: 1.2rem;
+}
+
+.expandedsidebar-card1>.recent {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    margin-top: 1.2rem;
+    /* align-items: center; */
+    gap: 0.5rem;
+    /* border: 1px solid green; */
+}
+
+.recent>.historyicon {
+    margin-left: 0.8rem;
+}
+
+.recent>span {
+    width: 57px;
+    height: 13px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(27, 27, 27, 1);
+}
+
+.expandedsidebar-card1>.history {
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history>div {
+    margin-left: 0.8rem;
+    height: 16px;
+    /* border: 1px solid red; */
+    color: rgba(27, 27, 27, 1);
+    font-size: 14px;
+    font-weight: 400;
+    /* border: 1px solid green; */
+}
+
+.more {
+    margin-top: 1.5rem;
+    /* border: 1px solid red; */
+    position: relative;
+    left: -5.2rem;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.more>span {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(139, 139, 139, 1);
+    width: 33px;
+    height: 16px;
+    margin-left: 0.5rem;
+}
+
+.expandedsidebar-card2 {
+    width: 100%;
+    height: 8%;
+    margin-bottom: 1.5rem;
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom1, .bottom2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.8rem;
+}
+.expandedsidebar-card2 img{
+    width: 18px;
+    height: 18px;
+}
+.expandedsidebar-card2 span{
+    height: 19px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(139, 139, 139, 1);
+}
 .card1,
 .card2 {
     display: flex;
@@ -75,6 +214,8 @@
     display: flex;
     justify-content: space-between;
     margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
 }
 
 header img:hover {
@@ -149,28 +290,33 @@ header img:hover {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .card-items>div:hover {
     cursor: pointer;
     border: 3px solid rgba(18, 50, 88, 1);
     /* box-shadow: 0px 4px 10px rgba(18, 50, 88, 0.1); */
 }
-.item1 > p{
-    width:149px;
+
+.item1>p {
+    width: 149px;
     height: 40px;
 
 }
-.item2 > p{
-    width:158px;
+
+.item2>p {
+    width: 158px;
     height: 40px;
 
 }
-.item3 > p{
-    width:158px;
+
+.item3>p {
+    width: 158px;
     height: 40px;
 
 }
-.item4 > p{
-    width:159px;
+
+.item4>p {
+    width: 159px;
     height: 60px;
 
 }
@@ -228,10 +374,12 @@ header img:hover {
     color: rgba(139, 139, 139, 1);
     background-color: transparent;
 }
+
 textarea:focus {
-  outline: none;
-  border: none;
-  box-shadow: none; /* remove browser-specific glow */
+    outline: none;
+    border: none;
+    box-shadow: none;
+    /* remove browser-specific glow */
 }
 
 
@@ -248,10 +396,13 @@ textarea:focus {
     justify-content: center;
     align-items: center;
 }
-.model-selector,#model-selector:hover {
+
+.model-selector,
+#model-selector:hover {
     /* background-color: rgba(31, 162, 208, 0.1); */
     cursor: pointer;
 }
+
 #model-selector {
     border: none;
     font-size: 14px;
@@ -259,11 +410,14 @@ textarea:focus {
     line-height: 26px;
     background-color: transparent;
 }
+
 #model-selector:focus {
     outline: none;
     border: none;
-    box-shadow: none; /* remove browser-specific glow */
+    box-shadow: none;
+    /* remove browser-specific glow */
 }
+
 .textarea-box .box2 {
     width: 100%;
     height: 40%;
@@ -299,6 +453,7 @@ textarea:focus {
     /* border: 2px solid red; */
     width: 95px;
 }
+
 .submit-button img {
     cursor: pointer;
 }
