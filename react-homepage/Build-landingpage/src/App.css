@@ -90,7 +90,7 @@
   margin-top: 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.5rem;
 }
 
 .prompt {
