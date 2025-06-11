@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg';
+import crossIcon from '../assets/cross-icon.svg';
 
 function LogoTitle() {
   return (
@@ -6,6 +7,7 @@ function LogoTitle() {
       <img src={logo} alt="Logo" />
       <span className="title">Power Maker AI</span>
       <span> (Beta)</span>
+      <img src={crossIcon} alt="Close" className='close-icon' />
     </div>
   );
 }

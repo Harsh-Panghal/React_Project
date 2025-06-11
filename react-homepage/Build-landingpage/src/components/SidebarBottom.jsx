@@ -1,9 +1,14 @@
 import questionIcon from '../assets/questionmark-icon.svg';
 import settingsIcon from '../assets/setting-icon.svg';
+import activityIcon from '../assets/activity-icon.svg';
 
 function SidebarBottom() {
   return (
     <>
+    <div className="bottom3">
+      <img src={activityIcon} alt="acticon" />
+      <span>Activity</span>
+    </div>
       <div className="bottom1">
         <img src={questionIcon} alt="Help" />
         <span>Help</span>

@@ -552,7 +552,12 @@ textarea:focus {
 .submit-button img {
   cursor: pointer;
 }
-
+.expanded-sidebar .expandedsidebar-card1 .logo-title .close-icon {
+  display: none;
+}
+.expanded-sidebar .expandedsidebar-card2 .bottom3{
+    display: none;
+}
 /* Responsive Styles */
 @media screen and (max-width: 428px) {
   .sidebar-card {
@@ -691,5 +696,74 @@ textarea:focus {
   .textarea-box .box2 .attachment-icon .addicon {
     width: 24px;
     height: 24px;
+  }
+  /* expanded sidebar */
+  .expanded-sidebar {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    width: 77%;
+  }
+  .expanded-sidebar .prompt {
+    left: 284px;
+    top: 211px;
+  }
+  .expanded-sidebar .prompt-description {
+    display: none;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .logo-title {
+    justify-content: space-between;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .logo-title .close-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1.5rem;
+    display: inline;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .logo-title > img {
+    margin-left: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .logo-title > .title {
+    display: none;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .logo-title > .title + span {
+    display: none;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .newchaticon {
+    height: 57px;
+    width: 290px;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .recent {
+    margin-top: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .recent .historyicon {
+    width: 18px;
+    height: 18px;
+    margin-left: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .recent .historyicon + span {
+    height: 20px;
+    width: 60px;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .history {
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .more {
+    left: -117px;
+  }
+  .expanded-sidebar .expandedsidebar-card2 .bottom1,
+  .bottom2 {
+    margin-left: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card2 {
+    height: 10%;
+  }
+  .expanded-sidebar .expandedsidebar-card2 .bottom3 {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1.5rem;
+    width: 19px;
   }
 }
