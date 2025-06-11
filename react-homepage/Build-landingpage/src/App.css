@@ -1,533 +1,695 @@
 .sidebar-card {
-    width: 105px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+  width: 105px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .expanded-sidebar {
-    width: 270px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+  width: 270px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .expandedsidebar-card1 {
-    margin-top: 1.5rem;
-    width: 100%;
-    height: 60%;
-    /* border: 3px solid red; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 60%;
+  /* border: 3px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
-.expandedsidebar-card1>.logo-title {
-    width: 100%;
-    height: 45px;
-    /* border: 1px solid green; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.expandedsidebar-card1 > .logo-title {
+  width: 100%;
+  height: 45px;
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo-title>img {
-    width: 36px;
-    height: 45px;
+.logo-title > img {
+  width: 36px;
+  height: 45px;
 }
 
-.logo-title>.title {
-    height: 21px;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgba(27, 27, 27, 1);
-    margin-left: 1rem;
+.logo-title > .title {
+  height: 21px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(27, 27, 27, 1);
+  margin-left: 1rem;
 }
 
-.logo-title .title+span {
-    font-size: 10px;
-    position: relative;
-    top: 2px;
-    margin-left: 4px;
-    color: rgba(139, 139, 139, 1);
-    font-weight: 500;
+.logo-title .title + span {
+  font-size: 10px;
+  position: relative;
+  top: 2px;
+  margin-left: 4px;
+  color: rgba(139, 139, 139, 1);
+  font-weight: 500;
 }
 
-.expandedsidebar-card1>.newchaticon {
-    margin-top: 1.2rem;
+.expandedsidebar-card1 > .newchaticon {
+  margin-top: 1.2rem;
 }
 
-.expandedsidebar-card1>.recent {
-    width: 100%;
-    height: 20px;
-    display: flex;
-    margin-top: 1.2rem;
-    /* align-items: center; */
-    gap: 0.5rem;
-    /* border: 1px solid green; */
+.expandedsidebar-card1 > .recent {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  margin-top: 1.2rem;
+  /* align-items: center; */
+  gap: 0.5rem;
+  /* border: 1px solid green; */
 }
 
-.recent>.historyicon {
-    margin-left: 0.8rem;
+.recent > .historyicon {
+  margin-left: 0.8rem;
 }
 
-.recent>span {
-    width: 57px;
-    height: 13px;
-    font-size: 18px;
-    font-weight: 700;
-    color: rgba(27, 27, 27, 1);
+.recent > span {
+  width: 57px;
+  height: 13px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(27, 27, 27, 1);
 }
 
-.expandedsidebar-card1>.history {
-    width: 100%;
-    /* border: 1px solid red; */
-    margin-top: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.expandedsidebar-card1 > .history {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .prompt {
-    position: absolute;
-    top: 193px;
-    left: 227px;
-    font-size: 17px;
-    font-weight: 700;
-    color: rgba(0, 122, 141, 1);
-    /* border: 1px solid red; */
-    cursor: pointer; /* This makes the cursor a pointer */
+  position: absolute;
+  top: 193px;
+  left: 227px;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(0, 122, 141, 1);
+  /* border: 1px solid red; */
+  cursor: pointer;
+  /* This makes the cursor a pointer */
 }
 
 .prompt:hover {
-    color: blue; /* Example hover effect */
-    text-decoration: underline; /* Optional */
+  color: blue;
+  /* Example hover effect */
+  text-decoration: underline;
+  /* Optional */
 }
+
 .prompt-description {
-    width: 124px;
-    height: 108px;
-    position: absolute;
-    top: 210px;
-    left: 214px;
-    font-size: 14px;
-    font-weight: bold;
-    /* color: rgba(139, 139, 139, 1); */
-    /* border: 1px solid red; */
-    border: 1px solid rgba(230, 230, 230, 1);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    opacity: 1;
-    filter: none;
-    color: #000; /* or any dark color */
-    z-index: 999; /* make sure it’s above */
-    cursor: pointer;
-    gap: 0.3rem;
-}
-.prompt-description > div{
-    margin-left: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.prompt-description > div img {
-    width: 16px;
-    height: 16px;
-}
-.prompt-description > .delete-prompt > span {
-    color: rgba(179, 38, 30, 1)
-}
-.prompt:hover {
-    cursor: pointer;
+  width: 124px;
+  height: 108px;
+  position: absolute;
+  top: 210px;
+  left: 214px;
+  font-size: 14px;
+  font-weight: bold;
+  /* color: rgba(139, 139, 139, 1); */
+  /* border: 1px solid red; */
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  opacity: 1;
+  filter: none;
+  color: #000;
+  /* or any dark color */
+  z-index: 999;
+  /* make sure it’s above */
+  cursor: pointer;
+  gap: 0.3rem;
 }
 
-.history>div {
-    margin-left: 0.8rem;
-    height: 16px;
-    /* border: 1px solid red; */
-    color: rgba(27, 27, 27, 1);
-    font-size: 14px;
-    font-weight: 400;
-    /* border: 1px solid green; */
+.prompt-description > div {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prompt-description > div img {
+  width: 16px;
+  height: 16px;
+}
+
+.prompt-description > .delete-prompt > span {
+  color: rgba(179, 38, 30, 1);
+}
+
+.prompt:hover {
+  cursor: pointer;
+}
+
+.history > div {
+  margin-left: 0.8rem;
+  height: 16px;
+  /* border: 1px solid red; */
+  color: rgba(27, 27, 27, 1);
+  font-size: 14px;
+  font-weight: 400;
+  /* border: 1px solid green; */
 }
 
 .more {
-    margin-top: 1.5rem;
-    /* border: 1px solid red; */
-    position: relative;
-    left: -5.2rem;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
+  margin-top: 1.5rem;
+  /* border: 1px solid red; */
+  position: relative;
+  left: -5.2rem;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
 }
 
-.more>span {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(139, 139, 139, 1);
-    width: 33px;
-    height: 16px;
-    margin-left: 0.5rem;
+.more > span {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(139, 139, 139, 1);
+  width: 33px;
+  height: 16px;
+  margin-left: 0.5rem;
 }
 
 .expandedsidebar-card2 {
-    width: 100%;
-    height: 8%;
-    margin-bottom: 1.5rem;
-    /* border: 3px solid blue; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  height: 8%;
+  margin-bottom: 1.5rem;
+  /* border: 3px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bottom1,
 .bottom2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.8rem;
 }
 
 .expandedsidebar-card2 img {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .expandedsidebar-card2 span {
-    height: 19px;
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(139, 139, 139, 1);
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(139, 139, 139, 1);
 }
 
 .card1,
 .card2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
 }
 
 .card1 {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card2 {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.card1>.logo {
-    width: 36px;
-    height: 45px;
+.card1 > .logo {
+  width: 36px;
+  height: 45px;
 }
 
 .main-card {
-    width: calc(100% - 105px);
-    background-color: #f0f0f0;
-    overflow: hidden;
-    display: flex;
+  width: calc(100% - 105px);
+  background-color: #f0f0f0;
+  overflow: hidden;
+  display: flex;
 }
 
-.main-card>.mainimg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
+.main-card > .mainimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.main-card>.sub-main-card {
-    position: relative;
-    z-index: 2;
-    /* above the image */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
+.main-card > .sub-main-card {
+  position: relative;
+  z-index: 2;
+  /* above the image */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
     align-items: center; */
-    /* Optional: add background or transparency */
-    background-color: rgba(255, 255, 255, 0.5);
+  /* Optional: add background or transparency */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .sub-main-card header {
-    width: 100%;
-    height: 105px;
-    /* border: 3px solid green; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 105px;
+  /* border: 3px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sub-main-card header .header-card1 {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 header img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
+.sub-main-card header .header-card1 .title {
+  display: none;
+}
+.sub-main-card header .header-card1 .beta {
+  display: none;
+}
+.sub-main-card header .header-card1 .dbicon {
+  height: 36px;
+  /* padding: 5px 10px; */
+}
 .sub-main-card header .header-card2 {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-right: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 2.5rem;
+}
+.sub-main-card header .header-card2 .picicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.header-card2>span {
-    width: 60px;
-    /* height:13px; */
-    font-size: 18px;
-    font-weight: 600;
+.header-card2 > span {
+  width: 60px;
+  /* height:13px; */
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .sub-main-card .content-grid {
-    height: calc(100% - 105px);
-    width: 100%;
-    /* border: 3px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: calc(100% - 105px);
+  width: 100%;
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.content-grid>.content-card {
-    width: 786px;
-    height: 432px;
-    /* border: 3px solid blue; */
+.content-grid > .content-card {
+  width: 786px;
+  height: 432px;
+  /* border: 3px solid blue; */
 }
 
-.content-card>h1 {
-    width: 465px;
-    height: 82px;
-    font-size: 35px;
-    font-weight: 600;
-    background: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.content-card > h1 {
+  width: 465px;
+  height: 82px;
+  font-size: 35px;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    rgba(31, 162, 208, 1),
+    rgba(14, 81, 133, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.content-card>p {
-    width: 252px;
-    height: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgba(139, 139, 139, 1);
-    margin-top: 12px;
+.content-card > p {
+  width: 252px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(139, 139, 139, 1);
+  margin-top: 12px;
 }
 
-.content-card>.card-items {
-    width: 100%;
-    height: 149px;
-    display: flex;
-    /* border: 1px solid red; */
-    margin-top: 10px;
-    gap: 1rem;
-
+.content-card > .card-items {
+  width: 100%;
+  height: 149px;
+  display: flex;
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  gap: 1rem;
 }
 
-.card-items>div {
-    height: 100%;
-    width: 33.33%;
-    border: 1px solid rgba(230, 230, 230, 1);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.card-items > div {
+  height: 100%;
+  width: 33.33%;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card-items>div:hover {
-    cursor: pointer;
-    border: 3px solid rgba(18, 50, 88, 1);
-    /* box-shadow: 0px 4px 10px rgba(18, 50, 88, 0.1); */
+.card-items > div:hover {
+  cursor: pointer;
+  border: 3px solid rgba(18, 50, 88, 1);
+  /* box-shadow: 0px 4px 10px rgba(18, 50, 88, 0.1); */
 }
 
-.item1>p {
-    width: 149px;
-    height: 40px;
-
+.item1 > p {
+  width: 149px;
+  height: 40px;
 }
 
-.item2>p {
-    width: 158px;
-    height: 40px;
-
+.item2 > p {
+  width: 158px;
+  height: 40px;
 }
 
-.item3>p {
-    width: 158px;
-    height: 40px;
-
+.item3 > p {
+  width: 158px;
+  height: 40px;
 }
 
-.item4>p {
-    width: 159px;
-    height: 60px;
-
+.item4 > p {
+  width: 159px;
+  height: 60px;
 }
 
-.card-items>div>p {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgba(27, 27, 27, 1);
-    margin-top: 10px;
-    margin-left: 10px;
+.card-items > div > p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(27, 27, 27, 1);
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.card-items>div>img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+.card-items > div > img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
-.content-card>.textarea-box {
-    width: 100%;
-    height: 123px;
-    margin-top: 30px;
-    border-width: 3px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: lightblue;
-    /* border-image: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1)) 1; */
-    /* border-image-slice: 1;
+.content-card > .textarea-box {
+  width: 100%;
+  height: 123px;
+  margin-top: 30px;
+  border-width: 3px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: lightblue;
+  /* border-image: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1)) 1; */
+  /* border-image-slice: 1;
     /* border-image-slice: 1; */
-    /* border-image-source: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1)); */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  /* border-image-source: linear-gradient(to right, rgba(31, 162, 208, 1), rgba(14, 81, 133, 1)); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .textarea-box .box1 {
-    width: 100%;
-    height: 60%;
-    margin-top: 0.5rem;
-    /* background-color: rgba(31, 162, 208, 0.1); */
-    /* border-radius: 10px; */
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 60%;
+  margin-top: 0.5rem;
+  /* background-color: rgba(31, 162, 208, 0.1); */
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: space-between;
 }
 
-.box1>textarea {
-    width: 100%;
-    height: 100%;
-    margin-left: 1.5rem;
-    border: none;
-    outline: none;
-    resize: none;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 26px;
-    color: rgba(139, 139, 139, 1);
-    background-color: transparent;
+.box1 > textarea {
+  width: 100%;
+  height: 100%;
+  margin-left: 1.5rem;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(139, 139, 139, 1);
+  background-color: transparent;
 }
 
-.textarea-box .box1>textarea::placeholder {
-    color: rgba(139, 139, 139, 1);
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    line-height: 26px;
+.textarea-box .box1 > textarea::placeholder {
+  color: rgba(139, 139, 139, 1);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  line-height: 26px;
 }
 
 textarea:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-    /* remove browser-specific glow */
+  outline: none;
+  border: none;
+  box-shadow: none;
+  /* remove browser-specific glow */
 }
 
-
-.box1>.model-selector {
-    margin-right: 1.5rem;
-    width: 106px;
-    height: 32px;
-    border: 1px solid rgba(230, 230, 230, 1);
-    border-radius: 25px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 8px 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box1 > .model-selector {
+  margin-right: 1.5rem;
+  width: 106px;
+  height: 32px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .model-selector,
 #model-selector:hover {
-    /* background-color: rgba(31, 162, 208, 0.1); */
-    cursor: pointer;
+  /* background-color: rgba(31, 162, 208, 0.1); */
+  cursor: pointer;
 }
 
 #model-selector {
-    border: none;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 26px;
-    background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  background-color: transparent;
 }
 
 #model-selector:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-    /* remove browser-specific glow */
+  outline: none;
+  border: none;
+  box-shadow: none;
+  /* remove browser-specific glow */
 }
 
 .textarea-box .box2 {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-    /* border: 2px solid lightblue; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  /* border: 2px solid lightblue; */
 }
 
 .attachment-icon {
-    width: 108px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    cursor: pointer;
+  width: 108px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
 }
 
 .attachment-icon span {
-    width: 87px;
-    height: 26px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 26px;
-    color: rgba(139, 139, 139, 1);
+  width: 87px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(139, 139, 139, 1);
 }
 
 .submit-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 2px solid red; */
-    width: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
+  width: 95px;
+  color: rgba(139, 139, 139, 1);
 }
 
 .submit-button img {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 428px) {
+  .sidebar-card {
+    display: none;
+  }
+
+  .main-card {
+    width: 100%;
+  }
+
+  .header-card1 {
+    position: relative;
+  }
+
+  .header-card1 > .dbicon {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+  }
+
+  .sub-main-card > header > .header-card2 {
+    margin-right: 1rem;
+  }
+  .sub-main-card > header > .header-card1 {
+    align-items: center;
+  }
+  .sub-main-card header .header-card1 .title {
+    display: inline;
+    color: rgba(27, 27, 27, 1);
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+  }
+  .sub-main-card header .header-card1 .dbicon {
+    height: 24px;
+    /* padding: 5px 10px; */
+    position: absolute;
+    top: 40px;
+    left: 97px;
+  }
+  .sub-main-card header .header-card1 .beta {
+    display: inline;
+    font-size: 10px;
+    font-weight: 500;
+    position: relative;
+    right: 75px;
+    top: 2px;
+    color: rgba(139, 139, 139, 1);
+  }
+  .main-card {
+    font-family: "roboto", sans-serif;
+  }
+  .header-card2 > .bellicon,
+  .username {
+    display: none;
+  }
+
+  .content-grid {
+    margin-top: 2rem;
+  }
+
+  .content-grid > .content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-card > h1 {
+    width: 319px;
+    height: 56px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .content-card > p {
+    position: relative;
+    left: -30px;
+  }
+  .content-card > .card-items {
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    width: 331px;
+    height: 131px;
+    gap: 11px;
+  }
+  .card-items > div {
+    width: 159px;
+  }
+  .card-items .item1 > p {
+    width: 137px;
+    height: 60px;
+  }
+  .card-items .item2 > p {
+    width: 134px;
+    height: 60px;
+  }
+  .card-items .item3 > p {
+    width: 136px;
+    height: 60px;
+  }
+  .card-items .item4 > p {
+    width: 134px;
+    height: 60px;
+  }
+  .content-grid > .content-card > .textarea-box {
+    position: relative;
+    top: 126px;
+    width: 331px;
+  }
+  .textarea-box .box1 .model-selector {
+    width: 93px;
+    height: 24px;
+    position: relative;
+    top: 77px;
+    right: 150px;
+  }
+  .textarea-box .box2 .attachment-text {
+    display: none;
+  }
+  .textarea-box .box2 .submit-button {
+    justify-content: end;
+    gap: 5px;
+  }
+  .textarea-box .box2 .submit-button > span {
+    width: 39px;
+    height: 9px;
+    font-size: 12px;
+    color: rgba(139, 139, 139, 1);
+  }
+  .textarea-box .box2 .submit-button img {
+    width: 24px;
+    height: 24px;
+  }
+  .textarea-box .box2 .attachment-icon .addicon {
+    width: 24px;
+    height: 24px;
+  }
 }

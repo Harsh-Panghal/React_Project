@@ -18,7 +18,7 @@ const PromptInputArea = () => (
     <div className="box2">
       <div className="attachment-icon">
         <img src={attachIcon} alt="Attach" className='addicon' />
-        <span>Add Attachment</span>
+        <span className='attachment-text'>Add Attachment</span>
       </div>
       <div className="submit-button">
         <span>0/1000</span>

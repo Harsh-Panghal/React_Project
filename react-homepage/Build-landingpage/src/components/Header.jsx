@@ -8,12 +8,14 @@ const Header = ({ onToggleSidebar }) => (
   <header>
     <div className="header-card1">
       <img src={threelinesIcon} alt="Menu" className='threelinesicon' onClick={onToggleSidebar} />
+      <span className="title">Power Maker AI</span>
+      <span className='beta'> (Beta)</span>
       <img src={dbIcon} alt="Database" className='dbicon' />
     </div>
     <div className="header-card2">
       <img src={bellIcon} alt="Bell" className='bellicon' />
       <img src={picIcon} alt="Profile" className='picicon' />
-      <span>Alessio</span>
+      <span className='username'>Alessio</span>
     </div>
   </header>
 );
