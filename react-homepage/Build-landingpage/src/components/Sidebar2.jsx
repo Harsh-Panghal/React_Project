@@ -5,29 +5,17 @@ import RecentSection from './RecentSection';
 import HistoryList from './HistoryList';
 import MoreSection from './MoreSection';
 import SidebarBottom from './SidebarBottom';
-import shareIcon from '../assets/share-icon.svg';
-import editIcon from '../assets/edit-icon.svg';
-import deleteIcon from '../assets/delete-icon.svg';
+import PromptMenu from './PromptMenu';
+import feedbackIcon from '../assets/feedback-icon.svg';
+import privacyIcon from '../assets/privacy-icon.svg';
+import termIcon from '../assets/terms-icon.svg';
+import cleanIcon from '../assets/clean-icon.svg';
+
 
 function Sidebar2() {
   return (
     <div className="expanded-sidebar">
-      <span className='prompt'>...</span>
-      {/* This span is used to display a prompt or an ellipsis, indicating that more options are available */}
-      <div className="prompt-description">
-        <div className='share'>
-          <img src={shareIcon} alt="share" />
-          <span>Share</span>
-        </div>
-        <div className="edit-prompt">
-          <img src={editIcon} alt="edit" />
-          <span>Edit</span>
-        </div>
-        <div className="delete-prompt">
-          <img src={deleteIcon} alt="delete" />
-          <span>Delete</span>
-        </div>
-      </div>
+      <PromptMenu />
       <div className="expandedsidebar-card1">
         <LogoTitle />
         <NewChatButton />
@@ -37,6 +25,25 @@ function Sidebar2() {
       </div>
       <div className="expandedsidebar-card2">
         <SidebarBottom />
+        <div className="bottom-dropdown">
+           <div className='feedback'>
+             <img src="" alt="" />
+             <span>Feedback</span>
+           </div>
+           <div className='privacy'>
+             <img src="" alt="" />
+             <span>Feedback</span>
+           </div>
+           <div className='terms'>
+             <img src="" alt="" />
+             <span>Feedback</span>
+           </div>
+           <div className='clean'>
+             <img src="" alt="" />
+             <span>Feedback</span>
+           </div>
+           
+        </div>
       </div>
     </div>
   );
