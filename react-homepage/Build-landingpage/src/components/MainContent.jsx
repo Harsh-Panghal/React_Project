@@ -5,7 +5,7 @@ import PromptCards from './PromptCards';
 import PromptInputArea from './PromptInputArea';
 
 const MainContent = ({ onToggleSidebar }) => (
-  <div className="main-card">
+  <div className="main-card ">
     <img src={mainImg} alt="Main" className='mainimg' />
     <div className="sub-main-card">
       <Header onToggleSidebar={onToggleSidebar} />

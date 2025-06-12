@@ -196,6 +196,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .bottom1,
@@ -559,6 +560,27 @@ textarea:focus {
     display: none;
 }
 /* Responsive Styles */
+
+
+
+
+
+
+/* Blur effect when sidebar2 is open on mobile */
+.blur-overlay {
+  filter: blur(4px) brightness(90%);
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+.blur-overlay {
+  filter: blur(4px) brightness(90%);
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+  background-color: gray;
+}
+
 @media screen and (max-width: 428px) {
   .sidebar-card {
     display: none;
