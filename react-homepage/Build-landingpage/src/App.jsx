@@ -5,6 +5,9 @@ import MainContent from './components/MainContent.jsx';
 import React, { useState } from 'react';
 import DeleteChatAccount from './components/DeleteChatAccount.jsx';
 import crossIcon from './assets/cross-icon.svg';
+import profileIcon from './assets/profile-icon.svg';
+import inviteIcon from './assets/invite-icon.svg';
+import logoutIcon from './assets/logout-icon.svg';
 
 
 function App() {
@@ -18,7 +21,7 @@ function App() {
   };
   return (
     <>
-      
+
       {isSidebar2Visible ? <Sidebar2 /> : <Sidebar />}
       <MainContent onToggleSidebar={handleToggleSidebar} />
       <DeleteChatAccount></DeleteChatAccount>
@@ -32,12 +35,26 @@ function App() {
         </div>
         <span>Add Team</span>
         <div className='email-input'>
-           <input type="email" placeholder='Enter Email'/>
-           <button className='send-btn'>Send</button>
+          <input type="email" placeholder='Enter Email' />
+          <button className='send-btn'>Send</button>
         </div>
         <p>Lorem Ipsum is simply dummy text of the printing</p>
       </div>
-      
+      <div className="profile-card">
+        <div className="share">
+          <img src={profileIcon} alt="share" />
+          <span>Edit profile</span>
+        </div>
+        <div className="edit-prompt">
+          <img src={inviteIcon} alt="edit" />
+          <span>Invite</span>
+        </div>
+        <div className="delete-prompt">
+          <img src={logoutIcon} alt="delete" />
+          <span>Log Out</span>
+        </div>
+      </div>
+
     </>
   );
 }
