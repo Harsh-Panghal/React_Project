@@ -26,7 +26,7 @@ function Sidebar2() {
       <div className="expandedsidebar-card2">
         <SidebarBottom />
 
-        <div className="bottom-dropdown">
+        <div className="help-dropdown">
            <div className='feedback'>
              <img src={feedbackIcon} alt="Feedback" />
              <span>Feedback</span>
