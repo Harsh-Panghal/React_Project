@@ -463,8 +463,11 @@ header img:hover {
   width: 33.33%;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 15px;
+
   display: flex;
+
   flex-direction: column;
+  
   justify-content: space-between;
 }
 
