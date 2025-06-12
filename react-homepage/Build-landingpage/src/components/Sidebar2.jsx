@@ -25,22 +25,23 @@ function Sidebar2() {
       </div>
       <div className="expandedsidebar-card2">
         <SidebarBottom />
+
         <div className="bottom-dropdown">
            <div className='feedback'>
-             <img src="" alt="" />
+             <img src={feedbackIcon} alt="Feedback" />
              <span>Feedback</span>
            </div>
            <div className='privacy'>
-             <img src="" alt="" />
-             <span>Feedback</span>
+             <img src={privacyIcon} alt="privacy" />
+             <span>Privacy Policy</span>
            </div>
            <div className='terms'>
-             <img src="" alt="" />
-             <span>Feedback</span>
+             <img src={termIcon} alt="Terms" />
+             <span>Terms of Use</span>
            </div>
            <div className='clean'>
-             <img src="" alt="" />
-             <span>Feedback</span>
+             <img src={cleanIcon}alt="cleanicon" />
+             <span>Clean Chat</span>
            </div>
            
         </div>
