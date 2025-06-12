@@ -7,14 +7,14 @@ function PromptMenu() {
   return (
     <>
       <span className="prompt">...</span>
-      <div className="prompt-description">
+      <div className="prompt-dropdown">
         <div className="share">
           <img src={shareIcon} alt="share" />
           <span>Share</span>
         </div>
         <div className="edit-prompt">
           <img src={editIcon} alt="edit" />
-          <span>Edit</span>
+          <span>Edit Prompt</span>
         </div>
         <div className="delete-prompt">
           <img src={deleteIcon} alt="delete" />

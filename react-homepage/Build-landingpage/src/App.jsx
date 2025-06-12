@@ -17,9 +17,9 @@ function App() {
   };
   return (
     <>
-    
+      
       {isSidebar2Visible ? <Sidebar2 /> : <Sidebar />}
-      <MainContent onToggleSidebar={handleToggleSidebar} isMobile={isMobile} />
+      <MainContent onToggleSidebar={handleToggleSidebar} />
       <DeleteChatAccount></DeleteChatAccount>
       
     </>
