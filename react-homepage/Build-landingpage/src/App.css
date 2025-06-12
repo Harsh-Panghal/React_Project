@@ -64,7 +64,46 @@
   font-size: 14px;
   font-weight: 500;
 }
+.profile-card{
+  width: 138px;
+  height: 101px;
+  position: absolute;
+  top: 80px;
+  left: 83%;
 
+  font-size: 14px;
+  font-weight: bold;
+
+  /* color: rgba(139, 139, 139, 1); */
+  /* border: 1px solid red; */
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  opacity: 1;
+  filter: none;
+  color: #000;
+  /* or any dark color */
+  z-index: 999;
+  /* make sure it’s above */
+  /* cursor: pointer; */
+  gap: 0.3rem;
+}
+.profile-card>div{
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.profile-card>.delete-prompt{
+  color: rgba(179, 38, 30, 1);
+}
 .invite-card {
   position: absolute;
   z-index: 5;
@@ -80,12 +119,14 @@
   display: flex;
   flex-direction: column;
 }
+
 .invite-card > img {
   position: absolute;
   right: 13px;
   top: 13px;
   width: 12px;
   height: 12px;
+  cursor: pointer;
 }
 .invite-card > h2 {
   font-size: 24px;
