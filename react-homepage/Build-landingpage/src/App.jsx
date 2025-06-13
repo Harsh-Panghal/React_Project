@@ -4,57 +4,42 @@ import Sidebar2 from './components/Sidebar2.jsx';
 import MainContent from './components/MainContent.jsx';
 import React, { useState } from 'react';
 import DeleteChatAccount from './components/DeleteChatAccount.jsx';
-import crossIcon from './assets/cross-icon.svg';
-import profileIcon from './assets/profile-icon.svg';
-import inviteIcon from './assets/invite-icon.svg';
-import logoutIcon from './assets/logout-icon.svg';
+import InviteCard from './components/InviteCard.jsx';
+import ProfileCard from './components/ProfileCard.jsx';
 
 
 function App() {
   const [isSidebar2Visible, setIsSidebar2Visible] = useState(false); // false means Sidebar (default)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 428);
-
+  const [isProfileCardVisible, setIsProfileCardVisible] = useState(false);
+  const [isInviteCardVisible, setIsInviteCardVisible] = useState(false);
+  const [isDeleteChatAccountVisible, setIsDeleteChatAccountVisible] = useState(false);
+ 
 
   const handleToggleSidebar = () => {
 
     setIsSidebar2Visible(prev => !prev);
   };
+  const handleToggleProfileCard = () => {
+
+    setIsProfileCardVisible(prev => !prev);
+  }
+  const handleToggleInviteCard = () => {
+
+    setIsInviteCardVisible(prev => !prev);
+  }
+  const handleToggleDeleteChatAccount = () => {
+
+    setIsDeleteChatAccountVisible(prev => !prev);
+  }
   return (
     <>
-      {isSidebar2Visible ? <Sidebar2 /> : <Sidebar />}
-      <MainContent onToggleSidebar={handleToggleSidebar} />
-      <DeleteChatAccount></DeleteChatAccount>
+      {isSidebar2Visible ? <Sidebar2 onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount}/> : <Sidebar />}
+      <MainContent onToggleSidebar={handleToggleSidebar} onToggleProfileCard={handleToggleProfileCard} />
+      {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount}/>}
       {/* convert this to a component */}
+      {isProfileCardVisible && <ProfileCard onToggleInviteCard={handleToggleInviteCard}/>}
+      {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       
-      <div className="invite-card">
-        <img src={crossIcon} alt="cross-btn" />
-        <h2>Invite people</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-        <div className='invite-btn'>
-          <button className='email'>Invite with email</button>
-          <button className='link'>Invite with link</button>
-        </div>
-        <span>Add Team</span>
-        <div className='email-input'>
-          <input type="email" placeholder='Enter Email' />
-          <button className='send-btn'>Send</button>
-        </div>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-      </div>
-      <div className="profile-card">
-        <div className="share">
-          <img src={profileIcon} alt="share" />
-          <span>Edit profile</span>
-        </div>
-        <div className="edit-prompt">
-          <img src={inviteIcon} alt="edit" />
-          <span>Invite</span>
-        </div>
-        <div className="delete-prompt">
-          <img src={logoutIcon} alt="delete" />
-          <span>Log Out</span>
-        </div>
-      </div>
 
     </>
   );

@@ -4,11 +4,11 @@ import Header from './Header';
 import PromptCards from './PromptCards';
 import PromptInputArea from './PromptInputArea';
 
-const MainContent = ({ onToggleSidebar }) => (
-  <div className="main-card ">
+const MainContent = ({ onToggleSidebar, onToggleProfileCard }) => (
+  <div className="main-card " >
     <img src={mainImg} alt="Main" className='mainimg' />
     <div className="sub-main-card">
-      <Header onToggleSidebar={onToggleSidebar} />
+      <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard}/>
       <div className="content-grid">
         <div className="content-card">
           <h1>Hello, Adam Siegel! <br /> What would you like to make?</h1>
