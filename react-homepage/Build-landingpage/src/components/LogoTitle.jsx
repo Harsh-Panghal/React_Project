@@ -1,13 +1,13 @@
 import logo from '../assets/logo.svg';
 import crossIcon from '../assets/cross-icon.svg';
 
-function LogoTitle() {
+function LogoTitle({ onToggleSidebar }) {
   return (
     <div className="logo-title">
       <img src={logo} alt="Logo" />
       <span className="title">Power Maker AI</span>
       <span> (Beta)</span>
-      <img src={crossIcon} alt="Close" className='close-icon' />
+      <img src={crossIcon} alt="Close" className='close-icon' onClick={onToggleSidebar}/>
     </div>
   );
 }

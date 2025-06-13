@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import LogoTitle from './LogoTitle';
 import NewChatButton from './NewChatButton';
 import RecentSection from './RecentSection';
@@ -6,45 +6,30 @@ import HistoryList from './HistoryList';
 import MoreSection from './MoreSection';
 import SidebarBottom from './SidebarBottom';
 import PromptMenu from './PromptMenu';
-import feedbackIcon from '../assets/feedback-icon.svg';
-import privacyIcon from '../assets/privacy-icon.svg';
-import termIcon from '../assets/terms-icon.svg';
-import cleanIcon from '../assets/clean-icon.svg';
+import HelpCard from './HelpCard';
 
 
-function Sidebar2() {
+function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar }) {
+  const [ishelpCardVisible, setIsHelpCardVisible] = useState(false);
+  const handleToggleHelpCard = () => {
+
+    setIsHelpCardVisible(prev => !prev);
+  } 
   return (
     <div className="expanded-sidebar">
-      <PromptMenu />
+      <PromptMenu  />
       <div className="expandedsidebar-card1">
-        <LogoTitle />
+        <LogoTitle onToggleSidebar={onToggleSidebar}/>
         <NewChatButton />
         <RecentSection />
         <HistoryList />
         <MoreSection />
       </div>
       <div className="expandedsidebar-card2">
-        <SidebarBottom />
+        <SidebarBottom onToggleHelpCard={handleToggleHelpCard} />
 
-        <div className="help-dropdown">
-           <div className='feedback'>
-             <img src={feedbackIcon} alt="Feedback" />
-             <span>Feedback</span>
-           </div>
-           <div className='privacy'>
-             <img src={privacyIcon} alt="privacy" />
-             <span>Privacy Policy</span>
-           </div>
-           <div className='terms'>
-             <img src={termIcon} alt="Terms" />
-             <span>Terms of Use</span>
-           </div>
-           <div className='clean'>
-             <img src={cleanIcon}alt="cleanicon" />
-             <span>Clean Chat</span>
-           </div>
-           
-        </div>
+        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} />}
+
       </div>
     </div>
   );

@@ -2,14 +2,14 @@ import questionIcon from '../assets/questionmark-icon.svg';
 import settingsIcon from '../assets/setting-icon.svg';
 import activityIcon from '../assets/activity-icon.svg';
 
-function SidebarBottom() {
+function SidebarBottom({ onToggleHelpCard }) {
   return (
     <>
     <div className="bottom3">
       <img src={activityIcon} alt="acticon" />
       <span>Activity</span>
     </div>
-      <div className="bottom1">
+      <div className="bottom1" onClick={onToggleHelpCard}>
         <img src={questionIcon} alt="Help" />
         <span>Help</span>
       </div>
