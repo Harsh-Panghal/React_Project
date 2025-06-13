@@ -823,10 +823,13 @@ textarea:focus {
 /* Responsive Styles */
 
 /* Blur effect when sidebar2 is open on mobile */
-.blurred {
+.main-card>.blurred {
   filter: blur(4px);
-  pointer-events: none;
-  transition: filter 0.3s ease;
+  background-color: #c8c8c8; /* white with transparency */
+  transition: filter 0.3s ease, background-color 0.3s ease;
+  pointer-events: none; /* optional: prevents clicks on blurred area */
+  /* border-radius: 12px; optional: softer look */
+
 }
 
 
