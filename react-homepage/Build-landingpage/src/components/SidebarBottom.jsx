@@ -9,11 +9,11 @@ function SidebarBottom({ onToggleHelpCard }) {
       <img src={activityIcon} alt="acticon" />
       <span>Activity</span>
     </div>
-      <div className="bottom1" onClick={onToggleHelpCard}>
+      <div className="bottom1" >
         <img src={questionIcon} alt="Help" />
         <span>Help</span>
       </div>
-      <div className="bottom2">
+      <div className="bottom2" onClick={onToggleHelpCard}>
         <img src={settingsIcon} alt="Settings" />
         <span>Settings</span>
       </div>
