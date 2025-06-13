@@ -233,7 +233,7 @@
   flex-direction: column;
   justify-content: space-between;
   /* overflow: hidden; */
-  transition: 1s ease-in-out;
+  /* transition: 1s ease-in-out; */
 }
 
 .expandedsidebar-card1 {
@@ -825,13 +825,19 @@ textarea:focus {
 /* Blur effect when sidebar2 is open on mobile */
 .main-card>.blurred {
   filter: blur(4px);
-  background-color: #c8c8c8; /* white with transparency */
+  background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
   transition: filter 0.3s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
 
 }
-
+.blurred{
+  filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
+  transition: filter 0.1s ease, background-color 0.3s ease;
+  pointer-events: none; /* optional: prevents clicks on blurred area */
+  /* border-radius: 12px; optional: softer look */
+}
 
 @media screen and (max-width: 428px) {
   .sidebar-card {

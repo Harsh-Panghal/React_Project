@@ -4,7 +4,7 @@ import Header from './Header';
 import PromptCards from './PromptCards';
 import PromptInputArea from './PromptInputArea';
 
-const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible }) => {
+const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible }
   const shouldBlur = issidebar2Visible && windowWidth <= 428;
 
   return (
-    <div className="main-card">
+    <div className={`main-card ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''}`}>
       <img src={mainImg} alt="Main" className='mainimg' />
       <div className={`sub-main-card ${shouldBlur ? 'blurred' : ''}`}>
         <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard} />

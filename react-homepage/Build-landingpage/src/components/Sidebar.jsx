@@ -5,8 +5,8 @@ import histIcon from '../assets/history-icon.svg';
 import quesIcon from '../assets/questionmark-icon.svg';
 import setIcon from '../assets/setting-icon.svg';
 
-const Sidebar = () => (
-  <div className="sidebar-card">
+const Sidebar = ({isInviteCardVisible, isDeleteChatAccountVisible}) => (
+  <div className={`sidebar-card ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''}`}>
     <div className="card1">
       <img src={logo} alt="Logo" className='logo' />
       <img src={addIcon} alt="Add" className='addicon' />

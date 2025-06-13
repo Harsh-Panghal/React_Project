@@ -9,14 +9,14 @@ import PromptMenu from './PromptMenu';
 import HelpCard from './HelpCard';
 
 
-function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar }) {
+function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible}) {
   const [ishelpCardVisible, setIsHelpCardVisible] = useState(false);
   const handleToggleHelpCard = () => {
 
     setIsHelpCardVisible(prev => !prev);
   } 
   return (
-    <div className="expanded-sidebar">
+    <div className={`expanded-sidebar ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''}`}>
       <PromptMenu  />
       <div className="expandedsidebar-card1">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>
