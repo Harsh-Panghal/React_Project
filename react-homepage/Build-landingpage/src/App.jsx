@@ -21,10 +21,11 @@ function App() {
   };
   return (
     <>
-
       {isSidebar2Visible ? <Sidebar2 /> : <Sidebar />}
       <MainContent onToggleSidebar={handleToggleSidebar} />
       <DeleteChatAccount></DeleteChatAccount>
+      {/* convert this to a component */}
+      
       <div className="invite-card">
         <img src={crossIcon} alt="cross-btn" />
         <h2>Invite people</h2>

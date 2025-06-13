@@ -95,6 +95,7 @@
 .profile-card>div{
   margin-left: 0.5rem;
   display: flex;
+
   align-items: center;
   gap: 1rem;
   cursor: pointer;
@@ -104,6 +105,7 @@
 .profile-card>.delete-prompt{
   color: rgba(179, 38, 30, 1);
 }
+
 .invite-card {
   position: absolute;
   z-index: 5;
