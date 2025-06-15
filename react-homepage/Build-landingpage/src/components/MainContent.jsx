@@ -17,7 +17,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
 
   return (
     <div className={`main-card ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''}`}>
-      <img src={mainImg} alt="Main" className='mainimg' />
+      {/* <img src={mainImg} alt="Main" className='mainimg' /> */}
       <div className={`sub-main-card ${shouldBlur ? 'blurred' : ''}`}>
         <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard} />
         <div className="content-grid">

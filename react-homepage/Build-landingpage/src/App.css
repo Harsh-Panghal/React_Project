@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  background-color: rgba(250, 250, 250, 1);
 }
 
 .delete-chat-acct-card {
@@ -232,8 +233,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(250, 250, 250, 1);
   /* overflow: hidden; */
-  /* transition: 1s ease-in-out; */
+  /* transition: width 1s ease-in-out; */
 }
 
 .expandedsidebar-card1 {
@@ -495,7 +497,7 @@
 
 .main-card {
   width: calc(100% - 105px);
-  background-color: #f0f0f0;
+  background-color: rgba(255,255,255,1);
   overflow: hidden;
   display: flex;
   position: relative;
@@ -634,12 +636,16 @@ header img:hover {
   flex-direction: column;
 
   justify-content: space-between;
+  transition: border 0.1s ease;
+  box-shadow: 4px 4px 8px rgba(18, 50, 88, 0.1);
 }
 
 .card-items > div:hover {
   cursor: pointer;
-  border: 3px solid rgba(18, 50, 88, 1);
+  border: 1px solid rgba(18, 50, 88, 1);
+  /* transform: translate(-3px, -3px); */
   /* box-shadow: 0px 4px 10px rgba(18, 50, 88, 0.1); */
+  background-color: rgba(28, 78, 140, 0.1);
 }
 
 .item1 > p {
