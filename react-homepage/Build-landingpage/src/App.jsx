@@ -13,7 +13,7 @@ function App() {
   const [isProfileCardVisible, setIsProfileCardVisible] = useState(false);
   const [isInviteCardVisible, setIsInviteCardVisible] = useState(false);
   const [isDeleteChatAccountVisible, setIsDeleteChatAccountVisible] = useState(false);
- 
+
 
   const handleToggleSidebar = () => {
 
@@ -34,13 +34,16 @@ function App() {
   return (
     <>
 
-      {isSidebar2Visible ? <Sidebar2  isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount}/> : <Sidebar isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard}/>}
+      {isSidebar2Visible ? <Sidebar2 isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} /> : <Sidebar isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
       <MainContent isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} issidebar2Visible={isSidebar2Visible} onToggleSidebar={handleToggleSidebar} onToggleProfileCard={handleToggleProfileCard} />
-      {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount}/>}
+      {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {/* convert this to a component */}
-      {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard}/>}
+      {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
-      
+      <div className="profile-page">
+        
+      </div>
+
 
     </>
   );
