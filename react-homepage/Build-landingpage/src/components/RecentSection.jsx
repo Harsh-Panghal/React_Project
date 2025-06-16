@@ -2,9 +2,9 @@ import historyIcon from '../assets/history-icon.svg';
 
 function RecentSection() {
   return (
-    <div className="recent">
-      <img src={historyIcon} alt="History" className="historyicon" />
-      <span>Recent</span>
+    <div className="recent h-auto opacity-50">
+      {/* <img src={historyIcon} alt="History" className="historyicon" /> */}
+      <span >Recent</span>
     </div>
   );
 }

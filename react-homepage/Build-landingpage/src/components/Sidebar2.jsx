@@ -18,7 +18,7 @@ function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisi
   return (
     <div className={`expanded-sidebar ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''}`}>
       <PromptMenu  />
-      <div className="expandedsidebar-card1">
+      <div className="expandedsidebar-card1 h-auto gap-[1rem]">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>
         <NewChatButton />
         <RecentSection />
