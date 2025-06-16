@@ -6,7 +6,7 @@ function LogoTitle({ onToggleSidebar }) {
     <div className="logo-title">
       <img src={logo} alt="Logo" />
       <span className="title">Power Maker AI</span>
-      <span> (Beta)</span>
+      <span className='top-[6px]'> (Beta)</span>
       <img src={crossIcon} alt="Close" className='close-icon' onClick={onToggleSidebar}/>
     </div>
   );
