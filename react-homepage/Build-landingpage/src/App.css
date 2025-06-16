@@ -234,7 +234,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(250, 250, 250, 1);
-  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1); */
   /* overflow: hidden; */
   /* transition: width 1s ease-in-out; */
 }
@@ -251,43 +251,48 @@
 }
 
 .expandedsidebar-card1 > .logo-title {
-  width: 100%;
-  height: 45px;
+  /* width: 100%;
+  height: 45px; */
   /* border: 1px solid green; */
+  max-width: 66%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-title > img {
-  width: 36px;
+  width: 30px;
   height: 45px;
 }
 
 .logo-title > .title {
-  height: 21px;
-  font-size: 18px;
+  /* height: 21px; */
+  font-size: 14px;
   font-weight: bold;
   color: rgba(27, 27, 27, 1);
-  margin-left: 1rem;
+  margin-left: 4px;
 }
 
 .logo-title .title + span {
-  font-size: 10px;
+  font-size: 9px;
   position: relative;
   top: 2px;
-  margin-left: 4px;
+  left: 2px;
+  margin-left: 0px;
   color: rgba(139, 139, 139, 1);
   font-weight: 500;
 }
 
 .expandedsidebar-card1 > .newchaticon {
-  margin-top: 1rem;
+  max-width: 180px;
+  /* margin-top: 1rem; */
 }
 
 .expandedsidebar-card1 > .recent {
-  width: 100%;
-  height: 20px;
+  /* width: 100%; */
+  /* height: 20px; */
+  position: relative;
+  left: -63px;
   display: flex;
   margin-top: 0px;
   /* align-items: center; */
@@ -302,26 +307,26 @@
 .recent > span {
   width: 57px;
   height: auto;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: rgba(27, 27, 27, 1);
   margin-left: 1rem;
 }
 
 .expandedsidebar-card1 > .history {
-  width: 100%;
+  /* width: 100%; */
   /* border: 1px solid red; */
   /* margin-top: 1.8rem; */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .expanded-sidebar > .prompt {
   position: absolute;
-  top: 185px;
-  left: 221px;
-  font-size: 25px;
+  top: 163px;
+  left: 217px;
+  font-size: 22px;
   font-weight: 700;
   color: rgba(0, 122, 141, 1);
   /* border: 1px solid red; */
@@ -380,11 +385,11 @@
 }
 
 .history > div {
-  margin-left: 0.8rem;
+  /* margin-left: 0.8rem; */
   height: 16px;
   /* border: 1px solid red; */
   color: #082343;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   /* border: 1px solid green; */
 }
@@ -393,7 +398,7 @@
   margin-top: 0.5rem;
   /* border: 1px solid red; */
   position: relative;
-  left: -5.2rem;
+  left: -57px;
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
@@ -409,13 +414,14 @@
 }
 
 .expandedsidebar-card2 {
-  width: 100%;
-  height: 8%;
+  /* width: 100%;
+  height: 8%; */
   margin-bottom: 1.5rem;
   /* border: 3px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   /* cursor: pointer; */
 }
 
@@ -424,7 +430,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-left: 0.8rem;
+  margin-left: 2rem;
   cursor: pointer;
 }
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown {
@@ -470,7 +476,7 @@
 
 .expandedsidebar-card2 span {
   height: 19px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(139, 139, 139, 1);
 }
