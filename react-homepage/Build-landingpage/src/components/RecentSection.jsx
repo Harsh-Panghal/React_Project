@@ -3,7 +3,7 @@ import historyIcon from '../assets/history-icon.svg';
 function RecentSection() {
   return (
     <div className="recent h-auto opacity-50">
-      {/* <img src={historyIcon} alt="History" className="historyicon" /> */}
+      <img src={historyIcon} alt="History" className="historyicon" />
       <span >Recent</span>
     </div>
   );
