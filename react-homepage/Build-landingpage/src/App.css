@@ -302,6 +302,7 @@
 
 .recent > .historyicon {
   margin-left: 0.8rem;
+  display: none;
 }
 
 .recent > span {
@@ -505,7 +506,7 @@
 
 .main-card {
   width: calc(100% - 105px);
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
   display: flex;
   position: relative;
@@ -520,23 +521,23 @@
   left: 0;
   /* z-index: 1; */
 }
-.main-card .profile-page{
+.main-card .profile-page {
   padding: 1rem 0rem;
 }
-.main-card .profile-page input{
+.main-card .profile-page input {
   padding-left: 25px;
 }
-.main-card > .profile-page input::placeholder{
+.main-card > .profile-page input::placeholder {
   color: rgba(139, 139, 139, 1);
   font-size: 14px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   line-height: 26px;
 }
-.main-card .profile-page select{
+.main-card .profile-page select {
   padding-left: 25px;
 }
-.main-card .profile-page .profile-update-btn{
+.main-card .profile-page .profile-update-btn {
   padding: 20px 141px;
 }
 .main-card > .sub-main-card {
@@ -659,7 +660,7 @@ header img:hover {
   width: 33.33%;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 15px;
-  color:#082343;
+  color: #082343;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -860,15 +861,14 @@ textarea:focus {
 /* Responsive Styles */
 
 /* Blur effect when sidebar2 is open on mobile */
-.main-card>.blurred {
+.main-card > .blurred {
   filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
   transition: filter 0.3s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
-
 }
-.blurred{
+.blurred {
   filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
   transition: filter 0.1s ease, background-color 0.3s ease;
@@ -912,11 +912,11 @@ textarea:focus {
     width: 130px;
     height: 36px;
   }
-  .invite-card>.email-input+p{
+  .invite-card > .email-input + p {
     font-size: 11px;
   }
-  .prompt-dropdown{
-    top: 231px;
+  .prompt-dropdown {
+    top: 239px;
     left: 85%;
   }
   .main-card {
@@ -1063,6 +1063,10 @@ textarea:focus {
     background-color: white;
     width: 77%;
   }
+  .expanded-sidebar .expandedsidebar-card1 {
+    height: auto;
+    align-items: flex-start;
+  }
   .expanded-sidebar .prompt {
     left: 284px;
     top: 211px;
@@ -1072,6 +1076,8 @@ textarea:focus {
   }
   .expanded-sidebar .expandedsidebar-card1 .logo-title {
     justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
   }
   .expanded-sidebar .expandedsidebar-card1 .logo-title .close-icon {
     width: 20px;
@@ -1081,6 +1087,8 @@ textarea:focus {
   }
   .expanded-sidebar .expandedsidebar-card1 .logo-title > img {
     margin-left: 1.5rem;
+    max-width: none;
+    width: 35px;
   }
   .expanded-sidebar .expandedsidebar-card1 .logo-title > .title {
     display: none;
@@ -1089,24 +1097,38 @@ textarea:focus {
     display: none;
   }
   .expanded-sidebar .expandedsidebar-card1 .newchaticon {
-    height: 57px;
     width: 290px;
+    max-width: none;
+    margin-top: 1rem;
+    height: auto;
+    margin-left: 1rem;
   }
   .expanded-sidebar .expandedsidebar-card1 .recent {
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
+    margin-top: 0rem;
+    margin-left: 1.5rem;
+    gap: 0.5rem;
+    position: static;
+    align-items: center;
   }
   .expanded-sidebar .expandedsidebar-card1 .recent .historyicon {
     width: 18px;
     height: 18px;
     margin-left: 1.5rem;
+    /* display: none; */
   }
   .expanded-sidebar .expandedsidebar-card1 .recent .historyicon + span {
-    height: 20px;
-    width: 60px;
+    margin-left: 0rem;
+    font-size: 18px;
+    width: auto;
+    height: auto;
   }
   .expanded-sidebar .expandedsidebar-card1 .history {
     gap: 1.5rem;
     margin-left: 1.5rem;
+  }
+  .expanded-sidebar .expandedsidebar-card1 .history>div {
+     font-size: 14px;
   }
   .expanded-sidebar .expandedsidebar-card1 .more {
     left: -117px;
