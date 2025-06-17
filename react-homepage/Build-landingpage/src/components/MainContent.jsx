@@ -33,24 +33,24 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
           </div>
         </div>
       </div>
-      {/* <div className="profile-page gap-2 absolute top-[10%] left-[1%] bg-white/90 border-1 border-solid border-[#E6E6E6CC]  w-[96%] max-w-[1604px] rounded-[12px] z-2 flex flex-col flex-wrap items-center justify-around">
-        <img src={tokenIcon} alt="token area" className='absolute top-[2%] right-[2%] cursor-pointer max-w-[179px] h-auto' />
+      {/* <div className="profile-page gap-2 absolute top-[10%] left-[5%] bg-white/90 border-1 border-solid border-[#E6E6E6CC]  w-[86%] max-w-[1604px] rounded-[12px] z-2 flex flex-col flex-wrap items-center justify-around">
+        <img src={tokenIcon} alt="token area" className='absolute top-[2%] right-[2%] cursor-pointer max-w-[120px] h-auto' />
         <h2 className="text-[#082343] font-bold">Profile</h2>
-        <img src={picSelectIcon} alt="pic-select-area" className='h-[113px] cursor-pointer' />
-        <div className=' profile-input-area text-[16px] max-w-[88%] h-auto flex gap-4 justify-between flex-wrap' >
-          <div className='name-area max-w-[45%] w-[45%]'>
+        <img src={picSelectIcon} alt="pic-select-area" className='h-[100px] cursor-pointer' />
+        <div className=' profile-input-area text-[16px] max-w-[88%] h-auto flex gap-4 justify-between flex-wrap border-1 border-amber-300' >
+          <div className='name-area w-[40%] max-w-[40%] '>
             <div className='text-[rgba(0, 20, 45, 1)] text-[14px] opacity-50'>Name</div>
             <input type="text" placeholder='Enter your name' value="Alessio" className='w-[100%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
           </div>
-          <div className='email-area w-[45%] max-w-[45%] '>
+          <div className='email-area w-[40%] max-w-[40%] '>
             <div className='text-[rgba(0, 20, 45, 1)] text-[14px] opacity-50'>E-Mail</div>
             <input type="email" placeholder='Enter your E-mail' className='w-[100%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
           </div>
-          <div className='company-area w-[45%] max-w-[45%]'>
+          <div className='company-area w-[40%] max-w-[40%]'>
             <div className='text-[rgba(0, 20, 45, 1)] text-[14px] opacity-50'>Company Name</div>
             <input type="text" placeholder='Enter your name' value="Lorem Ipsum is simpl" className='w-[100%] outline-[#1FA2D0] min-h-[60px] text-[#082343] text-[16px] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
           </div>
-          <div className='w-[45%] max-w-[45%] position-area relative'>
+          <div className='w-[40%] max-w-[40%] position-area relative'>
             <div className='text-[rgba(0, 20, 45, 1)] text-[14px] opacity-50'>Position</div>
             <img src={moreIcon} alt="option-selector" className='absolute left-[92%] top-[45%] w-[24px] h-[24px] cursor-pointer' />
             <select name="position" id="position" className=' cursor-pointer w-[100%] outline-[#1FA2D0] appearance-none min-h-[60px] text-[16px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]'>
@@ -60,14 +60,14 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
               <option value="other">other</option>
             </select>
           </div>
-          <div className='address-area w-[100%] max-w-[100%]'>
+          <div className='address-area w-[100%] max-w-[100%] border-t-1 border-blue-400'>
             <div className='text-[rgba(0, 20, 45, 1)] text-[14px] opacity-50'>Address</div>
             <div className="address-wrapper flex justify-between flex-wrap gap-1">
-              <input type="text" placeholder='Line 1' className='w-[45%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
-              <input type="text" placeholder='Line 2' className='w-[45%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
-              <input type="text" placeholder='City' className='w-[45%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
-              <input type="text" placeholder='ZIP Code' className='w-[45%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
-              <input type="text" placeholder='Country' className='w-[45%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
+              <input type="text" placeholder='Line 1' className='w-[40%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
+              <input type="text" placeholder='Line 2' className='w-[40%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
+              <input type="text" placeholder='City' className='w-[40%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
+              <input type="text" placeholder='ZIP Code' className='w-[40%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
+              <input type="text" placeholder='Country' className='w-[40%] outline-[#1FA2D0] min-h-[60px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[74px]' />
             </div>
           </div>
 

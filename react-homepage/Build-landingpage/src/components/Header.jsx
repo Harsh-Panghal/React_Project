@@ -15,7 +15,7 @@ const Header = ({ onToggleSidebar, onToggleProfileCard }) => (
     <div className="header-card2">
       <img src={bellIcon} alt="Bell" className='bellicon max-w-[20px]' />
       <img src={picIcon} alt="Profile" className='picicon' onClick={onToggleProfileCard} />
-      <span className='username'>Alessio</span>
+      <span className='username text-[#082343]'>Alessio</span>
     </div>
   </header>
 );

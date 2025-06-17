@@ -10,27 +10,30 @@
 
 .delete-chat-acct-card {
   position: absolute;
-  top: 41%;
-  left: 32%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 440px;
-  height: 199px;
+  height: auto;
+  min-height: 168px;
+  gap: 1rem;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
 
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.5rem;
   z-index: 5;
-  border-radius: 20px;
+  border-radius: 6px;
 }
 .delete-chat-acct-card > div {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0rem 0.5rem;
   align-items: center;
 }
 .delete-chat-acct-card > .d-item1 > span {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 
   color: rgba(0, 20, 45, 1);
@@ -43,30 +46,30 @@
 }
 .delete-chat-acct-card > .d-item2 > p {
   color: rgba(145, 158, 171, 1);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
 }
 .delete-chat-acct-card > .d-item3 > button {
   width: 180px;
   height: 44px;
-  border-radius: 31px;
+  border-radius: 6px;
   border: 1px solid rgba(139, 139, 139, 1);
 }
 .delete-chat-acct-card > .d-item3 > .cancel-btn {
   background-color: rgba(255, 255, 255, 1);
   color: rgba(139, 139, 139, 1);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 .delete-chat-acct-card > .d-item3 > .yes-btn {
   background-color: rgba(179, 38, 30, 1);
   color: rgba(255, 255, 255, 1);
   border-color: rgba(179, 38, 30, 1);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 .profile-card {
-  width: 138px;
+  width: 125px;
   height: 101px;
   position: absolute;
   top: 80px;
@@ -77,8 +80,8 @@
 
   /* color: rgba(139, 139, 139, 1); */
   /* border: 1px solid red; */
-  border: 1px solid rgba(230, 230, 230, 1);
-  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
@@ -92,6 +95,7 @@
   /* make sure it’s above */
   /* cursor: pointer; */
   gap: 0.3rem;
+  box-shadow: 0px 2px 4px 0px #00000014;
 }
 .profile-card > div {
   margin-left: 0.5rem;
@@ -100,8 +104,20 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
+  color: #81817c;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.profile-card > div:hover {
+  color: #0e5185;
+}
+.profile-card > .logout:hover {
+  color: #e60000;
+}
+.profile-card > div > img {
+  width: 16px;
+  height: 16px;
 }
 .profile-card > .logout {
   color: rgba(179, 38, 30, 1);
@@ -110,33 +126,38 @@
 .invite-card {
   position: absolute;
   z-index: 5;
-  top: 28%;
-  left: 30%;
   background-color: rgba(255, 255, 255, 1);
   width: 614px;
   border: 2px solid rgba(255, 255, 255, 1);
-  height: 322px;
+  /* height: 322px; */
   border-radius: 20px;
-  padding: 2rem 1.7rem;
+  padding: 1rem 1.5rem;
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 545px;
+  border-radius: 6px;
+  min-height: 246px;
 }
 
 .invite-card > img {
   position: absolute;
   right: 13px;
   top: 13px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   cursor: pointer;
 }
 .invite-card > h2 {
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 500;
   color: rgba(0, 20, 45, 1);
 }
 .invite-card > h2 + p {
-  font-size: 18px;
+  font-size: 14px;
   color: rgba(139, 139, 139, 1);
   font-weight: 400;
 }
@@ -144,18 +165,20 @@
   width: 355px;
   height: 52px;
   border: 1px solid rgba(139, 139, 139, 1);
-  border-radius: 75px;
+  border-radius: 6px;
   padding: 4px;
   margin-top: 10px;
+  max-width: 301px;
 }
 .invite-card > .invite-btn > button {
-  width: 171px;
-  height: 43px;
+  width: 144px;
+  max-width: 144px;
+  min-height: 44px;
   border: none;
   background-color: rgba(255, 255, 255, 1);
-  border-radius: 75px;
-  font-size: 18px;
-  font-weight: 500;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
   color: rgba(139, 139, 139, 1);
 }
 .invite-card > .invite-btn > button:hover {
@@ -166,11 +189,7 @@
   color: rgba(255, 255, 255, 1);
 } */
 .invite-card > .invite-btn > .link {
-  background: linear-gradient(
-    to left,
-    rgba(31, 162, 208, 1),
-    rgba(14, 81, 133, 1)
-  );
+  background-color: #0E5185;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -180,24 +199,26 @@
 }
 .invite-card > span {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(0, 20, 45, 1);
   margin-top: 12px;
 }
 .invite-card > .email-input {
-  width: 556px;
+  /* width: 556px; */
+  max-width: 437px;
   height: 56px;
   padding: 5px;
   border: 1px solid rgba(27, 27, 27, 0.2);
-  border-radius: 75px;
+  border-radius: 6px;
   margin-top: 5px;
 }
 .invite-card > .email-input > input {
-  width: 398px;
+  width: 307px;
+  max-width: 307px;
   height: 46px;
   border: none;
   outline: none;
-  border-radius: 25px;
+  border-radius: 6px;
   margin-left: 1rem;
 }
 .invite-card > .email-input > input::placeholder {
@@ -208,9 +229,10 @@
   line-height: 26px;
 }
 .invite-card > .email-input > .send-btn {
-  width: 130px;
+  width: 102px;
+  max-width: 102px;
   height: 46px;
-  border-radius: 75px;
+  border-radius: 6px;
   border: 1px solid rgba(139, 139, 139, 1);
   background: linear-gradient(
     to left,
@@ -218,12 +240,13 @@
     rgba(14, 81, 133, 1)
   );
   color: rgba(255, 255, 255, 1);
+  font-size: 14px;
 }
 .invite-card > .email-input > .send-btn:hover {
   cursor: pointer;
 }
 .invite-card > .email-input + p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: rgba(139, 139, 139, 1);
 }
@@ -338,9 +361,10 @@
 
 .prompt-dropdown {
   width: 124px;
+  /* max-width: max-content; */
   height: 108px;
   position: absolute;
-  top: 215px;
+  top: 194px;
   left: 214px;
 
   font-size: 14px;
@@ -349,7 +373,7 @@
   /* color: rgba(139, 139, 139, 1); */
   /* border: 1px solid red; */
   border: 1px solid rgba(230, 230, 230, 1);
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
@@ -363,6 +387,7 @@
   /* make sure it’s above */
   /* cursor: pointer; */
   gap: 0.3rem;
+  box-shadow: 0px 2px 4px 0px #00000014;
 }
 .prompt-dropdown > div {
   margin-left: 0.5rem;
@@ -370,17 +395,25 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  color: #81817c;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .prompt-dropdown > div img {
   width: 16px;
   height: 16px;
 }
-
+.prompt-dropdown > div span:hover {
+  color: #0e5185;
+}
+.prompt-dropdown > .delete-prompt > span:hover {
+  color: #e60000;
+}
 .prompt-dropdown > .delete-prompt > span {
   color: rgba(179, 38, 30, 1);
 }
-
 .prompt:hover {
   cursor: pointer;
 }
@@ -437,17 +470,19 @@
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown {
   display: none;
   position: absolute;
-  bottom: 47px;
-  left: 85px;
+  bottom: 38px;
+  left: 110px;
   height: auto;
-  width: 138px;
+  max-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0.5rem;
   gap: 0.5rem;
   background-color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 2px 4px 0px #00000014;
 }
 
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div {
@@ -458,10 +493,13 @@
   cursor: pointer;
 }
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > span {
-  font-size: 14px;
-  font-weight: 500;
-
-  color: rgba(27, 27, 27, 1);
+  color: #81817c;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > span:hover {
+  color: #0e5185;
 }
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > img {
   width: 16px;
@@ -469,6 +507,13 @@
 }
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > .clean > span {
   color: rgba(179, 38, 30, 1);
+}
+.expanded-sidebar
+  > .expandedsidebar-card2
+  > .help-dropdown
+  > .clean
+  > span:hover {
+  color: #e60000;
 }
 .expandedsidebar-card2 img {
   width: 18px;
@@ -627,14 +672,15 @@ header img:hover {
   height: auto;
   font-size: 35px;
   font-weight: 600;
-  background: linear-gradient(
+  color: #0e5185;
+  /* background: linear-gradient(
     to right,
     rgba(31, 162, 208, 1),
     rgba(14, 81, 133, 1)
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   /* background-color: aqua; */
   /* z-index: 1; */
   line-height: 40px;
@@ -660,6 +706,7 @@ header img:hover {
   margin-top: 10px;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-left: 2.5rem;
 }
 
 .card-items > div {
@@ -683,10 +730,11 @@ header img:hover {
 
 .card-items > div:hover {
   cursor: pointer;
-  border: 1px solid rgba(18, 50, 88, 1);
+  /* border: 1px solid rgba(18, 50, 88, 1); */
   /* transform: translate(-3px, -3px); */
   /* box-shadow: 0px 4px 10px rgba(18, 50, 88, 0.1); */
   background-color: rgba(28, 78, 140, 0.1);
+  border: 1px solid rgba(28, 78, 140, 0.2);
 }
 
 .item1 > p {
@@ -792,7 +840,7 @@ textarea:focus {
   width: 106px;
   height: 32px;
   border: 1px solid rgba(230, 230, 230, 1);
-  border-radius: 25px;
+  border-radius: 6px;
   cursor: pointer;
   background-color: transparent;
   padding: 8px 12px;
@@ -809,6 +857,7 @@ textarea:focus {
 
 #model-selector {
   border: none;
+  color: #082343;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -872,14 +921,14 @@ textarea:focus {
 
 /* Blur effect when sidebar2 is open on mobile */
 .main-card > .blurred {
-  filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
-  transition: filter 0.3s ease, background-color 0.3s ease;
-  pointer-events: none; /* optional: prevents clicks on blurred area */
+  /* filter: blur(4px); */
+  /* background-color: rgba(0, 0, 0, 0.2); white with transparency */
+  /* transition: filter 0.3s ease, background-color 0.3s ease; */
+  /* pointer-events: none; optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
 }
 .blurred {
-  filter: blur(4px);
+  /* filter: blur(4px); */
   background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
