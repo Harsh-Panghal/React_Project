@@ -614,12 +614,16 @@ header img:hover {
 
 .content-grid > .content-card {
   width: 786px;
-  height: 432px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
   /* border: 3px solid blue; */
 }
 
 .content-card > h1 {
   width: 465px;
+  max-width: fit-content;
   height: auto;
   font-size: 35px;
   font-weight: 600;
@@ -638,7 +642,8 @@ header img:hover {
 
 .content-card > p {
   width: 252px;
-  height: 20px;
+  max-width: fit-content;
+  height: auto;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -648,16 +653,19 @@ header img:hover {
 
 .content-card > .card-items {
   width: 100%;
-  height: 149px;
+  max-width: fit-content;
+  min-height: 149px;
   display: flex;
   /* border: 1px solid red; */
   margin-top: 10px;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card-items > div {
-  height: 100%;
+  min-height: 100%;
   width: 33.33%;
+  max-width: fit-content;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 15px;
   color: #082343;
@@ -665,9 +673,9 @@ header img:hover {
   font-weight: 500;
   line-height: 20px;
   display: flex;
-
   flex-direction: column;
-
+  flex: 1 1 auto;
+  gap: 2rem;
   justify-content: space-between;
   transition: border 0.1s ease;
   box-shadow: 4px 4px 8px rgba(18, 50, 88, 0.1);
@@ -682,23 +690,23 @@ header img:hover {
 }
 
 .item1 > p {
-  width: 149px;
-  height: 40px;
+  max-width: 149px;
+  height: auto;
 }
 
 .item2 > p {
-  width: 158px;
-  height: 40px;
+  max-width: 158px;
+  height: auto;
 }
 
 .item3 > p {
-  width: 158px;
-  height: 40px;
+  max-width: 158px;
+  height: auto;
 }
 
 .item4 > p {
-  width: 159px;
-  height: 60px;
+  max-width: 159px;
+  height: auto;
 }
 
 .card-items > div > p {
@@ -710,8 +718,8 @@ header img:hover {
 }
 
 .card-items > div > img {
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
+  min-height: 24px;
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
@@ -731,6 +739,8 @@ header img:hover {
 .content-card .textarea-box {
   width: 100%;
   height: 123px;
+  max-width: 980px;
+  min-height: auto;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -957,8 +967,8 @@ textarea:focus {
     font-size: 10px;
     font-weight: 500;
     position: relative;
-    right: 75px;
-    top: 2px;
+    right: 84px;
+    top: 3px;
     color: rgba(139, 139, 139, 1);
   }
   .main-card {
@@ -998,11 +1008,12 @@ textarea:focus {
     margin-top: 1.5rem;
     flex-wrap: wrap;
     width: 331px;
-    height: 131px;
+    min-height: 131px;
     gap: 11px;
   }
   .card-items > div {
-    width: 159px;
+    max-width: 159px;
+    min-height: 152px;
   }
   .card-items .item1 > p {
     width: 137px;
@@ -1021,8 +1032,8 @@ textarea:focus {
     height: 60px;
   }
   .content-grid > .content-card > .textarea-wrapper {
-    position: relative;
-    top: 126px;
+    /* position: relative;
+    top: 126px; */
     width: 331px;
   }
   .textarea-box .box1 .model-selector {
@@ -1127,8 +1138,8 @@ textarea:focus {
     gap: 1.5rem;
     margin-left: 1.5rem;
   }
-  .expanded-sidebar .expandedsidebar-card1 .history>div {
-     font-size: 14px;
+  .expanded-sidebar .expandedsidebar-card1 .history > div {
+    font-size: 14px;
   }
   .expanded-sidebar .expandedsidebar-card1 .more {
     left: -117px;
