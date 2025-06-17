@@ -12,7 +12,7 @@ const PromptCards = () => (
     </div>
     <div className="item2">
       <p>Filter trace logs generated in the last 1 hour.</p>
-      <img src={item2Icon} alt="Add" className='addicon' />
+      <img src={item2Icon} alt="Add" className='addicon w-[20px]' />
     </div>
     <div className="item3">
       <p>Find plugin logs that contain a NullReferenceException.</p>
