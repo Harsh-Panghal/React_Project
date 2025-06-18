@@ -1,7 +1,7 @@
 import profileIcon from '../assets/profile-icon.svg';
 import inviteIcon from '../assets/invite-icon.svg';
 import logoutIcon from '../assets/logout-icon.svg';
-function ProfileCard({onToggleInviteCard, isInviteCardVisible}) {
+function ProfileCard({onToggleInviteCard, isInviteCardVisible, onToggleDeleteChatAccount}) {
     return (
         <div className={`profile-card ${isInviteCardVisible ? 'hidden' : ''} bg-amber-500`}>
             <div className="edit-profile">
@@ -12,7 +12,7 @@ function ProfileCard({onToggleInviteCard, isInviteCardVisible}) {
                 <img src={inviteIcon} alt="edit" />
                 <span>Invite</span>
             </div>
-            <div className="logout">
+            <div className="logout" onClick={onToggleDeleteChatAccount}>
                 <img src={logoutIcon} alt="delete" />
                 <span>Log Out</span>
             </div>
