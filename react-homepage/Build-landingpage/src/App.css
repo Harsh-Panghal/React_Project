@@ -54,6 +54,11 @@
   height: 44px;
   border-radius: 6px;
   border: 1px solid rgba(139, 139, 139, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+.delete-chat-acct-card > .d-item3 > button:hover{
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .delete-chat-acct-card > .d-item3 > .cancel-btn {
   background-color: rgba(255, 255, 255, 1);
@@ -963,8 +968,14 @@ textarea:focus {
   }
   .invite-card {
     width: 375px;
-    left: 6%;
+    left: 50%;
     gap: 0.5rem;
+  }
+  .delete-chat-acct-card{
+    max-width: 352px;
+  }
+  .delete-chat-acct-card .d-item3 button{
+    max-width: 130px;
   }
   .invite-card > h2 {
     font-size: 16px;
@@ -983,11 +994,11 @@ textarea:focus {
     width: 316px;
   }
   .invite-card > .email-input > input {
-    width: 158px;
+    width: 186px;
   }
   .invite-card > .email-input > .send-btn {
     width: 130px;
-    height: 36px;
+    /* height: 36px; */
   }
   .invite-card > .email-input + p {
     font-size: 11px;
@@ -1178,7 +1189,7 @@ textarea:focus {
     width: 290px;
     max-width: none;
     margin-top: 1rem;
-    height: auto;
+    height: 45px;
     margin-left: 1rem;
   }
   .expanded-sidebar .expandedsidebar-card1 .recent {

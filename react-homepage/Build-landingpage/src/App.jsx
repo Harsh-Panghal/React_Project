@@ -36,9 +36,9 @@ function App() {
 
       {isSidebar2Visible ? <Sidebar2 isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} /> : <Sidebar isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
       <MainContent isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} issidebar2Visible={isSidebar2Visible} onToggleSidebar={handleToggleSidebar} onToggleProfileCard={handleToggleProfileCard} />
-      {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
+      {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isProfileCardVisible={isProfileCardVisible}/>}
       {/* convert this to a component */}
-      {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
+      {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} onToggleDeleteChatAccount={handleToggleDeleteChatAccount}/>}
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       {/* <div className="profile-page">
         
