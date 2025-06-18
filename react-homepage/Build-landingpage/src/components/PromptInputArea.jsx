@@ -2,9 +2,9 @@ import React from 'react';
 import submitIcon from '../assets/submit-icon.svg';
 import attachIcon from '../assets/attach-icon.svg';
 
-const PromptInputArea = () => (
+const PromptInputArea = ({ isDeleteChatAccountVisible, isInviteCardVisible}) => (
   <div className="textarea-wrapper">
-    <div className="textarea-box">
+    <div className={`textarea-box ${isDeleteChatAccountVisible || isInviteCardVisible ? 'blurred' : ''}`}>
       <div className="box1">
         <textarea placeholder='Enter Prompt Here'></textarea>
         <div className="model-selector">

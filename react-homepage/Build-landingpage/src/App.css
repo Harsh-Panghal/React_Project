@@ -188,7 +188,7 @@
   background: linear-gradient(to left,rgba(31, 162, 208, 1),rgba(14, 81, 133, 1));
   color: rgba(255, 255, 255, 1);
 } */
-.invite-card > .invite-btn > .link {
+.invite-card > .invite-btn > .active {
   background-color: #0e5185;
   color: rgba(255, 255, 255, 1);
 }
@@ -206,6 +206,7 @@
 .invite-card > .email-input {
   /* width: 556px; */
   max-width: 437px;
+  min-height: 44px;
   height: 56px;
   padding: 5px;
   border: 1px solid rgba(27, 27, 27, 0.2);
@@ -215,6 +216,7 @@
 .invite-card > .email-input > input {
   width: 307px;
   max-width: 307px;
+  min-height: 44px;
   height: 46px;
   border: none;
   outline: none;
@@ -232,13 +234,10 @@
   width: 102px;
   max-width: 102px;
   height: 46px;
+  padding: 13px 18px;
   border-radius: 6px;
   border: 1px solid rgba(139, 139, 139, 1);
-  background: linear-gradient(
-    to left,
-    rgba(31, 162, 208, 1),
-    rgba(14, 81, 133, 1)
-  );
+  background-color: rgba(14, 81, 133, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 14px;
 }
@@ -308,7 +307,13 @@
 
 .expandedsidebar-card1 > .newchaticon {
   max-width: 180px;
+  padding: 8px 15px;
   /* margin-top: 1rem; */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+.expandedsidebar-card1>.newchaticon:hover{
+  background-color: rgba(28, 78, 140, 0.1);
+  transform: scale(1.05);
 }
 
 .expandedsidebar-card1 > .recent {
@@ -468,7 +473,7 @@
   cursor: pointer;
 }
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown {
-  display: none;
+  /* display: none; */
   position: absolute;
   bottom: 38px;
   left: 110px;
@@ -483,6 +488,9 @@
   border-radius: 6px;
   border: 1px solid #e6e6e6;
   box-shadow: 0px 2px 4px 0px #00000014;
+}
+.expanded-sidebar > .expandedsidebar-card2 > .hidden{
+  display: none;
 }
 
 .expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div {
@@ -795,7 +803,14 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
+.content-card .textarea-wrapper .blurred{
+  /* filter: blur(4px); */
+  background-color:hwb(0 100% 0% / 0.915); /* white with transparency */
+  transition: filter 0.1s ease, background-color 0.3s ease;
+  pointer-events: none; /* optional: prevents clicks on blurred area */
+  /* border-radius: 12px; optional: softer look */
 
+}
 .textarea-box .box1 {
   width: 100%;
   height: 60%;
@@ -921,18 +936,21 @@ textarea:focus {
 
 /* Blur effect when sidebar2 is open on mobile */
 .main-card > .blurred {
-  /* filter: blur(4px); */
-  /* background-color: rgba(0, 0, 0, 0.2); white with transparency */
-  /* transition: filter 0.3s ease, background-color 0.3s ease; */
+  filter: blur(4px); 
+  background-color: rgba(28, 28, 28, 0.2); /* white with transparency */
+  transition: filter 0.2s ease, background-color 0.3s ease;
   /* pointer-events: none; optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
 }
 .blurred {
   /* filter: blur(4px); */
-  background-color: rgba(0, 0, 0, 0.2); /* white with transparency */
+  background-color: rgba(28, 78, 140, 0.1); /* white with transparency */
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
+}
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 428px) {

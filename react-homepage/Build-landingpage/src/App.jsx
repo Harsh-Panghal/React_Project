@@ -40,9 +40,9 @@ function App() {
       {/* convert this to a component */}
       {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
-      <div className="profile-page">
+      {/* <div className="profile-page">
         
-      </div>
+      </div> */}
 
 
     </>

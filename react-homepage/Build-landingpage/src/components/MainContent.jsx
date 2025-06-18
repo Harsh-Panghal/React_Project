@@ -29,7 +29,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
             <h1>Hello, Adam Siegel! <br />What would you like to make?</h1>
             <p>Use one of the most common prompts below</p>
             <PromptCards />
-            <PromptInputArea />
+            <PromptInputArea isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible}/>
           </div>
         </div>
       </div>

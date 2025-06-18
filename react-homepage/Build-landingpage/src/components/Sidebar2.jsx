@@ -20,7 +20,7 @@ function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisi
       <PromptMenu  />
       <div className="expandedsidebar-card1 h-auto gap-[1rem]">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>
-        <NewChatButton />
+        <NewChatButton isInviteCardVisible={isInviteCardVisible} isDeleteChatAccountVisible={isDeleteChatAccountVisible}/>
         <RecentSection />
         <HistoryList />
         <MoreSection />
@@ -28,7 +28,7 @@ function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisi
       <div className="expandedsidebar-card2">
         <SidebarBottom onToggleHelpCard={handleToggleHelpCard} />
 
-        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} />}
+        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible}/>}
 
       </div>
     </div>
