@@ -3,7 +3,7 @@ import inviteIcon from '../assets/invite-icon.svg';
 import logoutIcon from '../assets/logout-icon.svg';
 function ProfileCard({onToggleInviteCard, isInviteCardVisible}) {
     return (
-        <div className={`profile-card ${isInviteCardVisible ? 'blurred' : ''}`}>
+        <div className={`profile-card ${isInviteCardVisible ? 'hidden' : ''} bg-amber-500`}>
             <div className="edit-profile">
                 <img src={profileIcon} alt="share" />
                 <span>Edit profile</span>
