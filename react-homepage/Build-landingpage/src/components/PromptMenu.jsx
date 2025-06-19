@@ -23,7 +23,7 @@ function PromptMenu() {
             <span>Edit Prompt</span>
           </div>
           <div className="delete-prompt">
-            <img src={deleteIcon} alt="delete" />
+            <img src={deleteIcon} alt="delete"className='deleteicon' />
             <span>Delete</span>
           </div></div>
       }
