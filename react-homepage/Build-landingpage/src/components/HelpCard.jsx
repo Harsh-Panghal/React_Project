@@ -18,7 +18,7 @@ function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible}) {
                 <span>Terms of Use</span>
             </div>
             <div className='clean' onClick={onToggleDeleteChatAccount}>
-                <img src={cleanIcon} alt="cleanicon" />
+                <img src={cleanIcon} alt="cleanicon" className='cleanicon'/>
                 <span>Clean Chat</span>
             </div>
         </div>
