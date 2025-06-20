@@ -66,8 +66,7 @@
 }
 
 .signIn-card h2 {
-  width: 265px;
-  height: 45px;
+  max-width: fit-content;
   position: absolute;
   top: 222px;
   font-family: Roboto;
@@ -80,15 +79,19 @@
 }
 
 .signIn-card .signIn-description {
-  width: 296px;
-  height: 21px;
+  max-width: 398px;
   position: absolute;
   top: 278px;
   opacity: 0.5;
   font-size: 18px;
   font-weight: 400;
 }
-
+.signIn-card .codeInput-card {
+  margin-top: 5rem;
+}
+.signIn-card> button{
+  margin-top: 1rem;
+}
 .signIn-card .signIn-form {
   position: absolute;
   width: 400px;

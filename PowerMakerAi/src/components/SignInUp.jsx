@@ -1,8 +1,9 @@
 import { useState } from 'react';
-// import '../SignInUp.css';
+import '../SignInUp.css';
 import bottomImg from '../assets/bottom-img.svg';
 import SignIn from './SignIn.jsx';
 import SignUp from './SignUp.jsx';
+import Verify from './Verify.jsx';
 function SignInUp() {
     const [isSignIn, setIsSignIn] = useState(true);
 
@@ -17,11 +18,12 @@ function SignInUp() {
                 <img src={bottomImg} alt="wave image" className='bottom-img' />
             </div>
 
-            {isSignIn ? (
+            {/* {isSignIn ? (
                 <SignIn switchToSignUp={switchToSignUp} />
             ) : (
                 <SignUp switchToSignIn={switchToSignIn} />
-            )}
+            )} */}
+            <Verify />
         </>
     );
 }
