@@ -39,18 +39,18 @@ function App() {
 
     {/* ---------------------------------------landing Page component-------------------------------- */}
 
-      {isSidebar2Visible ? <Sidebar2 isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} /> : <Sidebar isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
+      {/* {isSidebar2Visible ? <Sidebar2 isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleSidebar={handleToggleSidebar} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} /> : <Sidebar isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} />}
       <MainContent isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} issidebar2Visible={isSidebar2Visible} onToggleSidebar={handleToggleSidebar} onToggleProfileCard={handleToggleProfileCard} />
       {isDeleteChatAccountVisible && <DeleteChatAccount onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isProfileCardVisible={isProfileCardVisible} />}
 
 
       {isProfileCardVisible && <ProfileCard isInviteCardVisible={isInviteCardVisible} onToggleInviteCard={handleToggleInviteCard} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
-      
+       */}
 
 
       {/* ----------------------------SignInUp component--------------------------------------------------------------------- */}
-      {/* <SignInUp /> */}
+      <SignInUp />
 
     </>
   );
