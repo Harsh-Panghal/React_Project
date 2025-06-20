@@ -71,7 +71,7 @@
   top: 222px;
   font-family: Roboto;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -83,7 +83,7 @@
   position: absolute;
   top: 278px;
   opacity: 0.5;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
 }
 .signIn-card .codeInput-card {
@@ -91,6 +91,10 @@
 }
 .signIn-card> button{
   margin-top: 1rem;
+}
+.signIn-card button:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 8px rgba(31, 162, 208, 0.4);
 }
 .signIn-card .signIn-form {
   position: absolute;
