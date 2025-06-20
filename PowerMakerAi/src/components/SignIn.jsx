@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg';
 import googleLogo from '../assets/g1.svg';
 import PasswordInput from '../components/PasswordInput.jsx'; // Adjusted casing to match folder name
 
-function SignIn({ switchToSignUp }) {
+function SignIn({ switchToSignUp, switchToVerify }) {
   return (
     <div className="signIn-card">
       <img src={logo} alt="Logo" className="logo" />
@@ -13,7 +13,7 @@ function SignIn({ switchToSignUp }) {
         <input type="email" placeholder=" Enter Email" required />
         <PasswordInput placeholder=" Enter Password" />
 
-        <button type="submit" className="signIn-button">Sign In</button>
+        <button type="submit" className="signIn-button" onClick={switchToVerify}>Sign In</button>
         <p className="forgot-password">Forgot Password?</p>
       </form>
       <div className="lines-or-card">

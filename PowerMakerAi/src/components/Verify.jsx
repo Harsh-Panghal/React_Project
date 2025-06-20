@@ -1,5 +1,7 @@
 import logo from '../assets/logo.svg';
+
 function Verify() {
+    
     return (
         <div className="signIn-card">
             <img src={logo} alt="Logo" className="logo" />
