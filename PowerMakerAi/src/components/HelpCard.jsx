@@ -2,10 +2,10 @@ import feedbackIcon from '../assets/feedback-icon.svg';
 import privacyIcon from '../assets/privacy-icon.svg';
 import termIcon from '../assets/terms-icon.svg';
 import cleanIcon from '../assets/clean-icon.svg';
-function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible}) {
+function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard }) {
     return (
         <div className={`help-dropdown ${isDeleteChatAccountVisible ? 'hidden' : ''}`}>
-            <div className='feedback'>
+            <div className='feedback' onClick={onToggleFeedbackCard}>
                 <img src={feedbackIcon} alt="Feedback" />
                 <span>Feedback</span>
             </div>
