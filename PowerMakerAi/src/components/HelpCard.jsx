@@ -4,9 +4,9 @@ import termIcon from '../assets/terms-icon.svg';
 import cleanIcon from '../assets/clean-icon.svg';
 import crmIcon from '../assets/crm-icon.svg'; 
 
-function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible }) {
+function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible }) {
     return (
-        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible ? 'hidden' : ''}`}>
+        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''}`}>
             <div className='feedback' onClick={onToggleFeedbackCard}>
                 <img src={feedbackIcon} alt="Feedback" />
                 <span>Feedback</span>

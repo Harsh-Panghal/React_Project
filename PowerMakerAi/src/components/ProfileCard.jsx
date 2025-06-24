@@ -2,9 +2,9 @@ import profileIcon from '../assets/profile-icon.svg';
 import inviteIcon from '../assets/invite-icon.svg';
 import logoutIcon from '../assets/logout-icon.svg';
 
-function ProfileCard({onToggleInviteCard, isInviteCardVisible, onToggleDeleteChatAccount, onToggleProfilePage, isProfilePageVisible}) {
+function ProfileCard({onToggleInviteCard, isInviteCardVisible, onToggleDeleteChatAccount, onToggleProfilePage, isProfilePageVisible, isDeleteChatAccountVisible}) {
     return (
-        <div className={`profile-card ${isInviteCardVisible || isProfilePageVisible ? 'hidden' : ''}`}>
+        <div className={`profile-card ${isInviteCardVisible || isProfilePageVisible || isDeleteChatAccountVisible ? 'hidden' : ''}`}>
             <div className="edit-profile" onClick={onToggleProfilePage}>
                 <img src={profileIcon} alt="share" />
                 <span>Edit profile</span>
