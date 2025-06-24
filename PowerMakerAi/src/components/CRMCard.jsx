@@ -2,8 +2,9 @@ import linkIcon from '../assets/link-icon.svg';
 import eyeIcon from '../assets/eye-icon.svg';
 import eyeSlashIcon from '../assets/eye-icon-slash.svg';
 import React, { useState } from 'react';
+import crossIcon from '../assets/cross-icon.svg';
 
-function CRMCard() {
+function CRMCard({onToggleCrmCard}) {
     const [connectionName, setConnectionName] = useState('');
     const isFilledConnectionName = connectionName !== '';
     const [tenantId, setTenantId] = useState('');
@@ -26,6 +27,7 @@ function CRMCard() {
     return (
         <>
             <div className="CRM-popup md:max-w-[474px] md:w-[474px] md:min-h-[660px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-2 border-[#E6E6E6] shadow-md rounded-md  bg-[#FFFFFF] flex flex-col gap-4 !px-4 !py-5 font-[Roboto]">
+                <img src={crossIcon} alt="corss-icon" className="absolute top-[10px] right-[10px] cursor-pointer w-[12px] h-[12px]" onClick={onToggleCrmCard} />
                 <h2 className="text-[18px] text-[#082343] font-[600]">Crm Connection Detail</h2>
                 <div className="connection-info md:max-w-[431px] md:min-h-[113px] border-1 border-[#E6E6E6] rounded-md bg-[#F4F4F4] flex flex-col gap-2 !px-2 !py-1 relative">
                     <p className="text-[#0E5185] text-[12px] font-[500]">Currently Active</p>

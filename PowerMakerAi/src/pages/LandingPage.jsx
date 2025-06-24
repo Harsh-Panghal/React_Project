@@ -30,13 +30,19 @@ function LandingPage() {
   const handleToggleFeedbackCard = () => setIsFeedbackCardVisible(prev => !prev);
   const handleToggleProfilePage = () => setIsProfilePageVisible(prev => !prev);
 
-  
+
 
 
 
   return (
     <>
-      {isSidebar2Visible ? (
+      {isProfilePageVisible ? (
+        <Sidebar
+          isDeleteChatAccountVisible={isDeleteChatAccountVisible}
+          isInviteCardVisible={isInviteCardVisible}
+          onToggleInviteCard={handleToggleInviteCard}
+        />
+      ) : isSidebar2Visible ? (
         <Sidebar2
           isDeleteChatAccountVisible={isDeleteChatAccountVisible}
           isInviteCardVisible={isInviteCardVisible}
@@ -44,6 +50,7 @@ function LandingPage() {
           onToggleDeleteChatAccount={handleToggleDeleteChatAccount}
           onToggleFeedbackCard={handleToggleFeedbackCard}
           onToggleCrmCard={handleToggleCrmCard}
+          isCrmCardVisible={isCrmCardVisible}
         />
       ) : (
         <Sidebar
@@ -52,6 +59,7 @@ function LandingPage() {
           onToggleInviteCard={handleToggleInviteCard}
         />
       )}
+
 
       <MainContent
         isDeleteChatAccountVisible={isDeleteChatAccountVisible}
@@ -81,9 +89,9 @@ function LandingPage() {
 
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       {isFeedbackCardVisible && <FeedbackCard />}
-      {isProfilePageVisible && <ProfilePage />}
-      {isCrmCardVisible && <CRMCard />}
-      
+      {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} />}
+      {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard}/>}
+
 
     </>
   );
