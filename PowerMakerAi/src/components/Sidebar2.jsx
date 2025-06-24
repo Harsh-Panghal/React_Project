@@ -9,7 +9,7 @@ import PromptMenu from './PromptMenu';
 import HelpCard from './HelpCard';
 
 
-function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard }) {
+function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard }) {
   const [ishelpCardVisible, setIsHelpCardVisible] = useState(false);
   const handleToggleHelpCard = () => {
 
@@ -28,7 +28,7 @@ function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisi
       <div className="expandedsidebar-card2">
         <SidebarBottom onToggleHelpCard={handleToggleHelpCard} />
 
-        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={onToggleFeedbackCard}/>}
+        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={onToggleFeedbackCard} onToggleCrmCard={onToggleCrmCard}/>}
 
       </div>
     </div>

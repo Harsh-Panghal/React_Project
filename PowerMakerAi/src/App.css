@@ -515,7 +515,8 @@
   bottom: 38px;
   left: 110px;
   height: auto;
-  max-width: fit-content;
+  z-index: 2;
+  max-width: 189px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
