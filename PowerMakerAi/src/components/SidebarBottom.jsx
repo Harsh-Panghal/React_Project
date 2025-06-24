@@ -5,6 +5,7 @@ import activityIcon from '../assets/activity-icon.svg';
 function SidebarBottom({ onToggleHelpCard }) {
   return (
     <>
+    <div className="border-[1px] border-[#E6E6E6] w-[189px] !ml-[25px] opacity-60"></div>
     <div className="bottom3">
       <img src={activityIcon} alt="acticon" />
       <span>Activity</span>
