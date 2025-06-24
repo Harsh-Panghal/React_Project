@@ -4,7 +4,7 @@ import tokenIcon from '../assets/token-icon.svg';
 import logo from '../assets/logo.svg';
 import React, { useState } from 'react';
 
-function ProfilePage() {
+function ProfilePage({onToggleProfilePage}) {
     const [name, setName] = useState('');
     const isFilled = name !== '';
     const [email, setEmail] = useState('');
@@ -124,10 +124,10 @@ function ProfilePage() {
                     <div className=' max-w-[400px] position-area relative'>
                         <div className='text-[rgba(0, 20, 45, 1)] text-[14px] absolute top-[-0.7rem] bg-[#F3FAFD]   left-6'>Position</div>
                         <img src={moreIcon} alt="option-selector" className='absolute left-[92%] top-[45%] w-[24px] h-[24px] cursor-pointer' />
-                        <select name="position" id="position" className=' cursor-pointer w-[400px] focus:outline-none appearance-none min-h-[56px] text-[16px] text-[#082343] border-1 border-solid border-[#08234333] pl-6 rounded-[6px]'>
-                            <option value="position-1">Position 1</option>
-                            <option value="position-2">Position 2</option>
-                            <option value="position-3">Position 3</option>
+                        <select name="position" id="position" className=' cursor-pointer w-[400px] focus:outline-none appearance-none min-h-[56px] text-[16px] text-[#082343] border-1 border-solid border-[#08234333] !pl-6 rounded-[6px]'>
+                            <option value="position-1">CEO</option>
+                            <option value="position-2">CTO</option>
+                            <option value="position-3" selected>Manager</option>
                             <option value="other">other</option>
                         </select>
                     </div>
@@ -238,7 +238,7 @@ function ProfilePage() {
                     </div>
 
                 </div>
-                <button className='profile-update-btn  !mt-6 cursor-pointer bg-[#0E5185] text-[#FFFFFF] max-w-[400px] rounded-[6px] hover:bg-[#1FA2D0] transition ease-in-out hover:scale-[1.01] duration-300 !px-[141px] !py-[14px]'>Update</button>
+                <button className='profile-update-btn  !mt-6 cursor-pointer bg-[#0E5185] text-[#FFFFFF] max-w-[400px] rounded-[6px] hover:bg-[#1FA2D0] transition ease-in-out hover:scale-[1.01] duration-300 !px-[141px] !py-[14px]' onClick={onToggleProfilePage}>Update</button>
                 <span className='text-[16px] font-[500] text-[#B3261E] cursor-pointer relative inline-block group'>Delete Account
                     <span class="absolute left-0 w-0 bottom-0 h-[2px] bg-[#B3261E] transition-all duration-300 group-hover:w-full"></span>
                 </span>
