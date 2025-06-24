@@ -3,7 +3,8 @@ import uploadIcon from '../assets/upload-icon.svg';
 import { useEffect } from 'react';
 import { FaStar } from "react-icons/fa";
 import React, { useState } from 'react';
-function FeedbackCard() {
+import crossIcon from '../assets/cross-icon.svg';
+function FeedbackCard({onToggleFeedbackCard}) {
     const [preview, setPreview] = useState(null);
     const [selectedStar, setSelectedStar] = useState(0);   // Stores selected rating
     const [hoveredStar, setHoveredStar] = useState(null);  // Stores hover state
@@ -27,6 +28,7 @@ function FeedbackCard() {
 
     return (
         <div className="feedback-card max-w-[423px] w-[423px] min-h-[594px] bg-[#FFFFFF] rounded-xl absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-[1px] border-[#E6E6E6] shadow-md !px-4 !py-6 flex flex-col  gap-2">
+            <img src={crossIcon} alt="cross-icon" className='absolute top-[15px] right-[15px] cursor-pointer w-[12px] h-[12px]' onClick={onToggleFeedbackCard} />
             <h2 className="text-xl font-[700] text-[#082343] tracking-[-4%]">Send Feedback</h2>
             <p className="text-[#81817C] text-[14px] font-[400]">What do you think about us!</p>
             <textarea
@@ -92,7 +94,7 @@ function FeedbackCard() {
                     ))}
                 </div>
             </div>
-            <button className="bg-[#0E5185] !px-[130px] !py-[15px] rounded-md text-[#FFFFFF] text-[14px] font-[700] !mt-2 cursor-pointer hover:scale-[1.01] transition-all ">Submit</button>
+            <button className="bg-[#0E5185] !px-[120px] !py-[14px] rounded-md text-[#FFFFFF] text-[14px] font-[700] !mt-2 cursor-pointer hover:scale-[1.01] transition-all ">Submit</button>
         </div>
     )
 }

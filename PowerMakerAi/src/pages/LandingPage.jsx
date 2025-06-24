@@ -51,6 +51,7 @@ function LandingPage() {
           onToggleFeedbackCard={handleToggleFeedbackCard}
           onToggleCrmCard={handleToggleCrmCard}
           isCrmCardVisible={isCrmCardVisible}
+          isFeedbackCardVisible={isFeedbackCardVisible}
         />
       ) : (
         <Sidebar
@@ -84,11 +85,12 @@ function LandingPage() {
           onToggleDeleteChatAccount={handleToggleDeleteChatAccount}
           onToggleProfilePage={handleToggleProfilePage}
           isProfilePageVisible={isProfilePageVisible}
+          isDeleteChatAccountVisible={isDeleteChatAccountVisible}
         />
       )}
 
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
-      {isFeedbackCardVisible && <FeedbackCard />}
+      {isFeedbackCardVisible && <FeedbackCard onToggleFeedbackCard={handleToggleFeedbackCard} />}
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} />}
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard}/>}
 
