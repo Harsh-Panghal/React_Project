@@ -7,6 +7,7 @@ import InviteCard from '../components/InviteCard.jsx';
 import ProfileCard from '../components/ProfileCard.jsx';
 import '../App.css';
 import FeedbackCard from '../components/FeedbackCard.jsx';
+import ProfilePage from '../components/ProfilePage.jsx';
 
 
 function LandingPage() {
@@ -15,12 +16,14 @@ function LandingPage() {
   const [isInviteCardVisible, setIsInviteCardVisible] = useState(false);
   const [isDeleteChatAccountVisible, setIsDeleteChatAccountVisible] = useState(false);
   const [isFeedbackCardVisible, setIsFeedbackCardVisible] = useState(false);
+  const [isProfilePageVisible, setIsProfilePageVisible] = useState(false);
 
   const handleToggleSidebar = () => setIsSidebar2Visible(prev => !prev);
   const handleToggleProfileCard = () => setIsProfileCardVisible(prev => !prev);
   const handleToggleInviteCard = () => setIsInviteCardVisible(prev => !prev);
   const handleToggleDeleteChatAccount = () => setIsDeleteChatAccountVisible(prev => !prev);
   const handleToggleFeedbackCard = () => setIsFeedbackCardVisible(prev => !prev);
+  const handleToggleProfilePage = () => setIsProfilePageVisible(prev => !prev);
 
   
 
@@ -48,6 +51,7 @@ function LandingPage() {
         issidebar2Visible={isSidebar2Visible}
         onToggleSidebar={handleToggleSidebar}
         onToggleProfileCard={handleToggleProfileCard}
+        isProfilePageVisible={isProfilePageVisible}
       />
 
       {isDeleteChatAccountVisible && (
@@ -62,11 +66,15 @@ function LandingPage() {
           isInviteCardVisible={isInviteCardVisible}
           onToggleInviteCard={handleToggleInviteCard}
           onToggleDeleteChatAccount={handleToggleDeleteChatAccount}
+          onToggleProfilePage={handleToggleProfilePage}
+          isProfilePageVisible={isProfilePageVisible}
         />
       )}
 
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       {isFeedbackCardVisible && <FeedbackCard />}
+      {isProfilePageVisible && <ProfilePage />}
+
     </>
   );
 }
