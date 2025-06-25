@@ -1021,6 +1021,9 @@ textarea:focus {
   .profile-page .token-icon {
     display: none;
   }
+  .profile-page>.profile-page-backLogo{
+    display: none;
+  }
   .help-dropdown {
     /* display: none; */
     width: 100%;
