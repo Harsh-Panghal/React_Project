@@ -6,7 +6,7 @@ import ChatPage from './ChatPage'; // Import the ChatPage>
 
 
 
-const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible }) => {
+const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
@@ -19,7 +19,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
   const shouldBlur = issidebar2Visible && windowWidth <= 428;
 
   return (
-    <div className={`main-card ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''} grow shrink basis-auto`}>
+    <div className={`main-card ${isInviteCardVisible || isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} grow shrink basis-auto`}>
       {/* <img src={mainImg} alt="Main" className='mainimg' /> */}
       <div className={`sub-main-card ${shouldBlur ? 'blurred' : ''}`}>
         <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard} />
