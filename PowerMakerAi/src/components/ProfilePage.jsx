@@ -56,7 +56,7 @@ function ProfilePage({ onToggleProfilePage }) {
                     alt="mobile token area"
                     className="block md:hidden absolute top-[2%] right-[2%] cursor-pointer max-w-[100px] w-[70px]"
                 />
-                <img src={backIcon} alt="backicon" className="md:hidden absolute top-[2%] left-[2%] cursor-pointer w-[20px]" />
+                <img src={backIcon} alt="backicon" className="md:hidden absolute top-[2%] left-[2%] cursor-pointer w-[20px]" onClick={onToggleProfilePage} />
                 <h2 className="text-[#082343] font-bold !mt-[1.2rem]">Profile</h2>
                 <input type="file" id="profile-pic" accept="image/*" className='hidden' onChange={handleImageChange} />
                 <label htmlFor="profile-pic" className=' text-center cursor-pointer'>
