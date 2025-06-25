@@ -7,12 +7,12 @@ import backIcon from '../assets/back-icon.svg';
 
 function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard }) {
     return (
-        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''}`}>
+        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''} ${isDeleteChatAccountVisible? 'blurred' : ''}`}>
             <div className="setting-title relative md:hidden text-center">
                 <img src={backIcon} alt="back" className="absolute top-1.5 left-0 cursor-pointer" onClick={onToggleHelpCard} />
                 <span className="text-[24px] font-[600] text-[#00142D]">Settings</span>
             </div>
-            <div className="setting-option flex flex-col gap-8 md:gap-2">
+            <div className={`setting-option flex flex-col gap-8 md:gap-2 ${ isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''}`}>
                 <div className='feedback' onClick={onToggleFeedbackCard}>
                     <img src={feedbackIcon} alt="Feedback" />
                     <span>Feedback</span>
