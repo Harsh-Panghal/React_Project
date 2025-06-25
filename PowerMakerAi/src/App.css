@@ -7,11 +7,13 @@
   overflow: hidden;
   background-color: rgba(250, 250, 250, 1);
 }
-.profile-page .profile-input-area div> input:focus ~ label,input:not(:placeholder-shown) input:not(:focus) ~ label{
+.profile-page .profile-input-area div > input:focus ~ label,
+input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.7rem;
   font-size: 14px;
 }
-.CRM-popup .connection-add-area div> input:focus ~ label,input:not(:placeholder-shown) input:not(:focus) ~ label{
+.CRM-popup .connection-add-area div > input:focus ~ label,
+input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.6rem;
   font-size: 12px;
 }
@@ -33,7 +35,7 @@
   padding: 0.5rem;
   z-index: 5;
   border-radius: 6px;
-  border: 2px solid #F6F6F6;
+  border: 2px solid #f6f6f6;
   box-shadow: 0 4px 8px #0003;
 }
 .delete-chat-acct-card > div {
@@ -127,11 +129,13 @@
 .profile-card > div:hover {
   color: #0e5185;
 }
-.profile-card > div:hover img{
-  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%) hue-rotate(169deg) brightness(97%) contrast(97%);
+.profile-card > div:hover img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%)
+    hue-rotate(169deg) brightness(97%) contrast(97%);
 }
-.profile-card > div:hover .logouticon{
-  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%) hue-rotate(0deg) brightness(95%) contrast(102%);
+.profile-card > div:hover .logouticon {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%)
+    hue-rotate(0deg) brightness(95%) contrast(102%);
 }
 .profile-card > .logout:hover {
   color: #e60000;
@@ -161,10 +165,9 @@
   max-width: 545px;
   border-radius: 6px;
   min-height: 246px;
-  border: 2px solid #F6F6F6;
+  border: 2px solid #f6f6f6;
   box-shadow: 0 4px 8px #0003;
   transition: all 0.2s ease-in-out;
-  
 }
 
 .invite-card > img {
@@ -343,7 +346,7 @@
   background-color: rgba(28, 78, 140, 0.1);
   transform: scale(1.05);
 }
-.expandedsidebar-card1 .blurred{
+.expandedsidebar-card1 .blurred {
   background-color: #d3cdcdc8;
 }
 
@@ -442,10 +445,12 @@
   height: 16px;
 }
 .prompt-dropdown > div:hover img {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%) hue-rotate(169deg) brightness(97%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%)
+    hue-rotate(169deg) brightness(97%) contrast(97%);
 }
-.prompt-dropdown > div:hover .deleteicon{
-  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%) hue-rotate(0deg) brightness(95%) contrast(102%);
+.prompt-dropdown > div:hover .deleteicon {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%)
+    hue-rotate(0deg) brightness(95%) contrast(102%);
 }
 .prompt-dropdown > div span:hover {
   color: #0e5185;
@@ -509,7 +514,7 @@
   margin-left: 2rem;
   cursor: pointer;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown {
+.help-dropdown {
   /* display: none; */
   position: absolute;
   bottom: 38px;
@@ -531,42 +536,39 @@
   display: none;
 }
 
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div {
+.help-dropdown > .setting-option > div {
   display: flex;
   gap: 10px;
   align-items: center;
   /* justify-content: center; */
   cursor: pointer;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div:hover img{
-  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%) hue-rotate(169deg) brightness(97%) contrast(97%);  
+.help-dropdown > .setting-option > div:hover img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(31%) saturate(1060%)
+    hue-rotate(169deg) brightness(97%) contrast(97%);
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > span {
+.help-dropdown > .setting-option > div > span {
   color: #81817c;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > span:hover {
+.help-dropdown > .setting-option > div > span:hover {
   color: #0e5185;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div > img {
+.help-dropdown > .setting-option > div > img {
   width: 16px;
   height: 16px;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > .clean > span {
+.help-dropdown > .setting-option > .clean > span {
   color: rgba(179, 38, 30, 1);
 }
-.expanded-sidebar
-  > .expandedsidebar-card2
-  > .help-dropdown
-  > .clean
-  > span:hover {
+.help-dropdown > .setting-option > .clean > span:hover {
   color: #e60000;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .help-dropdown > div:hover .cleanicon{
-  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%) hue-rotate(0deg) brightness(95%) contrast(102%);
-
+.help-dropdown > .setting-option > div:hover .cleanicon {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7460%)
+    hue-rotate(0deg) brightness(95%) contrast(102%);
 }
 .expandedsidebar-card2 img {
   width: 18px;
@@ -850,7 +852,7 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
-.content-grid .input-card .textarea-box{
+.content-grid .input-card .textarea-box {
   width: 100%;
   height: 101px;
   max-width: 980px;
@@ -861,14 +863,14 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
-.content-grid  .input-card .textarea-wrapper{
+.content-grid .input-card .textarea-wrapper {
   margin-top: 0px;
   width: 732px;
 }
 
 .content-card .textarea-wrapper .blurred {
   /* filter: blur(4px); */
-  background-color:#ded9d9fd; /* white with transparency */
+  background-color: #ded9d9fd; /* white with transparency */
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
@@ -1016,8 +1018,39 @@ textarea:focus {
 }
 
 @media screen and (max-width: 428px) {
-  .profile-page .token-icon{
+  .profile-page .token-icon {
     display: none;
+  }
+  .help-dropdown {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* height: auto; */
+    z-index: 10;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+    gap: 3rem;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 2px 4px 0px #00000014;
+  }
+  .help-dropdown > .setting-option > div > span {
+    color: #81817c;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .help-dropdown > .setting-option > div > img {
+    width: 35px;
+    height: 35px;
   }
   .sidebar-card {
     display: none;
@@ -1032,7 +1065,8 @@ textarea:focus {
     gap: 0.5rem;
   }
   .delete-chat-acct-card {
-    max-width: 352px;
+    max-width: 370px;
+    z-index: 11;
   }
   .delete-chat-acct-card .d-item3 button {
     max-width: 130px;

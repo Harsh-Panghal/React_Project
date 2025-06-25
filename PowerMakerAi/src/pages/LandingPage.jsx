@@ -9,6 +9,7 @@ import '../App.css';
 import FeedbackCard from '../components/FeedbackCard.jsx';
 import ProfilePage from '../components/ProfilePage.jsx';
 import CRMCard from '../components/CRMCard.jsx';
+import HelpCard from '../components/HelpCard.jsx';
 
 
 
@@ -31,6 +32,12 @@ function LandingPage() {
   const handleToggleProfilePage = () => setIsProfilePageVisible(prev => !prev);
 
 
+  const [ishelpCardVisible, setIsHelpCardVisible] = useState(false);
+  const handleToggleHelpCard = () => {
+
+    setIsHelpCardVisible(prev => !prev);
+  }
+
 
 
 
@@ -52,6 +59,7 @@ function LandingPage() {
           onToggleCrmCard={handleToggleCrmCard}
           isCrmCardVisible={isCrmCardVisible}
           isFeedbackCardVisible={isFeedbackCardVisible}
+          onToggleHelpCard={handleToggleHelpCard}
         />
       ) : (
         <Sidebar
@@ -92,9 +100,9 @@ function LandingPage() {
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       {isFeedbackCardVisible && <FeedbackCard onToggleFeedbackCard={handleToggleFeedbackCard} />}
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} />}
-      {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard}/>}
+      {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
-
+      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard}/>}
     </>
   );
 }

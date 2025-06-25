@@ -9,12 +9,8 @@ import PromptMenu from './PromptMenu';
 import HelpCard from './HelpCard';
 
 
-function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible }) {
-  const [ishelpCardVisible, setIsHelpCardVisible] = useState(false);
-  const handleToggleHelpCard = () => {
-
-    setIsHelpCardVisible(prev => !prev);
-  } 
+function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard }) {
+  
   return (
     <div className={`expanded-sidebar ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
       <PromptMenu  />
@@ -26,10 +22,7 @@ function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisi
         <MoreSection />
       </div>
       <div className="expandedsidebar-card2">
-        <SidebarBottom onToggleHelpCard={handleToggleHelpCard} />
-
-        {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={onToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={onToggleFeedbackCard} onToggleCrmCard={onToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible}/>}
-
+        <SidebarBottom onToggleHelpCard={onToggleHelpCard} />
       </div>
     </div>
   );
