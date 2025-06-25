@@ -77,6 +77,8 @@ function LandingPage() {
         onToggleSidebar={handleToggleSidebar}
         onToggleProfileCard={handleToggleProfileCard}
         isProfilePageVisible={isProfilePageVisible}
+        isFeedbackCardVisible={isFeedbackCardVisible}
+        isCrmCardVisible={isCrmCardVisible}
       />
 
       {isDeleteChatAccountVisible && (

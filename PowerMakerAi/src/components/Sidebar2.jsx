@@ -12,7 +12,7 @@ import HelpCard from './HelpCard';
 function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard }) {
   
   return (
-    <div className={`expanded-sidebar ${isInviteCardVisible || isDeleteChatAccountVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
+    <div className={`expanded-sidebar ${isInviteCardVisible || isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
       <PromptMenu  />
       <div className="expandedsidebar-card1 h-auto gap-[1rem]">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>

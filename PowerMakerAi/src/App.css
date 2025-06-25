@@ -347,7 +347,7 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   transform: scale(1.05);
 }
 .expandedsidebar-card1 .blurred {
-  background-color: #d3cdcdc8;
+  filter: blur(2px);
 }
 
 .expandedsidebar-card1 > .recent {
@@ -870,7 +870,8 @@ header img:hover {
 
 .content-card .textarea-wrapper .blurred {
   /* filter: blur(4px); */
-  background-color: #ded9d9fd; /* white with transparency */
+  /* background-color: #ffffff; white with transparency */
+  filter: blur(2px);
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
@@ -1001,14 +1002,17 @@ textarea:focus {
 /* Blur effect when sidebar2 is open on mobile */
 .main-card > .blurred {
   /* filter: blur(4px); */
-  background-color: #0000004d; /* white with transparency */
+  background-color: #FFFFFF33; /* white with transparency */
+  filter:blur(2px);
   transition: filter 0.2s ease, background-color 0.3s ease;
   /* pointer-events: none; optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
 }
 .blurred {
   /* filter: blur(4px); */
-  background-color: #9e9b9b4d; /* white with transparency */
+  background-color: #FFFFFF33;
+   /* white with transparency */
+   filter: blur(2px);
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
