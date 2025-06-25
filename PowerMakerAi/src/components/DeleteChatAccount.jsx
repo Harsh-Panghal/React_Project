@@ -1,5 +1,5 @@
 import crossIcon from '../assets/cross-icon.svg';
-function DeleteChatAccount({onToggleDeleteChatAccount, isProfileCardVisible}) {
+function DeleteChatAccount({ onToggleDeleteChatAccount, isProfileCardVisible, isProfilePageVisible }) {
     return (
         <div className="delete-chat-acct-card">
             <div className='d-item1'>
@@ -7,7 +7,14 @@ function DeleteChatAccount({onToggleDeleteChatAccount, isProfileCardVisible}) {
                 <img src={crossIcon} alt="" width='24px' height="24px" onClick={onToggleDeleteChatAccount} />
             </div>
             <div className='d-item2'>
-                <p>`{isProfileCardVisible ? 'Are you sure you want to Log Out?' : 'Do you really want to Delete the chat'}`</p>
+                <p>
+                    {isProfileCardVisible && isProfilePageVisible
+                        ? 'Do you really want to Delete your account?'
+                        : isProfileCardVisible
+                            ? 'Are you sure you want to Log Out?'
+                            : 'Do you really want to Delete the chat'}
+                </p>
+
             </div>
             <div className='d-item3'>
                 <button className='cancel-btn'>Cancel</button>

@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import tokenIconMobile from '../assets/token-icon-mobile.svg';
 import backIcon from '../assets/back-icon.svg';
 
-function ProfilePage({ onToggleProfilePage }) {
+function ProfilePage({ onToggleProfilePage, onToggleDeleteChatAccount }) {
     const [name, setName] = useState('');
     const isFilled = name !== '';
     const [email, setEmail] = useState('');
@@ -172,7 +172,7 @@ function ProfilePage({ onToggleProfilePage }) {
                                 value={customPosition}
                                 onChange={(e) => setCustomPosition(e.target.value)}
                                 placeholder="Enter your position"
-                                className="justify-end !ml-auto w-[400px] min-h-[48px] md:min-h-[56px] pt-5 !pl-6 text-[#082343] text-[16px] border border-[#08234333] rounded-[6px] focus:outline-none transition-all"
+                                className="justify-end md:!ml-auto w-[400px] min-h-[48px] md:min-h-[56px] pt-5 !pl-6 text-[#082343] text-[16px] border border-[#08234333] rounded-[6px] focus:outline-none transition-all"
                             />
                         )}
                     <div className='address-area  w-[100%] max-w-[100%]'>
@@ -290,10 +290,10 @@ function ProfilePage({ onToggleProfilePage }) {
 
                 </div>
                 <button className='profile-update-btn  !mt-6 cursor-pointer bg-[#0E5185] text-[#FFFFFF] max-w-[400px] rounded-[6px] hover:bg-[#1FA2D0] transition ease-in-out hover:scale-[1.01] duration-300 !px-[141px] !py-[14px]' onClick={onToggleProfilePage}>Update</button>
-                <span className='text-[16px] font-[500] text-[#B3261E] cursor-pointer relative inline-block group'>Delete Account
+                <span className='text-[16px] font-[500] text-[#B3261E] cursor-pointer relative inline-block group' onClick={onToggleDeleteChatAccount}>Delete Account
                     <span class="absolute left-0 w-0 bottom-0 h-[2px] bg-[#B3261E] transition-all duration-300 group-hover:w-full"></span>
                 </span>
-                <img src={logo} alt="logo" className='absolute top-[2%] left-[36%] w-[25%] opacity-10 blur-[15px] z-[-1]' />
+                <img src={logo} alt="logo" className='profile-page-backLogo absolute md:block top-[2%] left-[36%] md:w-[25%] opacity-10 blur-[15px] z-[-1]' />
             </div>
 
         </>

@@ -83,6 +83,7 @@ function LandingPage() {
         <DeleteChatAccount
           onToggleDeleteChatAccount={handleToggleDeleteChatAccount}
           isProfileCardVisible={isProfileCardVisible}
+          isProfilePageVisible={isProfilePageVisible}
         />
       )}
 
@@ -99,7 +100,7 @@ function LandingPage() {
 
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
       {isFeedbackCardVisible && <FeedbackCard onToggleFeedbackCard={handleToggleFeedbackCard} />}
-      {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} />}
+      {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
       {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard}/>}
