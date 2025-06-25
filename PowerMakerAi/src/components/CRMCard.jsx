@@ -3,8 +3,9 @@ import eyeIcon from '../assets/eye-icon.svg';
 import eyeSlashIcon from '../assets/eye-icon-slash.svg';
 import React, { useState } from 'react';
 import crossIcon from '../assets/cross-icon.svg';
+import crmDeleteIcon from '../assets/crm-delete-icon.svg';
 
-function CRMCard({onToggleCrmCard}) {
+function CRMCard({ onToggleCrmCard }) {
     const [connectionName, setConnectionName] = useState('');
     const isFilledConnectionName = connectionName !== '';
     const [tenantId, setTenantId] = useState('');
@@ -29,12 +30,13 @@ function CRMCard({onToggleCrmCard}) {
             <div className="CRM-popup z-11 md:z-0  max-w-[400px] md:max-w-[474px] md:w-[474px] md:min-h-[660px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-2 border-[#E6E6E6] shadow-md rounded-md  bg-[#FFFFFF] flex flex-col gap-4 !px-4 !py-5 font-[Roboto]">
                 <img src={crossIcon} alt="corss-icon" className="absolute top-[10px] right-[10px] cursor-pointer w-[12px] h-[12px]" onClick={onToggleCrmCard} />
                 <h2 className="text-[18px] text-[#082343] font-[600]">Crm Connection Detail</h2>
-                <div className="connection-info md:max-w-[431px] md:min-h-[113px] border-1 border-[#E6E6E6] rounded-md bg-[#F4F4F4] flex flex-col gap-2 !px-2 !py-1 relative">
+                <p className="md:max-w-[410px] !ml-[10px] md:min-h-[38px] !px-[6px] !py-[5px] bg-[#0E518533] rounded-[3px] text-[#0E5185] text-[12px]
+          font-[600] leading-[100%] text-center capitalize font-[Roboto]"> "Your connection information is protected with industry-standard encryption."</p>
+                <div className="connection-info md:max-w-[431px] md:min-h-[59px] border-1 border-[#E6E6E6] rounded-md bg-[#F4F4F4] flex flex-col gap-2 !px-2 !py-1 relative">
                     <p className="text-[#0E5185] text-[12px] font-[500]">Currently Active</p>
-                    <p className="text-[#082343] text-[16px] font-[500] !mt-[-4px]">SMYL Dev [Del]</p>
-                    <p className="md:max-w-[410px] md:min-h-[38px] !px-[6px] !py-[5px] bg-[#0E518533] rounded-[3px] text-[#0E5185] text-[12px]
-          font-[500] leading-[100%] text-center capitalize font-[Roboto]"> "Your connection information is protected with industry-standard encryption."</p>
-                    <img src={linkIcon} alt="linkIcon" className="absolute top-[15px] right-[10px]" />
+                    <p className="text-[#082343] text-[16px] font-[500] !mt-[-4px]">SMYL Dev</p>
+
+                    <img src={crmDeleteIcon} alt="linkIcon" className="absolute top-[15px] right-[10px] cursor-pointer" />
                 </div>
                 <div className=" md:max-w-[434px] border-1 border-[#E6E6E6]"></div>
                 <div className="connection-add-area  rounded-md md:max-w-[430.45px]  flex flex-col gap-4">
