@@ -850,7 +850,7 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
-.content-grid .textarea-box{
+.content-grid .input-card .textarea-box{
   width: 100%;
   height: 101px;
   max-width: 980px;
@@ -861,7 +861,7 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
-.content-grid .textarea-wrapper{
+.content-grid  .input-card .textarea-wrapper{
   margin-top: 0px;
   width: 732px;
 }
@@ -1016,6 +1016,9 @@ textarea:focus {
 }
 
 @media screen and (max-width: 428px) {
+  .profile-page .token-icon{
+    display: none;
+  }
   .sidebar-card {
     display: none;
   }
