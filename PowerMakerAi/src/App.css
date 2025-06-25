@@ -532,7 +532,10 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   border: 1px solid #e6e6e6;
   box-shadow: 0px 2px 4px 0px #00000014;
 }
-.expanded-sidebar > .expandedsidebar-card2 > .hidden {
+ .hidden {
+  display: none;
+}
+.help-dropdown>.hidden{
   display: none;
 }
 
