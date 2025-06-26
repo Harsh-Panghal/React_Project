@@ -5,13 +5,12 @@ import PromptInputArea from './PromptInputArea';
 import ChatPage from './ChatPage'; // Import the ChatPage>
 import moreIcon from '../assets/more-icon.svg';
 import TraceLogFilterCard from './TraceLogFilterCard';
+import EntityTable from './EntityTable';
 
 
 
 const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -41,7 +40,11 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
 
 
           {/* --------------------------------------Trace log filter Table area---------------- */}
-          <TraceLogFilterCard />
+          {/* <TraceLogFilterCard /> */}
+
+          {/* --------------------------------------Entity Table area---------------- */}
+          <EntityTable />
+
         </div >
       </div >
 

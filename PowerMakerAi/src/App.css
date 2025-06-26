@@ -22,6 +22,11 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.6rem;
   font-size: 12px;
 }
+.content-grid .entity-area .entity-table div > input:focus ~ label,
+input:not(:placeholder-shown) input:not(:focus) ~ label {
+  top: -0.6rem;
+  font-size: 12px;
+}
 .delete-chat-acct-card {
   position: absolute;
   top: 50%;
