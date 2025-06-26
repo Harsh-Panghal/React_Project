@@ -11,6 +11,22 @@ input::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+/* Restore number steppers ONLY for .with-stepper input */
+input.with-stepper::-webkit-inner-spin-button,
+input.with-stepper::-webkit-outer-spin-button {
+  -webkit-appearance: auto;
+  margin: 0;
+}
+
+input.with-stepper {
+  background-color: #F4F4F4;
+  -moz-appearance: number-input;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
 
 *{
     box-sizing: border-box;
