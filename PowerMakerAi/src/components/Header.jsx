@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import threelinesIcon from '../assets/parallel-icon.svg';
-import bellIcon from '../assets/bell-icon.svg';
+
 import picIcon from '../assets/pic-icon.svg';
-import DBConnectivityCard from './DBConnectivityCard';
+import DBConnectivity from './DBConnectivity';
+import NotificationBell from './NotificationBell';
 
 const Header = ({ onToggleSidebar, onToggleProfileCard }) => {
- 
 
   return (
     <header className='gap-4'>
@@ -13,10 +13,10 @@ const Header = ({ onToggleSidebar, onToggleProfileCard }) => {
         <img src={threelinesIcon} alt="Menu" className='threelinesicon max-w-[20px]' onClick={onToggleSidebar} />
         <span className="title">Power Maker AI</span>
         <span className='beta'> (Beta)</span>
-        <DBConnectivityCard />
+        <DBConnectivity />
       </div>
       <div className="header-card2">
-        <img src={bellIcon} alt="Bell" className='bellicon max-w-[20px]' />
+        <NotificationBell />
         <img src={picIcon} alt="Profile" className='picicon' onClick={onToggleProfileCard} />
         <span className='username text-[#082343]'>Alessio</span>
       </div>
