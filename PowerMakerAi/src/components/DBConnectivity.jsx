@@ -1,7 +1,7 @@
 import dbIcon from '../assets/db-icon.svg';
 import refreshIcon from '../assets/refresh-icon.svg';
 import { useState } from 'react';
-function DBConnectivityCard() {
+function DBConnectivity() {
      const [isDBConnected, setIsDBConnected] = useState(true);
       const [isRefreshing, setIsRefreshing] = useState(false);
       const handleRefreshClick = () => {
@@ -41,4 +41,4 @@ function DBConnectivityCard() {
         </div>
     );
 }
-export default DBConnectivityCard;
+export default DBConnectivity;
