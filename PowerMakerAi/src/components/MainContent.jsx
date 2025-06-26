@@ -5,6 +5,7 @@ import PromptInputArea from './PromptInputArea';
 import ChatPage from './ChatPage'; // Import the ChatPage>
 import moreIcon from '../assets/more-icon.svg';
 import plugInIcon from '../assets/plugin-icon.svg';
+import calenderICon from '../assets/calender-icon.svg';
 
 
 
@@ -79,25 +80,31 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
     ${isSeeLessClicked ? 'h-[153px] overflow-hidden gap-y-8' : 'h-[359px]'} 
     bg-[#F4F4F4] shadow-[0px_2px_4px_0px_#00000014] !px-3 !py-3 
     grid grid-cols-[repeat(4,_minmax(100px,_1fr))] `}>
-              <div className="startdate relative w-[160px] h-[38px] ">
+              <div className="startdate relative w-[160px] h-[38px]">
                 <input
                   type="date"
                   id="startdate"
-                  placeholder=" "
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="peer w-full min-h-[38px] md:min-h-[38px] !pl-3 text-[#082343] text-[14px] border border-[#08234333] rounded-[6px] outline-none transition-all"
+                  className="peer w-full min-h-[38px] !pl-3 pr-8 text-[#082343] text-[14px] 
+               border border-[#08234333] rounded-[6px] outline-none bg-[#F4F4F4] 
+               appearance-none"
                 />
                 <label
                   htmlFor="startdate"
-                  className={`
-          absolute left-4 text-[#81817C]  bg-[#F4F4F4] transition-all duration-200 ease-in
-            ${isFilledstartDate ? 'top-[-0.7rem] text-[12px]' : 'top-2 text-[14px]'}
-            peer-focus:top-2 peer-focus:text-[14px]
-        `}
+                  className={`absolute left-4 text-[#81817C] bg-[#F4F4F4] transition-all duration-200 ease-in
+      ${isFilledstartDate ? 'top-[-0.7rem] text-[12px]' : 'top-2 text-[14px]'} 
+      peer-focus:top-2 peer-focus:text-[14px]`}
                 >
                   Start Date
                 </label>
+
+                {/* Custom calendar icon */}
+                <img
+                  src={calenderICon} 
+                  alt="calendar"
+                  className="absolute right-2 top-2.5 w-[16px] h-[16px] pointer-events-none"
+                />
               </div>
               <div className="enddate relative w-[160px] h-[38px]  ">
                 <input
@@ -118,16 +125,28 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
                 >
                   End Date
                 </label>
+                {/* Custom calendar icon */}
+                <img
+                  src={calenderICon} 
+                  alt="calendar"
+                  className="absolute right-2 top-2.5 w-[16px] h-[16px] pointer-events-none"
+                />
               </div>
               <div className="minDurartion relative w-[160px] h-[38px]  ">
                 <input
                   type="number"
                   id="minDurartion"
                   placeholder=" "
+                  step="50"
                   value={minDurartion}
                   onChange={(e) => setMinDuration(e.target.value)}
-                  className="peer w-full min-h-[38px] md:min-h-[38px] !pl-3 text-[#082343] text-[14px] border border-[#08234333] rounded-[6px] outline-none transition-all"
+                  className="with-stepper peer w-full min-h-[38px] md:min-h-[38px] 
+             !pl-3 text-[#082343] text-[14px] bg-[#F4F4F4] 
+             border border-[#08234333] rounded-[6px] 
+             outline-none transition-all"
                 />
+
+
                 <label
                   htmlFor="minDurartion"
                   className={`
@@ -145,8 +164,9 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
                   id="maxDurartion"
                   placeholder=" "
                   value={maxDurartion}
+                  step="50"
                   onChange={(e) => setMaxDuration(e.target.value)}
-                  className="peer w-full min-h-[38px] md:min-h-[38px] !pl-3 text-[#082343] text-[14px] border border-[#08234333] rounded-[6px] outline-none transition-all"
+                  className="peer with-stepper w-full min-h-[38px] md:min-h-[38px] !pl-3 text-[#082343] text-[14px] border border-[#08234333] rounded-[6px] outline-none transition-all"
                 />
                 <label
                   htmlFor="maxDurartion"
@@ -257,7 +277,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
                   className="peer w-full min-h-[38px] md:min-h-[38px] !pl-3 text-[#082343] text-[14px] border border-[#08234333] rounded-[6px] outline-none transition-all"
                 />
                 <label
-                  htmlFor="startdate"
+                  htmlFor="plugin-name"
                   className={`
           absolute left-4 text-[#81817C]  bg-[#F4F4F4] transition-all duration-200 ease-in 
           ${isFilledPluginName ? 'top-[-0.7rem] text-[12px]' : 'top-2 text-[14px]'} 
@@ -393,7 +413,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
                 <span className="absolute left-0 w-0 bottom-0 h-[1px] bg-[#0E5185] transition-all duration-300 group-hover:w-full"></span>
               </div>
             </div>
-            <button className="!mr-auto border-1 border-[#0E5185] rounded-md font-[500] !px-3 !py-1 text-[14px] text-[#0E5185] cursor-pointer">Show Trace Logs</button>
+            <button className="!mr-auto border-1 border-[#0E5185] rounded-md font-[500] !px-3 !py-1 text-[14px] text-[#0E5185] cursor-pointer hover:bg-[#a0c1daca] hover:scale-[1.01] transition-scale ease-in duration-200">Show Trace Logs</button>
 
           </div>
         </div >
