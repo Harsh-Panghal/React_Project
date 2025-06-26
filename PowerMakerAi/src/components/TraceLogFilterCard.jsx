@@ -4,40 +4,40 @@ import calenderICon from '../assets/calender-icon.svg';
 function TraceLogFilterCard() {
 
     const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
-  const isFilledstartDate = startDate !== '';
-  const isFilledendDate = endDate !== '';
-  const [minDurartion, setMinDuration] = useState('');
-  const isFilledMinDuration = minDurartion !== '';
-  const [maxDurartion, setMaxDuration] = useState('');
-  const isFilledMaxDuration = maxDurartion !== '';
-  const [position, setPosition] = useState("operation-3");
-  const [message, setMessage] = useState('');
-  const isFilledMessage = message !== '';
-  const [stage, setStage] = useState('All');
-  const isFilledStage = stage !== '';
-  const [mode, setMode] = useState('');
-  const isFilledMode = mode !== '';
-  const [pluginName, setPluginName] = useState('');
-  const isFilledPluginName = pluginName !== '';
-  const [entityName, setEntityName] = useState('');
-  const isFilledEntityName = entityName !== '';
-  const [correlationId, setCorrelationId] = useState('');
-  const isFilledCorrelationId = correlationId !== '';
-  const [initiatedBy, setInitiatedBy] = useState('');
-  const isFilledInitiatedBy = initiatedBy !== '';
-  const [exception, setException] = useState('');
-  const isFilledException = exception !== '';
-  const [recordCount, setRecordCount] = useState('100');
-  const isFilledRecordCount = recordCount !== '';
+    const [endDate, setEndDate] = useState(null);
+    const isFilledstartDate = startDate !== '';
+    const isFilledendDate = endDate !== '';
+    const [minDurartion, setMinDuration] = useState('');
+    const isFilledMinDuration = minDurartion !== '';
+    const [maxDurartion, setMaxDuration] = useState('');
+    const isFilledMaxDuration = maxDurartion !== '';
+    const [position, setPosition] = useState("operation-3");
+    const [message, setMessage] = useState('');
+    const isFilledMessage = message !== '';
+    const [stage, setStage] = useState('All');
+    const isFilledStage = stage !== '';
+    const [mode, setMode] = useState('');
+    const isFilledMode = mode !== '';
+    const [pluginName, setPluginName] = useState('');
+    const isFilledPluginName = pluginName !== '';
+    const [entityName, setEntityName] = useState('');
+    const isFilledEntityName = entityName !== '';
+    const [correlationId, setCorrelationId] = useState('');
+    const isFilledCorrelationId = correlationId !== '';
+    const [initiatedBy, setInitiatedBy] = useState('');
+    const isFilledInitiatedBy = initiatedBy !== '';
+    const [exception, setException] = useState('');
+    const isFilledException = exception !== '';
+    const [recordCount, setRecordCount] = useState('100');
+    const isFilledRecordCount = recordCount !== '';
 
-  const [isSeeLessClicked, setIsSeeLessClicked] = useState(false);
+    const [isSeeLessClicked, setIsSeeLessClicked] = useState(false);
 
-  const handleSeeLessClick = () => setIsSeeLessClicked(true);
+    const handleSeeLessClick = () => setIsSeeLessClicked(true);
 
 
     return (
-        <div className="trace-log-filter-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 border-1 border-sky-500">
+        <div className="trace-log-filter-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Trace Log Filter:</h2>
             <div className={`trace-log-filter-table relative border-1 border-[#E6E6E6] w-full rounded-md 
     ${isSeeLessClicked ? 'h-[153px] overflow-hidden gap-y-8' : 'h-[359px]'} 
