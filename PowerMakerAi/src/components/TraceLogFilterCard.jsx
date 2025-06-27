@@ -31,9 +31,9 @@ function TraceLogFilterCard() {
     const [recordCount, setRecordCount] = useState('100');
     const isFilledRecordCount = recordCount !== '';
 
-    const [isSeeLessClicked, setIsSeeLessClicked] = useState(false);
+    const [isSeeLessClicked, setIsSeeLessClicked] = useState(true);
 
-    const handleSeeLessClick = () => setIsSeeLessClicked(true);
+    const handleSeeLessClick = () => setIsSeeLessClicked(false);
 
 
     return (

@@ -5,11 +5,13 @@ import NewChatPage from './NewChatPage';
 import ChatPage from './ChatPage'; // Import the ChatPage>
 import moreIcon from '../assets/more-icon.svg';
 import TraceLogFilterCard from './TraceLogFilterCard';
-import EntityTable from './EntityTable';
+// import EntityTable from './EntityTable';
+import ChatPageWithTable from './ChatPageWithTable';
 
 
 
-const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible, isNewChatPageVisible, isChatPageVisible }) => {
+
+const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible, isNewChatPageVisible, isChatPageVisible, isChatPageWithTableVisible }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -27,19 +29,18 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
         <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard} />
         <div className="content-grid">
           {/* ------------------------------------------default Landing page Or new chat page------------------- */}
-          {isNewChatPageVisible && <NewChatPage isProfilePageVisible={isProfilePageVisible} isDeleteChatAccountVisible={isDeleteChatAccountVisible}/>}
-          
+          {isNewChatPageVisible && <NewChatPage isProfilePageVisible={isProfilePageVisible} isDeleteChatAccountVisible={isDeleteChatAccountVisible} />}
+
 
 
           {/*---------------------------------------  Existing-Chat-page --------------------------------- */}
           {isChatPageVisible && <ChatPage />}
 
+          {isChatPageWithTableVisible && <ChatPageWithTable isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} />}
+          
 
           {/* --------------------------------------Trace log filter Table ---------------- */}
           {/* <TraceLogFilterCard /> */}
-
-          {/* --------------------------------------Entity Table ---------------- */}
-          {/* <EntityTable /> */}
 
         </div >
       </div >

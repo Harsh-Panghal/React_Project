@@ -17,7 +17,12 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.6rem;
   font-size: 12px;
 }
-.content-grid .trace-log-filter-area .trace-log-filter-table div > input:focus ~ label,
+.content-grid
+  .trace-log-filter-area
+  .trace-log-filter-table
+  div
+  > input:focus
+  ~ label,
 input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.6rem;
   font-size: 12px;
@@ -541,10 +546,10 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   border: 1px solid #e6e6e6;
   box-shadow: 0px 2px 4px 0px #00000014;
 }
- .hidden {
+.hidden {
   display: none;
 }
-.help-dropdown>.hidden{
+.help-dropdown > .hidden {
   display: none;
 }
 
@@ -875,9 +880,27 @@ header img:hover {
   justify-content: space-between;
   background: white;
 }
+.content-grid .input-card2 .textarea-box {
+  width: 100%;
+  height: 101px;
+  max-width: 980px;
+  min-height: auto;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+}
 .content-grid .input-card .textarea-wrapper {
   margin-top: 0px;
   width: 732px;
+}
+.content-grid .input-card2 .textarea-wrapper {
+  margin-top: 0px;
+  width: 732px;
+  position: fixed;
+  z-index: 15;
+  bottom: 36px;
 }
 
 .content-card .textarea-wrapper .blurred {
@@ -1014,17 +1037,17 @@ textarea:focus {
 /* Blur effect when sidebar2 is open on mobile */
 .main-card > .blurred {
   /* filter: blur(4px); */
-  background-color: #FFFFFF33; /* white with transparency */
-  filter:blur(2px);
+  background-color: #ffffff33; /* white with transparency */
+  filter: blur(2px);
   transition: filter 0.2s ease, background-color 0.3s ease;
   /* pointer-events: none; optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
 }
 .blurred {
   /* filter: blur(4px); */
-  background-color: #FFFFFF33;
-   /* white with transparency */
-   filter: blur(2px);
+  background-color: #ffffff33;
+  /* white with transparency */
+  filter: blur(2px);
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
@@ -1037,7 +1060,7 @@ textarea:focus {
   .profile-page .token-icon {
     display: none;
   }
-  .profile-page>.profile-page-backLogo{
+  .profile-page > .profile-page-backLogo {
     display: none;
   }
   .help-dropdown {
