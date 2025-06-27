@@ -5,12 +5,13 @@ import picIcon from '../assets/pic-icon.svg';
 import logo from '../assets/logo.svg';
 import EntityTable from './EntityTable';
 import AttributeTable from './AttributeTable';
+import RelationshipTable from './RelationshipTable';
 import PromptInputArea from './PromptInputArea';
 
 
 function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible }) {
     return (
-        <div className="input-card2 overflow-auto hide-scrollbar md:max-h-[560px]  !mb-auto relative  !mt-[-30px] md:w-[734px] md:max-w-[734px] flex flex-col gap-4   ">
+        <div className="input-card2 overflow-auto hide-scrollbar md:max-h-[560px]  border border-red-400  !mb-auto relative  !mt-[-30px] md:w-[734px] md:max-w-[734px] flex flex-col gap-4   ">
             <div className="input-text-area flex gap-[5px] !ml-auto">
                 <div className=" md:w-content max-w-[556px] !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md ">
                     <p className="text-[12px] leading-[22px] font-[400] text-[#082343]">Extract all the collected plugin fillter details</p>
@@ -33,6 +34,7 @@ function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible }) 
             {/* ------------------Attribute Table------------------- */}
             <AttributeTable />
             {/* ------------------------Relationship Table---------------- */}
+            <RelationshipTable />
 
             <PromptInputArea isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} />
         </div>
