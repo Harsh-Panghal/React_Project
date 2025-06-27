@@ -14,6 +14,7 @@ function HistoryList({ setIsChatPageVisible, setIsNewChatPageVisible, setIsChatP
           if (index === 1) {
             setIsChatPageWithTableVisible(true);
             setIsChatPageVisible(false);
+            setIsNewChatPageVisible(false);
           } else {
             setIsChatPageVisible(true);
             setIsNewChatPageVisible(false);
