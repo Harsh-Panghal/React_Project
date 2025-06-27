@@ -40,6 +40,7 @@ function LandingPage() {
 
   const [isNewChatPageVisible, setIsNewChatPageVisible] = useState(true);
   const [isChatPageVisible, setIsChatPageVisible] = useState(false);
+  const [isChatPageWithTableVisible, setIsChatPageWithTableVisible] = useState(false);
   
 
 
@@ -66,6 +67,7 @@ function LandingPage() {
           onToggleHelpCard={handleToggleHelpCard}
           setIsNewChatPageVisible={setIsNewChatPageVisible}
           setIsChatPageVisible={setIsChatPageVisible}
+          setIsChatPageWithTableVisible={setIsChatPageWithTableVisible}
         />
       ) : (
         <Sidebar
@@ -87,6 +89,7 @@ function LandingPage() {
         isCrmCardVisible={isCrmCardVisible}
         isNewChatPageVisible={isNewChatPageVisible}
         isChatPageVisible={isChatPageVisible}
+        isChatPageWithTableVisible={isChatPageWithTableVisible}
       />
 
       {isDeleteChatAccountVisible && (

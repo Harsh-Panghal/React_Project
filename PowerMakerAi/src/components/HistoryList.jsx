@@ -1,4 +1,4 @@
-function HistoryList({ setIsChatPageVisible, setIsNewChatPageVisible }) {
+function HistoryList({ setIsChatPageVisible, setIsNewChatPageVisible, setIsChatPageWithTableVisible }) {
   const historyItems = [
     'Watch Purchase Comparison',
     'URL Filtering Issue',
@@ -10,7 +10,16 @@ function HistoryList({ setIsChatPageVisible, setIsNewChatPageVisible }) {
   return (
     <div className="history">
       {historyItems.map((item, index) => (
-        <div key={index} className="history-item cursor-pointer" onClick={() => { setIsChatPageVisible(true); setIsNewChatPageVisible(false); }}>
+        <div key={index} className="history-item cursor-pointer" onClick={() => {
+          if (index === 1) {
+            setIsChatPageWithTableVisible(true);
+            setIsChatPageVisible(false);
+          } else {
+            setIsChatPageVisible(true);
+            setIsNewChatPageVisible(false);
+            setIsChatPageWithTableVisible(false);
+          }
+        }}>
           {item}
         </div>
       ))}
