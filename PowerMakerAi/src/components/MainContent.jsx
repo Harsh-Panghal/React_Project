@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
-import PromptCards from './PromptCards';
 import PromptInputArea from './PromptInputArea';
+import NewChatPage from './NewChatPage';
 import ChatPage from './ChatPage'; // Import the ChatPage>
 import moreIcon from '../assets/more-icon.svg';
 import TraceLogFilterCard from './TraceLogFilterCard';
@@ -9,7 +9,7 @@ import EntityTable from './EntityTable';
 
 
 
-const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible }) => {
+const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible, isNewChatPageVisible, isChatPageVisible }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -26,24 +26,20 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
       <div className={`sub-main-card ${shouldBlur ? 'blurred' : ''}`}>
         <Header onToggleSidebar={onToggleSidebar} onToggleProfileCard={onToggleProfileCard} />
         <div className="content-grid">
-          {/* ------------------------------------------default home page------------------- */}
-          {/* <div className={`content-card ${isProfilePageVisible ? '!hidden' : ''}`}>
-            <h1>Hello, Adam Siegel! <br />What would you like to make?</h1>
-            <p>Use one of the most common prompts below</p>
-            <PromptCards />
-            <PromptInputArea isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} />
-          </div> */}
+          {/* ------------------------------------------default Landing page Or new chat page------------------- */}
+          {isNewChatPageVisible && <NewChatPage isProfilePageVisible={isProfilePageVisible} isDeleteChatAccountVisible={isDeleteChatAccountVisible}/>}
+          
 
 
-          {/*--------------------------------------- text area--------------------------------- */}
-          {/* <ChatPage></ChatPage> */}
+          {/*---------------------------------------  Existing-Chat-page --------------------------------- */}
+          {isChatPageVisible && <ChatPage />}
 
 
-          {/* --------------------------------------Trace log filter Table area---------------- */}
+          {/* --------------------------------------Trace log filter Table ---------------- */}
           {/* <TraceLogFilterCard /> */}
 
-          {/* --------------------------------------Entity Table area---------------- */}
-          <EntityTable />
+          {/* --------------------------------------Entity Table ---------------- */}
+          {/* <EntityTable /> */}
 
         </div >
       </div >
