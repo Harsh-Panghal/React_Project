@@ -1,4 +1,4 @@
-function HistoryList() {
+function HistoryList({ setIsChatPageVisible, setIsNewChatPageVisible }) {
   const historyItems = [
     'Watch Purchase Comparison',
     'URL Filtering Issue',
@@ -10,7 +10,7 @@ function HistoryList() {
   return (
     <div className="history">
       {historyItems.map((item, index) => (
-        <div key={index} className="history-item">
+        <div key={index} className="history-item cursor-pointer" onClick={() => { setIsChatPageVisible(true); setIsNewChatPageVisible(false); }}>
           {item}
         </div>
       ))}
