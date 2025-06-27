@@ -11,7 +11,7 @@ function ChatPage({ isInviteCardVisible, isDeleteChatAccountVisible }) {
     return (
         <div className="input-card !mt-[-30px] md:w-[734px] md:max-w-[734px] flex flex-col gap-4  ">
             <div className="input-text-area flex gap-[5px] !ml-auto">
-                <div className=" md:w-[556px] max-w-[556px] !py-[5px] !px-[16px] bg-[#F4F4F4] rounded-md self-end">
+                <div className=" md:w-content max-w-[556px] !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md self-end">
                     <p className="text-[12px] leading-[22px] font-[400] text-[#082343]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </p>
                 </div>
                 <img src={picIcon} alt="pic-icon" className="cursor-pointer w-[35px] h-[35px]" />
