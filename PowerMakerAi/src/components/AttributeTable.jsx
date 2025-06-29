@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-function AttributeTable() {
+function AttributeTable({ setIsAttributeSideDrawerOpen }) {
+    const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+
     return (
         <div className="attribute-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6  ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Attributes</h2>
@@ -20,7 +22,16 @@ function AttributeTable() {
                         <tr className="bg-white h-[82px]">
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Authentication Type</td>
                             <td className="w-[140px] text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4 break-words whitespace-normal">dev_authentication_type</td>
-                            <td className="text-[14px] font-[400] text-[#0E5185] underline cursor-pointer border border-[#E6E6E6] !px-4">Option Set</td>
+                            <td
+                                className="text-[14px] font-[400] text-[#0E5185] underline cursor-pointer border border-[#E6E6E6] !px-4"
+                                onClick={() => {
+                                    setIsAttributeSideDrawerOpen(true);
+                                    setTimeout(() => setIsDrawerVisible(true), 300);
+                                }}
+                            >
+                                Option Set
+                            </td>
+
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Text</td>
                             <td className="text-[14px] font-[400] text-[#81817C] border border-[#E6E6E6] !px-4">(null)</td>
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Optional</td>
@@ -28,7 +39,15 @@ function AttributeTable() {
                         <tr className="bg-white h-[82px]">
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Authentication Type</td>
                             <td className="w-[140px] text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4 break-words whitespace-normal">dev_authentication_type</td>
-                            <td className="text-[14px] font-[400] text-[#0E5185] underline cursor-pointer border border-[#E6E6E6] !px-4">Option Set</td>
+                            <td
+                                className="text-[14px] font-[400] text-[#0E5185] underline cursor-pointer border border-[#E6E6E6] !px-4"
+                                onClick={() => {
+                                    setIsAttributeSideDrawerOpen(true);
+                                    setTimeout(() => setIsDrawerVisible(true), 300);
+                                }}
+                            >
+                                Option Set
+                            </td>
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Text</td>
                             <td className="text-[14px] font-[400] text-[#81817C] border border-[#E6E6E6] !px-4">(null)</td>
                             <td className="text-[14px] font-[400] text-[#082343] border border-[#E6E6E6] !px-4">Optional</td>
