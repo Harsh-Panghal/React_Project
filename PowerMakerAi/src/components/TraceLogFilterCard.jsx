@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import plugInIcon from '../assets/plugin-icon.svg';
 import calenderICon from '../assets/calender-icon.svg';
-function TraceLogFilterCard() {
+function TraceLogFilterCard({setIsShowTraceClicked}) {
 
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
@@ -40,7 +40,7 @@ function TraceLogFilterCard() {
         <div className="trace-log-filter-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Trace Log Filter:</h2>
             <div className={`trace-log-filter-table relative border-1 border-[#E6E6E6] w-full rounded-md 
-    ${isSeeLessClicked ? 'h-[153px] overflow-hidden gap-y-8' : 'h-[359px]'} 
+    ${isSeeLessClicked ? 'h-[153px] overflow-hidden gap-y-8' : 'min-h-[359px]'} 
     bg-[#F4F4F4] shadow-[0px_2px_4px_0px_#00000014] !px-3 !py-3 
     grid grid-cols-[repeat(4,_minmax(100px,_1fr))] `}>
                 <div className="startdate relative w-[160px] h-[38px]">
@@ -369,14 +369,14 @@ function TraceLogFilterCard() {
                     </label>
                 </div>
                 <div
-                    className="seeLess absolute right-2 bottom-2 text-[#0E5185] text-[12px] cursor-pointer inline-block group"
+                    className="seeLess absolute right-8 bottom-1.5 text-[#0E5185] text-[12px] cursor-pointer inline-block group"
                     onClick={() => setIsSeeLessClicked(!isSeeLessClicked)}
                 >
                     {isSeeLessClicked ? 'See More' : 'See Less'}
                     <span className="absolute left-0 w-0 bottom-0 h-[1px] bg-[#0E5185] transition-all duration-300 group-hover:w-full"></span>
                 </div>
             </div>
-            <button className="!mr-auto border-1 border-[#0E5185] rounded-md font-[500] !px-3 !py-1 text-[14px] text-[#0E5185] cursor-pointer hover:bg-[#a0c1daca] hover:scale-[1.01] transition-scale ease-in duration-100">Show Trace Logs</button>
+            <button className="!mr-auto !mt-[-5px] border-1 border-[#0E5185] rounded-md font-[500] !px-3 !py-1 text-[14px] text-[#0E5185] cursor-pointer hover:bg-[#b5cfe3ca] hover:scale-[1.01] transition-scale ease-in duration-100" onClick={() => setIsShowTraceClicked(prev => !prev)}>Show Trace Logs</button>
 
         </div>
     );
