@@ -7,14 +7,18 @@ import EntityTable from './EntityTable';
 import AttributeTable from './AttributeTable';
 import RelationshipTable from './RelationshipTable';
 import PromptInputArea from './PromptInputArea';
+import TraceLogFilterCard from './TraceLogFilterCard';
+import PluginTraceLogTable from './PluginTraceLogTable';
 
 
 function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, setIsAttributeSideDrawerOpen }) {
     const [isShowPreviewClicked, setIsShowPreviewClicked] = useState(false);
-    const [isEditTextIconClicked, setIsEditTextIconClicked] = useState(false);  
+    const [isEditTextIconClicked, setIsEditTextIconClicked] = useState(false);
+    const [isShowTraceClicked, setIsShowTraceClicked] = useState(false);
+   
 
     return (
-        <div className={`input-card2 overflow-auto hide-scrollbar md:max-h-[560px]  relative  md:w-[734px] md:max-w-[734px] flex flex-col gap-4 ${isShowPreviewClicked ? '!mt-[-30px] !mb-auto' : ''}`}>
+        <div className={`input-card2 overflow-auto hide-scrollbar md:max-h-[550px]  relative  md:w-[734px] md:max-w-[734px] flex flex-col gap-4 !mt-[-30px] !mb-auto`}>
             <div className="input-text-area flex gap-[5px] !ml-auto">
                 <div className=" w-content max-w-[556px] !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md ">
                     <p
@@ -43,6 +47,9 @@ function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, se
             {isShowPreviewClicked && <AttributeTable setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
             {/* ------------------------Relationship Table---------------- */}
             {isShowPreviewClicked && <RelationshipTable />}
+            <TraceLogFilterCard setIsShowTraceClicked={setIsShowTraceClicked}/>
+            {isShowTraceClicked && <PluginTraceLogTable />}
+            
 
             <PromptInputArea isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} />
         </div>

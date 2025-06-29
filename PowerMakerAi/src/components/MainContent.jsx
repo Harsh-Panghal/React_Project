@@ -42,7 +42,8 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
 
           {isChatPageWithTableVisible && <ChatPageWithTable isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
 
-          {/* --------------------------------------Trace log filter Table ---------------- */}
+          {/* --------------------------------------Trace log filter Table Page ---------------- */}
+          
           {/* <TraceLogFilterCard /> */}
           {/* -------------------------------------SideDrawer for Attributes------------------------  */}
           
