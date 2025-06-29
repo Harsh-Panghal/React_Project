@@ -10,6 +10,7 @@ import FeedbackCard from '../components/FeedbackCard.jsx';
 import ProfilePage from '../components/ProfilePage.jsx';
 import CRMCard from '../components/CRMCard.jsx';
 import HelpCard from '../components/HelpCard.jsx';
+import AttributeSideDrawer from '../components/AttributeSideDrawer.jsx';
 
 
 
@@ -21,6 +22,8 @@ function LandingPage() {
   const [isFeedbackCardVisible, setIsFeedbackCardVisible] = useState(false);
   const [isProfilePageVisible, setIsProfilePageVisible] = useState(false);
   const [isCrmCardVisible, setIsCrmCardVisible] = useState(false);
+
+  const [isAttributeSideDrawerOpen, setIsAttributeSideDrawerOpen] = useState(false);
 
   const handleToggleCrmCard = () => setIsCrmCardVisible(prev => !prev);
 
@@ -68,6 +71,7 @@ function LandingPage() {
           setIsNewChatPageVisible={setIsNewChatPageVisible}
           setIsChatPageVisible={setIsChatPageVisible}
           setIsChatPageWithTableVisible={setIsChatPageWithTableVisible}
+          isAttributeSideDrawerOpen={isAttributeSideDrawerOpen}
         />
       ) : (
         <Sidebar
@@ -90,6 +94,8 @@ function LandingPage() {
         isNewChatPageVisible={isNewChatPageVisible}
         isChatPageVisible={isChatPageVisible}
         isChatPageWithTableVisible={isChatPageWithTableVisible}
+        isAttributeSideDrawerOpen={isAttributeSideDrawerOpen}
+        setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen}
       />
 
       {isDeleteChatAccountVisible && (
@@ -117,6 +123,8 @@ function LandingPage() {
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
       {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard}/>}
+
+      {isAttributeSideDrawerOpen && <AttributeSideDrawer setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
     </>
   );
 }

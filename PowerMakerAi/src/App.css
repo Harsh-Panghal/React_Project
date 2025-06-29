@@ -32,6 +32,17 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   top: -0.6rem;
   font-size: 12px;
 }
+.content-grid .attribute-side-drawer .type-card .length-format div > input:focus ~ label,
+input:not(:placeholder-shown) input:not(:focus) ~ label {
+  top: -0.6rem;
+  font-size: 12px;
+}
+.content-grid .attribute-side-drawer .attribute-detail-card  div > input:focus ~ label,
+input:not(:placeholder-shown) input:not(:focus) ~ label {
+  top: -0.6rem;
+  font-size: 12px;
+}
+
 .delete-chat-acct-card {
   position: absolute;
   top: 50%;
@@ -361,7 +372,7 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   transform: scale(1.05);
 }
 .expandedsidebar-card1 .blurred {
-  filter: blur(2px);
+  filter: blur(0px);
 }
 
 .expandedsidebar-card1 > .recent {
@@ -906,7 +917,7 @@ header img:hover {
 .content-card .textarea-wrapper .blurred {
   /* filter: blur(4px); */
   /* background-color: #ffffff; white with transparency */
-  filter: blur(2px);
+  filter: blur(0px);
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
@@ -1047,7 +1058,7 @@ textarea:focus {
   /* filter: blur(4px); */
   background-color: #ffffff33;
   /* white with transparency */
-  filter: blur(2px);
+  filter: blur(0.5px);
   transition: filter 0.1s ease, background-color 0.3s ease;
   pointer-events: none; /* optional: prevents clicks on blurred area */
   /* border-radius: 12px; optional: softer look */
