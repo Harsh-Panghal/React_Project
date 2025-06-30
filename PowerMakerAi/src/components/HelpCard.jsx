@@ -5,7 +5,7 @@ import cleanIcon from '../assets/clean-icon.svg';
 import crmIcon from '../assets/crm-icon.svg';
 import backIcon from '../assets/back-icon.svg';
 
-function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard }) {
+function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIstermCardVisible, onToggleTermCard, onTogglePrivacyCard }) {
     return (
         <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''} ${isDeleteChatAccountVisible? 'blurred' : ''}`}>
             <div className="setting-title relative md:hidden text-center">
@@ -17,11 +17,11 @@ function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onTog
                     <img src={feedbackIcon} alt="Feedback" />
                     <span>Feedback</span>
                 </div>
-                <div className='privacy'>
+                <div className='privacy' onClick={onTogglePrivacyCard}>
                     <img src={privacyIcon} alt="privacy" />
                     <span>Privacy Policy</span>
                 </div>
-                <div className='terms'>
+                <div className='terms' onClick={onToggleTermCard}>
                     <img src={termIcon} alt="Terms" />
                     <span>Terms of Use</span>
                 </div>
