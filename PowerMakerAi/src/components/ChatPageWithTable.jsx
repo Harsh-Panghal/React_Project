@@ -11,7 +11,7 @@ import TraceLogFilterCard from './TraceLogFilterCard';
 import PluginTraceLogTable from './PluginTraceLogTable';
 
 
-function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, setIsAttributeSideDrawerOpen }) {
+function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, setIsAttributeSideDrawerOpen, setIsPluginTraceDrawerOpen }) {
     const [isShowPreviewClicked, setIsShowPreviewClicked] = useState(false);
     const [isEditTextIconClicked, setIsEditTextIconClicked] = useState(false);
     const [isShowTraceClicked, setIsShowTraceClicked] = useState(false);
@@ -48,7 +48,7 @@ function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, se
             {/* ------------------------Relationship Table---------------- */}
             {isShowPreviewClicked && <RelationshipTable />}
             <TraceLogFilterCard setIsShowTraceClicked={setIsShowTraceClicked}/>
-            {isShowTraceClicked && <PluginTraceLogTable />}
+            {isShowTraceClicked && <PluginTraceLogTable setIsPluginTraceDrawerOpen={setIsPluginTraceDrawerOpen} />}
             
 
             <PromptInputArea isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} />
