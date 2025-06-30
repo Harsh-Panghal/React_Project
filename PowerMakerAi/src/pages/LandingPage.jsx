@@ -12,6 +12,8 @@ import CRMCard from '../components/CRMCard.jsx';
 import HelpCard from '../components/HelpCard.jsx';
 import AttributeSideDrawer from '../components/AttributeSideDrawer.jsx';
 import PluginTraceDrawer from '../components/PluginTraceDrawer.jsx';
+import TermsCard from '../components/TermsCard.jsx';
+import PrivacyCard from '../components/PrivacyCard.jsx';
 
 
 
@@ -48,8 +50,12 @@ function LandingPage() {
   const [isChatPageWithTableVisible, setIsChatPageWithTableVisible] = useState(false);
 
   const [isDrawerVisible, setIsDrawerVisible] = useState(true);
+  const [isTermCardVisible, setIsTermCardVisible] = useState(false);
+  const handletermcard = () => setIsTermCardVisible(prev => !prev);
+  const [isPrivacyCardVisible, setIsPrivacyCardVisible] = useState(false);
+  const handleprivacycard = () => setIsPrivacyCardVisible(prev => !prev);
 
-  
+
 
 
 
@@ -130,12 +136,18 @@ function LandingPage() {
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
-      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} />}
+      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} onToggleTermCard={handletermcard} onTogglePrivacyCard={handleprivacycard} />}
+
+      
+      {isTermCardVisible && <TermsCard />}
+      {isPrivacyCardVisible && <PrivacyCard />}
+
+    
 
       {isAttributeSideDrawerOpen && <AttributeSideDrawer setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
       {isPluginTraceDrawerOpen && <PluginTraceDrawer setIsPluginTraceDrawerOpen={setIsPluginTraceDrawerOpen} />}
 
-      
+
     </>
   );
 }
