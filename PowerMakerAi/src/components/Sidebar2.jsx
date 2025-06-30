@@ -9,10 +9,10 @@ import PromptMenu from './PromptMenu';
 import HelpCard from './HelpCard';
 
 
-function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIsNewChatPageVisible, setIsChatPageVisible, setIsChatPageWithTableVisible, isAttributeSideDrawerOpen }) {
+function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIsNewChatPageVisible, setIsChatPageVisible, setIsChatPageWithTableVisible, isAttributeSideDrawerOpen, isPluginTraceDrawerOpen }) {
   
   return (
-    <div className={`expanded-sidebar ${isInviteCardVisible || isAttributeSideDrawerOpen || isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
+    <div className={`expanded-sidebar ${isInviteCardVisible || isAttributeSideDrawerOpen || isPluginTraceDrawerOpen || isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
       <PromptMenu  />
       <div className="expandedsidebar-card1 h-auto gap-[1rem]">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>

@@ -3,7 +3,7 @@ import searchIcon from '../assets/search-icon.svg';
 import traceDownIcon from '../assets/trace-down-icon.svg';
 import crossIcon from '../assets/cross-icon.svg';
 
-function PluginTraceLogTable({ logs }) {
+function PluginTraceLogTable({ setIsPluginTraceDrawerOpen }) {
     const [isFocused, setIsFocused] = useState(false);
     const [searchValue, setSearchValue] = useState('');
 
@@ -101,7 +101,7 @@ function PluginTraceLogTable({ logs }) {
                                                 </td>
                                             ))}
                                             <td className='border border-[#E6E6E6] !px-4'>
-                                                <div className="h-[28px] w-[100px] border border-[#0E5185] rounded-md shadow-[0px_2px_4px_0px_#00000014] text-[14px] font-[400] text-[#0E5185] cursor-pointer text-center !py-0.5">
+                                                <div className="h-[28px] w-[100px] border border-[#0E5185] rounded-md shadow-[0px_2px_4px_0px_#00000014] text-[14px] font-[400] text-[#0E5185] cursor-pointer text-center !py-0.5" onClick={() => setIsPluginTraceDrawerOpen(true)}>
                                                     View Details
                                                 </div>
                                             </td>

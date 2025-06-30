@@ -11,6 +11,7 @@ import ProfilePage from '../components/ProfilePage.jsx';
 import CRMCard from '../components/CRMCard.jsx';
 import HelpCard from '../components/HelpCard.jsx';
 import AttributeSideDrawer from '../components/AttributeSideDrawer.jsx';
+import PluginTraceDrawer from '../components/PluginTraceDrawer.jsx';
 
 
 
@@ -24,6 +25,7 @@ function LandingPage() {
   const [isCrmCardVisible, setIsCrmCardVisible] = useState(false);
 
   const [isAttributeSideDrawerOpen, setIsAttributeSideDrawerOpen] = useState(false);
+  const [isPluginTraceDrawerOpen, setIsPluginTraceDrawerOpen] = useState(false);
 
   const handleToggleCrmCard = () => setIsCrmCardVisible(prev => !prev);
 
@@ -44,6 +46,9 @@ function LandingPage() {
   const [isNewChatPageVisible, setIsNewChatPageVisible] = useState(true);
   const [isChatPageVisible, setIsChatPageVisible] = useState(false);
   const [isChatPageWithTableVisible, setIsChatPageWithTableVisible] = useState(false);
+
+  const [isDrawerVisible, setIsDrawerVisible] = useState(true);
+
   
 
 
@@ -72,6 +77,7 @@ function LandingPage() {
           setIsChatPageVisible={setIsChatPageVisible}
           setIsChatPageWithTableVisible={setIsChatPageWithTableVisible}
           isAttributeSideDrawerOpen={isAttributeSideDrawerOpen}
+          isPluginTraceDrawerOpen={isPluginTraceDrawerOpen}
         />
       ) : (
         <Sidebar
@@ -96,6 +102,8 @@ function LandingPage() {
         isChatPageWithTableVisible={isChatPageWithTableVisible}
         isAttributeSideDrawerOpen={isAttributeSideDrawerOpen}
         setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen}
+        setIsPluginTraceDrawerOpen={setIsPluginTraceDrawerOpen}
+        isPluginTraceDrawerOpen={isPluginTraceDrawerOpen}
       />
 
       {isDeleteChatAccountVisible && (
@@ -122,9 +130,12 @@ function LandingPage() {
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
-      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard}/>}
+      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} />}
 
       {isAttributeSideDrawerOpen && <AttributeSideDrawer setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
+      {isPluginTraceDrawerOpen && <PluginTraceDrawer setIsPluginTraceDrawerOpen={setIsPluginTraceDrawerOpen} />}
+
+      
     </>
   );
 }

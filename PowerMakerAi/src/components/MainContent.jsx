@@ -12,12 +12,9 @@ import ChatPageWithTable from './ChatPageWithTable';
 
 
 
-const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible, isNewChatPageVisible, isChatPageVisible, isChatPageWithTableVisible,setIsAttributeSideDrawerOpen, isAttributeSideDrawerOpen }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, isInviteCardVisible, isDeleteChatAccountVisible, isProfilePageVisible, isFeedbackCardVisible, isCrmCardVisible, isNewChatPageVisible, isChatPageVisible, isChatPageWithTableVisible,setIsAttributeSideDrawerOpen, isAttributeSideDrawerOpen, setIsPluginTraceDrawerOpen,isPluginTraceDrawerOpen }) => {
 
-
-
-  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);  
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -28,7 +25,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
   const shouldBlur = issidebar2Visible && windowWidth <= 428;
 
   return (
-    <div className={`main-card ${isInviteCardVisible || isAttributeSideDrawerOpen ||isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} grow shrink basis-auto`}>
+    <div className={`main-card ${isInviteCardVisible || isAttributeSideDrawerOpen || isPluginTraceDrawerOpen ||isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} grow shrink basis-auto`}>
       
       {/* <img src={mainImg} alt="Main" className='mainimg' /> */}
       <div className={`sub-main-card ${shouldBlur  ? 'blurred' : ''}`}>
@@ -40,7 +37,7 @@ const MainContent = ({ onToggleSidebar, onToggleProfileCard, issidebar2Visible, 
           {/*---------------------------------------  Existing-Chat-page --------------------------------- */}
           {isChatPageVisible && <ChatPage />}
 
-          {isChatPageWithTableVisible && <ChatPageWithTable isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} />}
+          {isChatPageWithTableVisible && <ChatPageWithTable isDeleteChatAccountVisible={isDeleteChatAccountVisible} isInviteCardVisible={isInviteCardVisible} setIsAttributeSideDrawerOpen={setIsAttributeSideDrawerOpen} setIsPluginTraceDrawerOpen={setIsPluginTraceDrawerOpen} />}
 
           {/* --------------------------------------Trace log filter Table Page ---------------- */}
           
