@@ -6,7 +6,7 @@ function NotificationBell() {
     const toggleNotification = () => setHasNotification(!hasNotification);
 
     return (
-        <div className="relative w-fit">
+        <div className="bellicon relative w-fit">
             <img
                 src={bellIcon}
                 alt="Bell"

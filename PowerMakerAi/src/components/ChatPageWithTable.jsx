@@ -18,9 +18,9 @@ function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, se
    
 
     return (
-        <div className={`input-card2 overflow-auto hide-scrollbar md:max-h-[550px]  relative  md:w-[734px] md:max-w-[734px] flex flex-col gap-4 !mt-[-30px] !mb-auto`}>
-            <div className="input-text-area flex gap-[5px] !ml-auto">
-                <div className=" w-content max-w-[556px] !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md ">
+        <div className={`input-card2 overflow-auto hide-scrollbar max-h-[600px] md:max-h-[560px]  relative  md:w-[734px] md:max-w-[734px] max-w-[385px] flex flex-col gap-4 !mt-[-30px] !mb-auto border-b-1 border-sky-500`}>
+            <div className="input-text-area md:max-w-[556px] flex gap-[5px] !ml-auto ">
+                <div className=" w-content !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md ">
                     <p
                         className={`text-[14px] leading-[22px] font-[400] ${isEditTextIconClicked ? 'text-[#81817C]' : 'text-[#082343]'} focus:outline-none`}
                         contentEditable={isEditTextIconClicked}

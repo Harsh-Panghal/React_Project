@@ -857,6 +857,7 @@ header img:hover {
   margin-left: 1rem;
 }
 .textarea-wrapper {
+  width: 732px;
   margin-top: 30px;
   padding: 1px;
   border-radius: 20px;
@@ -1180,7 +1181,7 @@ textarea:focus {
     font-weight: bold;
     font-family: "roboto", sans-serif;
   }
-  .sub-main-card header .header-card1 .dbicon {
+  .sub-main-card header .header-card1 .dbCard {
     height: 24px;
     /* padding: 5px 10px; */
     position: absolute;
@@ -1261,11 +1262,18 @@ textarea:focus {
     top: 126px; */
     width: 331px;
   }
-  .textarea-box .box1 .model-selector {
+  .content-card .textarea-box .box1 .model-selector {
     width: 93px;
     height: 24px;
     position: relative;
     top: 80px;
+    right: 150px;
+  }
+  .input-card .textarea-box .box1 .model-selector {
+    width: 93px;
+    height: 24px;
+    position: relative;
+    top: 63px;
     right: 150px;
   }
   .textarea-box .box2 .attachment-text {

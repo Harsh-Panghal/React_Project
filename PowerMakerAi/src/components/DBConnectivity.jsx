@@ -22,7 +22,7 @@ function DBConnectivity() {
       };
 
     return (
-        <div className={`dbCard  !px-[8px] !py-[4px] ${isDBConnected ? 'bg-[#34C7591A] md:w-[172px] md:max-w-[172px]' : 'bg-[#FF3B3033] md:w-[139px] md:max-w-[139px]'}  rounded-[14px] flex gap-2`}>
+        <div className={`dbCard  hidden md:!flex !px-[8px] !py-[4px] ${isDBConnected ? 'bg-[#34C7591A] md:w-[172px] md:max-w-[172px]' : 'bg-[#FF3B3033] md:w-[139px] md:max-w-[139px]'}  rounded-[14px]  gap-2`}>
             {isDBConnected ? (
                 <img
                     src={dbIcon}
