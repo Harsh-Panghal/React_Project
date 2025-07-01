@@ -3,7 +3,7 @@ import submitIcon from '../assets/submit-icon.svg';
 import attachIcon from '../assets/attach-icon.svg';
 
 const PromptInputArea = ({ isDeleteChatAccountVisible, isInviteCardVisible}) => (
-  <div className="textarea-wrapper">
+  <div className="textarea-wrapper max-w-[331px] md:max-w-none !mx-auto md:!mx-0 !mb-[80px] md:!mb-0">
     <div className={`textarea-box ${isDeleteChatAccountVisible || isInviteCardVisible ? 'blurred' : ''}`}>
       <div className="box1">
         <textarea placeholder='Enter Prompt Here'></textarea>

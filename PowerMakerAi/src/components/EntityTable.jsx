@@ -25,13 +25,15 @@ function EntityTable() {
     };
 
     return (
-        <div className="entity-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
+        <div className="entity-area w-full max-w-full md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Entity Details</h2>
-            <div className={`entity-table relative border-1 border-[#E6E6E6] w-full rounded-md 
-    ${isSeeLessClicked ? 'h-[143px] overflow-hidden' : 'h-auto'} 
+            <div className={`entity-table relative border-1 border-[#E6E6E6] w-full max-w-full rounded-md 
+    ${isSeeLessClicked ? 'md:h-[143px] h-[198px] overflow-hidden' : 'h-auto'} 
     bg-[#F4F4F4] shadow-[0px_2px_4px_0px_#00000014] !px-3 !py-3 
-    grid grid-cols-[repeat(4,_minmax(100px,_1fr))] gap-x-5 gap-y-6`}>
-                <div className="schemaName relative w-[160px] h-[38px] ">
+    grid  gap-x-5 gap-y-6`} style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(162px, 1fr))',
+                }}>
+                <div className="schemaName relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="schemaName"
@@ -51,7 +53,7 @@ function EntityTable() {
                         Schema Name
                     </label>
                 </div>
-                <div className="displayName relative w-[160px] h-[38px] ">
+                <div className="displayName relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="displayName"
@@ -71,7 +73,7 @@ function EntityTable() {
                         Display Name
                     </label>
                 </div>
-                <div className="pluralName relative w-[160px] h-[38px] ">
+                <div className="pluralName relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="pluralName"
@@ -91,7 +93,7 @@ function EntityTable() {
                         Plural Name
                     </label>
                 </div>
-                <div className="PmaAction relative w-[160px] h-[38px] ">
+                <div className="PmaAction relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="pmaAction"
@@ -111,7 +113,7 @@ function EntityTable() {
                         PMA Action
                     </label>
                 </div>
-                <div className="ownership relative w-[160px] h-[38px] ">
+                <div className="ownership relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="ownership"
@@ -131,7 +133,7 @@ function EntityTable() {
                         Ownership
                     </label>
                 </div>
-                <div className="description relative  h-[38px] col-start-2 col-end-5">
+                <div className="description !block  relative w-full h-[38px] md:row-start-2 md:row-end-3 md:col-start-2 md:col-end-5">
                     <input
                         type="text"
                         id="description"
@@ -144,7 +146,7 @@ function EntityTable() {
                         htmlFor="description"
                         className={`
           absolute left-4 text-[#81817C]  bg-[#F4F4F4] transition-all duration-200 ease-in 
-          ${isFilledOwnership ? 'top-[-0.6rem] text-[12px]' : 'top-2 text-[14px]'} 
+          ${isFilledDescription ? 'top-[-0.6rem] text-[12px]' : 'top-2 text-[14px]'} 
           peer-focus:top-2 peer-focus:text-[14px]
         `}
                     >
@@ -152,7 +154,7 @@ function EntityTable() {
                     </label>
                 </div>
                 {/* ----------------------------See Less---------------------------- */}
-                <div className='col-start-1 col-end-5 !mt-[-20px] !ml-[1px]'>
+                <div className='row-start-4 row-end-5 md:row-start-3 md:row-end-4 md:col-start-1 md:col-end-5 !mt-[-25px] md:!mt-[-20px] !ml-[1px]'>
                     <span
                         className="seeLess relative   text-[#0E5185] text-[12px] inline-block cursor-pointer group"
                         onClick={() => setIsSeeLessClicked(!isSeeLessClicked)}
@@ -161,7 +163,7 @@ function EntityTable() {
                         <span className="absolute left-0 w-0 bottom-[2px] h-[1px] bg-[#0E5185] transition-all duration-300 group-hover:w-full"></span>
                     </span>
                 </div>
-                <div className="more-area relative !mt-[-20px] col-start-1 col-end-5 flex flex-col gap-3">
+                <div className="more-area relative !mt-[-20px]  md:col-end-5 col-start-1 col-end-3 flex flex-col gap-3">
                     {[0, 1, 2].map((index) => (
                         <div key={index} className="relative w-full mb-6">
                             {/* Entity Definition Header */}

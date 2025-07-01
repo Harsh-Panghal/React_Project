@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import plugInIcon from '../assets/plugin-icon.svg';
 import calenderICon from '../assets/calender-icon.svg';
-function TraceLogFilterCard({setIsShowTraceClicked}) {
+function TraceLogFilterCard({ setIsShowTraceClicked }) {
 
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
@@ -37,13 +37,22 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
 
 
     return (
-        <div className="trace-log-filter-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
+        <div className="trace-log-filter-area w-full max-w-full md:w-[734px] md:max-w-[734px] flex flex-col gap-6 ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Trace Log Filter:</h2>
-            <div className={`trace-log-filter-table relative border-1 border-[#E6E6E6] w-full rounded-md 
-    ${isSeeLessClicked ? 'h-[153px] overflow-hidden gap-y-8' : 'min-h-[359px]'} 
-    bg-[#F4F4F4] shadow-[0px_2px_4px_0px_#00000014] !px-3 !py-3 
-    grid grid-cols-[repeat(4,_minmax(100px,_1fr))] `}>
-                <div className="startdate relative w-[160px] h-[38px]">
+            <div className={`
+    trace-log-filter-table relative border border-[#E6E6E6]
+    w-full max-w-full
+    rounded-md
+    ${isSeeLessClicked
+                    ? 'md:h-[153px] h-[245px] overflow-hidden md:gap-y-8 gap-y-5 gap-x-5'
+                    : 'md:min-h-[359px]  gap-y-5 min-h-[497px] gap-x-5 '}
+    bg-[#F4F4F4] shadow-[0px_2px_4px_0px_#00000014] !px-3 !py-3
+    grid
+  `}
+                style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(162px, 1fr))',
+                }}>
+                <div className="startdate relative w-full h-[38px]">
                     <input
                         type="date"
                         id="startdate"
@@ -69,7 +78,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         className="absolute right-2 top-2.5 w-[16px] h-[16px] pointer-events-none"
                     />
                 </div>
-                <div className="enddate relative w-[160px] h-[38px]  ">
+                <div className="enddate relative w-full h-[38px]  ">
                     <input
                         type="date"
                         id="enddate"
@@ -95,7 +104,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         className="absolute right-2 top-2.5 w-[16px] h-[16px] pointer-events-none"
                     />
                 </div>
-                <div className="minDurartion relative w-[160px] h-[38px]  ">
+                <div className="minDurartion relative w-full h-[38px]  ">
                     <input
                         type="number"
                         id="minDurartion"
@@ -121,7 +130,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Min Duration(ms)
                     </label>
                 </div>
-                <div className="maxDurartion relative w-[160px] h-[38px] ">
+                <div className="maxDurartion relative w-full h-[38px] ">
                     <input
                         type="number"
                         id="maxDurartion"
@@ -142,7 +151,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Max Duration(ms)
                     </label>
                 </div>
-                <div className="operationType relative w-[160px] h-[38px]  ">
+                <div className="operationType relative w-full h-[38px]  ">
                     <div className="text-[#81817C] text-[12px] absolute top-[-0.7rem] bg-[#F4F4F4] left-3">
                         Operation Type
                     </div>
@@ -166,7 +175,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         <option value="other">Other</option>
                     </select>
                 </div>
-                <div className="messageType relative w-[160px] h-[38px] ">
+                <div className="messageType relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="message"
@@ -186,7 +195,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Message
                     </label>
                 </div>
-                <div className="stage relative w-[160px] h-[38px] ">
+                <div className="stage relative w-full h-[38px] ">
                     <div className="text-[#81817C] text-[12px] absolute top-[-0.7rem] bg-[#F4F4F4] left-3">
                         Stage
                     </div>
@@ -210,7 +219,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         <option value="All">All</option>
                     </select>
                 </div>
-                <div className="mode relative w-[160px] h-[38px] ">
+                <div className="mode relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="mode"
@@ -230,7 +239,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Mode
                     </label>
                 </div>
-                <div className="plugin-name relative w-[160px] h-[38px] ">
+                <div className="plugin-name relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="plugin-name"
@@ -250,7 +259,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Plugin Name
                     </label>
                 </div>
-                <div className=" entityName relative w-[160px] h-[38px] ">
+                <div className=" entityName relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="entityName"
@@ -270,7 +279,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Entity Name
                     </label>
                 </div>
-                <div className="correlationId relative w-[160px] h-[38px] ">
+                <div className="correlationId relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="correlationId"
@@ -290,7 +299,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Correlation Id
                     </label>
                 </div>
-                <div className="InitiatedBy relative w-[160px] h-[38px] ">
+                <div className="InitiatedBy relative w-full h-[38px] ">
                     <input
                         type="text"
                         id="InitiatedBy"
@@ -310,7 +319,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Initiated By
                     </label>
                 </div>
-                <div className="exception relative row-start-4 row-end-6 col-start-1 col-end-5 !mr-4">
+                <div className="exception w-full relative col-span-2 h-[76px] md:row-start-4 md:row-end-6 md:col-start-1 md:col-end-5 !mr-4">
                     <input
                         type="text"
                         id="exception"
@@ -330,7 +339,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Exception
                     </label>
                 </div>
-                <div className="recordCount relative w-[160px] h-[38px] !mt-5 ">
+                <div className="recordCount relative w-full h-[38px]  ">
                     <input
                         type="number"
                         id="recordCount"
@@ -350,7 +359,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                         Record Count
                     </label>
                 </div>
-                <div className="w-[160px] h-[38px] !mt-5  flex items-center justify-center gap-2">
+                <div className="w-[160px] h-[38px]  flex items-center justify-center gap-2">
                     <input
                         type="checkbox"
                         id="exceptionOnly"
@@ -369,7 +378,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
                     </label>
                 </div>
                 <div
-                    className="seeLess absolute right-8 bottom-1.5 text-[#0E5185] text-[12px] cursor-pointer inline-block group"
+                    className="seeLess absolute right-[12px] bottom-[0px] md:right-8 md:bottom-1.5 text-[#0E5185] text-[12px] cursor-pointer inline-block group"
                     onClick={() => setIsSeeLessClicked(!isSeeLessClicked)}
                 >
                     {isSeeLessClicked ? 'See More' : 'See Less'}
@@ -378,7 +387,7 @@ function TraceLogFilterCard({setIsShowTraceClicked}) {
             </div>
             <button className="!mr-auto !mt-[-5px] border-1 border-[#0E5185] rounded-md font-[500] !px-3 !py-1 text-[14px] text-[#0E5185] cursor-pointer hover:bg-[#b5cfe3ca] hover:scale-[1.01] transition-scale ease-in duration-100" onClick={() => setIsShowTraceClicked(prev => !prev)}>Show Trace Logs</button>
 
-        </div>
+        </div >
     );
 }
 export default TraceLogFilterCard;
