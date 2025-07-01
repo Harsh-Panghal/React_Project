@@ -4,18 +4,18 @@ function AttributeTable({ setIsAttributeSideDrawerOpen }) {
     const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
     return (
-        <div className="attribute-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6 border border-red-600  ">
+        <div className="attribute-area md:w-[734px] md:max-w-[734px] flex flex-col gap-6   ">
             <h2 className="text-[18px] text-[#082343] font-[600]">Attributes</h2>
             <div className="attribute-table w-[385px] md:w-full overflow-auto md:overflow-hidden hide-scrollbar rounded-md  shadow-[0px_2px_4px_0px_#00000014] border border-[#E6E6E6]">
-                <table className="min-w-[750px] table-fixed border-separate border-spacing-0">
+                <table className="min-w-[750px] table-fixed border-collapse">
                     <thead className="bg-[#F4F4F4] h-[41px]">
                         <tr>
-                            <th className=" w-[140px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Display Name</th>
-                            <th className=" w-[140px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Schema Name</th>
-                            <th className=" w-[120px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Data Type</th>
-                            <th className=" w-[100px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Format</th>
-                            <th className="text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Description</th>
-                            <th className="w-[120px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-2">Required Level</th>
+                            <th className="w-[140px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Display Name</th>
+                            <th className="w-[120px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Schema Name</th>
+                            <th className="text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Data Type</th>
+                            <th className=" text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Format</th>
+                            <th className="w-[90px] text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-4">Description</th>
+                            <th className=" text-[14px] font-[400] text-[#81817C] text-left border border-[#E6E6E6] !px-2">Required Level</th>
                         </tr>
                     </thead>
                     <tbody>
