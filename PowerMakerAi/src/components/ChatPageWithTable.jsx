@@ -18,7 +18,7 @@ function ChatPageWithTable({ isDeleteChatAccountVisible, isInviteCardVisible, se
    
 
     return (
-        <div className={`input-card2 overflow-auto hide-scrollbar max-h-[600px] md:max-h-[560px]  relative  md:w-[734px] md:max-w-[734px] max-w-[385px] flex flex-col gap-4 !mt-[-30px] !mb-auto border-b-1 border-sky-500`}>
+        <div className={`input-card2 overflow-auto hide-scrollbar max-h-[600px] md:max-h-[560px]  relative  md:w-[734px] md:max-w-[734px] max-w-[385px] flex flex-col gap-4 !mt-[-30px] !mb-auto `}>
             <div className="input-text-area md:max-w-[556px] flex gap-[5px] !ml-auto ">
                 <div className=" w-content !py-[14px] !px-[16px] bg-[#F4F4F4] rounded-md ">
                     <p
