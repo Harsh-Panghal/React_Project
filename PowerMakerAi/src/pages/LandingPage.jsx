@@ -136,7 +136,7 @@ function LandingPage() {
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
       {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
 
-      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} onToggleTermCard={handletermcard} onTogglePrivacyCard={handleprivacycard} />}
+      {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} onToggleTermCard={handletermcard} onTogglePrivacyCard={handleprivacycard} onToggleSidebar={handleToggleSidebar} />}
 
       
       {isTermCardVisible && <TermsCard />}
