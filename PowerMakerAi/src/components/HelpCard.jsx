@@ -5,9 +5,9 @@ import cleanIcon from '../assets/clean-icon.svg';
 import crmIcon from '../assets/crm-icon.svg';
 import backIcon from '../assets/back-icon.svg';
 
-function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIstermCardVisible, onToggleTermCard, onTogglePrivacyCard }) {
+function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIstermCardVisible, onToggleTermCard, onTogglePrivacyCard, onToggleSidebar }) {
     return (
-        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''} ${isDeleteChatAccountVisible? 'blurred' : ''}`}>
+        <div className={`help-dropdown ${isDeleteChatAccountVisible || isCrmCardVisible || isFeedbackCardVisible ? 'hidden ' : 'flex'} ${isDeleteChatAccountVisible? 'blurred' : ''} `}>
             <div className="setting-title relative md:hidden text-center">
                 <img src={backIcon} alt="back" className="absolute top-1.5 left-0 cursor-pointer" onClick={onToggleHelpCard} />
                 <span className="text-[24px] font-[600] text-[#00142D]">Settings</span>
@@ -25,7 +25,7 @@ function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onTog
                     <img src={termIcon} alt="Terms" />
                     <span>Terms of Use</span>
                 </div>
-                <div className='CRM' onClick={onToggleCrmCard}>
+                <div className='CRM' onClick={() => { onToggleCrmCard(); onToggleSidebar(); }}>
                     <img src={crmIcon} alt="Terms" />
                     <span>Crm Connection Detail</span>
                 </div>
