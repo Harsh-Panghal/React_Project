@@ -23,17 +23,17 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
 
 
     return (
-        <div className={`attribute-side-drawer absolute top-0 right-0 z-50 flex items-start gap-4 transition-all transform duration-300 ease-in-out
-    ${isDrawerVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+        <div className={`attribute-side-drawer absolute w-[350px] md:w-auto min-w-[282px] top-0 right-0 z-50 flex items-start gap-4 transition-all transform duration-300 ease-in-out
+    ${isDrawerVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}  overflow-hidden`}>
             <img
                 src={sideDrawerCrossbtnIcon}
                 alt="side-drawer-cross-btn"
-                className="side-drawer-cross-btn cursor-pointer !mt-[20px]"
+                className="side-drawer-cross-btn cursor-pointer md:!mt-[20px] !mt-[45px] w-[35px] h-[35px] md:w-[45px] md:h-[45px]"
                 onClick={handleCloseDrawer}
             />
-            <div className="side-drawer-card md:w-[488px] md:max-w-[488px] h-[100vh] bg-[#FFFFFF] border-2 border-[#E6E6E6] opacity-97 flex flex-col gap-4 !px-6 !py-4">
+            <div className="side-drawer-card md:w-[488px] md:max-w-[488px] h-[100vh] bg-[#FFFFFF] border-2 border-[#E6E6E6] opacity-97 flex flex-col gap-4 md:!px-6 !px-3 !py-4 ">
 
-                <div className="attribute-detail-card flex flex-col gap-6 !mt-[10px]  md:w-[425px]">
+                <div className="attribute-detail-card flex flex-col gap-6 md:!mt-[10px] !mt-[30px] md:w-[425px] w-[265px]">
                     <h2 className="text-[18px] font-[600] leading-[22px] text-[#082343]">Attribute Details</h2>
                     <div className="displayName relative w-full h-[38px] ">
                         <input
@@ -55,7 +55,7 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
                             Display Name
                         </label>
                     </div>
-                    <div className="custom-checkbox !mt-[-15px] z-0 w-full h-[38px] bg-[#FFFFFF] !py-[6px] text-[#082343] text-[14px] flex gap-5">
+                    <div className="custom-checkbox !mt-[-15px] z-0 md:w-full w-[265px]  bg-[#FFFFFF] !py-[6px] text-[#082343] text-[14px] flex flex-wrap md:gap-5 justify-between gap-y-1 md:h-[]border border-green-700">
                         {["Is Searchable", "Is Audit Enabled", "Primary Attribute"].map((labelText, index) => (
                             <div key={index} className="gap-2 flex items-center">
                                 <input type="checkbox" id={`option-${index}`} className="peer hidden" />
@@ -76,9 +76,9 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
 
                 </div>
 
-                <div className="md:w-[422px] md:max-w-[422px] !mt-[0px] border border-[#E6E6E6]"></div>
+                <div className="md:w-[422px] w-[270px] md:max-w-[422px] !mt-[0px] border border-[#E6E6E6]"></div>
 
-                <div className="type-card md:w-[425px] flex flex-col gap-4 ">
+                <div className="type-card md:w-[425px] w-[265px] flex flex-col md:gap-4 gap-6">
                     <h2 className='text-[18px] font-[600] leading-[150%] text-[#082343]'>Type</h2>
                     <div className="data-type relative h-[38px]  ">
                         <div className="text-[#81817C] text-[12px] absolute top-[-0.6rem] z-1 bg-[white] left-4">
@@ -88,7 +88,7 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
                         <img
                             src={downIcon}
                             alt="data-type-selector"
-                            className="absolute left-[93%] md:top-[32%] top-[27%] w-[14px] h-[14px] cursor-pointer"
+                            className="absolute left-[90%] md:left-[93%] md:top-[32%] top-[27%] w-[14px] h-[14px] cursor-pointer"
                         />
 
                         <select
@@ -104,8 +104,8 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    <div className="length-format  flex gap-3 !mt-[6px]">
-                        <div className="max-length relative  !bg-white w-[206px] h-[38px] ">
+                    <div className="length-format  flex md:gap-3 gap-6 md:!mt-[6px] flex-wrap ">
+                        <div className="max-length relative  !bg-white md:w-[206px] w-[265px] h-[38px] ">
                             <input
                                 type="number"
                                 id="maxLength"
@@ -126,7 +126,7 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
                                 Max Length
                             </label>
                         </div>
-                        <div className="format relative w-[206px] h-[38px] ">
+                        <div className="format relative md:w-[206px] h-[38px] w-[265px] ">
                             <input
                                 type="text"
                                 id="format-type"
@@ -149,7 +149,7 @@ function AttributeSideDrawer({ setIsAttributeSideDrawerOpen }) {
                     </div>
                 </div>
 
-                <button className="save-btn inline-block md:w-[425px] md:max-w-[425px] !px-[141px] !py-[12px] bg-[#0E5185] text-white text-[16px] font-[700] rounded-md cursor-pointer hover:scale-[1.01] transition-all duration-100 ease-in">Save</button>
+                <button className="save-btn inline-block w-[265px] md:w-[425px] md:max-w-[425px] !px-[121px] !py-[8px] md:!px-[141px] md:!py-[12px] bg-[#0E5185] text-white text-[16px] font-[700] rounded-md cursor-pointer hover:scale-[1.01] transition-all duration-100 ease-in">Save</button>
             </div>
         </div>
     )
