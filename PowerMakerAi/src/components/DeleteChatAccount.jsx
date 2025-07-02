@@ -1,10 +1,10 @@
 import crossIcon from '../assets/cross-icon.svg';
-function DeleteChatAccount({ onToggleDeleteChatAccount, isProfileCardVisible, isProfilePageVisible }) {
+function DeleteChatAccount({ onToggleDeleteChatAccount, isProfileCardVisible, isProfilePageVisible, onToggleSidebar }) {
     return (
         <div className="delete-chat-acct-card">
             <div className='d-item1'>
                 <span>Are you sure?</span>
-                <img src={crossIcon} alt="" width='24px' height="24px" onClick={onToggleDeleteChatAccount} />
+                <img src={crossIcon} alt="" width='24px' height="24px" onClick={() => { onToggleDeleteChatAccount(); onToggleSidebar(); }} />
             </div>
             <div className='d-item2'>
                 <p>

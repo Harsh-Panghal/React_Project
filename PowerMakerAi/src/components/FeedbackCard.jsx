@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { FaStar } from "react-icons/fa";
 import React, { useState } from 'react';
 import crossIcon from '../assets/cross-icon.svg';
-function FeedbackCard({onToggleFeedbackCard}) {
+function FeedbackCard({onToggleFeedbackCard, onToggleSidebar}) {
     const [preview, setPreview] = useState(null);
     const [selectedStar, setSelectedStar] = useState(0);   // Stores selected rating
     const [hoveredStar, setHoveredStar] = useState(null);  // Stores hover state
@@ -28,7 +28,7 @@ function FeedbackCard({onToggleFeedbackCard}) {
 
     return (
         <div className="feedback-card max-w-[400px] z-11 md:z-0 md:max-w-[423px] w-[423px] min-h-[594px] bg-[#FFFFFF] rounded-xl absolute top-[45%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-[1px] border-[#E6E6E6] shadow-md !px-4 !py-6 flex flex-col  gap-2">
-            <img src={crossIcon} alt="cross-icon" className='absolute top-[15px] right-[15px] cursor-pointer w-[12px] h-[12px]' onClick={onToggleFeedbackCard} />
+            <img src={crossIcon} alt="cross-icon" className='absolute top-[15px] right-[15px] cursor-pointer w-[12px] h-[12px]' onClick={() => {onToggleFeedbackCard(); onToggleSidebar();}} />
             <h2 className="text-xl font-[700] text-[#082343] tracking-[-4%]">Send Feedback</h2>
             <p className="text-[#81817C] text-[14px] font-[400]">What do you think about us!</p>
             <textarea
