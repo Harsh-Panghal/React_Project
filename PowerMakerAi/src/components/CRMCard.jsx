@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import crossIcon from '../assets/cross-icon.svg';
 import crmDeleteIcon from '../assets/crm-delete-icon.svg';
 
-function CRMCard({ onToggleCrmCard }) {
+function CRMCard({ onToggleCrmCard, onToggleSidebar }) {
     const [connectionName, setConnectionName] = useState('');
     const isFilledConnectionName = connectionName !== '';
     const [tenantId, setTenantId] = useState('');
@@ -28,7 +28,10 @@ function CRMCard({ onToggleCrmCard }) {
     return (
         <>
             <div className="CRM-popup z-11 md:z-0  max-w-[400px] md:max-w-[474px] md:w-[474px] md:min-h-[660px] absolute top-[45%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-2 border-[#E6E6E6] shadow-md rounded-md  bg-[#FFFFFF] flex flex-col gap-4 !px-4 !py-5 font-[Roboto]">
-                <img src={crossIcon} alt="corss-icon" className="absolute top-[10px] right-[10px] cursor-pointer w-[12px] h-[12px]" onClick={onToggleCrmCard} />
+                <img src={crossIcon} alt="corss-icon" className="absolute top-[10px] right-[10px] cursor-pointer w-[12px] h-[12px]" onClick={() => {
+                    onToggleCrmCard();
+                    onToggleSidebar();
+                }} />
                 <h2 className="text-[18px] text-[#082343] font-[600]">Crm Connection Detail</h2>
                 <p className="md:max-w-[410px] !ml-[10px] md:min-h-[38px] !px-[6px] !py-[5px] bg-[#0E518533] rounded-[3px] text-[#0E5185] text-[12px]
           font-[600] leading-[100%] text-center capitalize font-[Roboto]"> "Your connection information is protected with industry-standard encryption."</p>
