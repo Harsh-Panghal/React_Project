@@ -13,7 +13,7 @@ function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onTog
                 <span className="text-[24px] font-[600] text-[#00142D]">Settings</span>
             </div>
             <div className={`setting-option flex flex-col gap-8 md:gap-2 ${ isCrmCardVisible || isFeedbackCardVisible ? 'hidden' : ''}`}>
-                <div className='feedback' onClick={onToggleFeedbackCard}>
+                <div className='feedback' onClick={() => { onToggleFeedbackCard(); onToggleSidebar(); }}>
                     <img src={feedbackIcon} alt="Feedback" />
                     <span>Feedback</span>
                 </div>
@@ -29,7 +29,7 @@ function HelpCard({ onToggleDeleteChatAccount, isDeleteChatAccountVisible, onTog
                     <img src={crmIcon} alt="Terms" />
                     <span>Crm Connection Detail</span>
                 </div>
-                <div className='clean' onClick={onToggleDeleteChatAccount}>
+                <div className='clean' onClick={() => { onToggleDeleteChatAccount(); onToggleSidebar(); }}>
                     <img src={cleanIcon} alt="cleanicon" className='cleanicon' />
                     <span>Clean Chat</span>
                 </div>

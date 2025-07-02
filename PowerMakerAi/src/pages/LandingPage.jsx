@@ -117,6 +117,7 @@ function LandingPage() {
           onToggleDeleteChatAccount={handleToggleDeleteChatAccount}
           isProfileCardVisible={isProfileCardVisible}
           isProfilePageVisible={isProfilePageVisible}
+          onToggleSidebar={handleToggleSidebar}
         />
       )}
 
@@ -132,15 +133,15 @@ function LandingPage() {
       )}
 
       {isInviteCardVisible && <InviteCard onToggleInviteCard={handleToggleInviteCard} />}
-      {isFeedbackCardVisible && <FeedbackCard onToggleFeedbackCard={handleToggleFeedbackCard} />}
+      {isFeedbackCardVisible && <FeedbackCard onToggleFeedbackCard={handleToggleFeedbackCard} onToggleSidebar={handleToggleSidebar} />}
       {isProfilePageVisible && <ProfilePage onToggleProfilePage={handleToggleProfilePage} onToggleDeleteChatAccount={handleToggleDeleteChatAccount} />}
-      {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} />}
+      {isCrmCardVisible && <CRMCard onToggleCrmCard={handleToggleCrmCard} onToggleSidebar={handleToggleSidebar} />}
 
       {ishelpCardVisible && <HelpCard onToggleDeleteChatAccount={handleToggleDeleteChatAccount} isDeleteChatAccountVisible={isDeleteChatAccountVisible} onToggleFeedbackCard={handleToggleFeedbackCard} onToggleCrmCard={handleToggleCrmCard} isCrmCardVisible={isCrmCardVisible} isFeedbackCardVisible={isFeedbackCardVisible} onToggleHelpCard={handleToggleHelpCard} onToggleTermCard={handletermcard} onTogglePrivacyCard={handleprivacycard} onToggleSidebar={handleToggleSidebar} />}
 
       
-      {isTermCardVisible && <TermsCard />}
-      {isPrivacyCardVisible && <PrivacyCard />}
+      {isTermCardVisible && <TermsCard onToggleTermCard={handletermcard} onToggleSidebar/>}
+      {isPrivacyCardVisible && <PrivacyCard onTogglePrivacyCard={handleprivacycard} />}
 
     
 
