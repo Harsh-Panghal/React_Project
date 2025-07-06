@@ -7,16 +7,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#F5F7FA]">
+    <!-- big-screen-bg-img -->
     <img
-      src="./assest/landingPage-bg.png"
+      src="./assest/landingPage-bg.svg"
       alt="bg-image-of-landing-page"
-      class="w-full h-[1007px] absolute top-0 left-0 z-1 opacity-40"
+      class="hidden md:!inline-block w-full md:h-[1007px] h-[547px] absolute top-0 left-0 z-1"
     />
+    <!-- mobile-bg-img -->
+    <img src="./assest/mobile-bg-img.svg" alt="" class=" w-full inline-block md:!hidden h-[547px] absolute top-0 left-0 z-1 opacity-100">
     <!-- nav-area -->
     <nav
       class="!mt-[30px] !mx-[60px] flex justify-between items-center z-2 relative"
     >
-      <div class="logo-title flex items-center justify-between gap-[15px]">
+      <div
+        class="logo-title flex items-center justify-between gap-[15px] mx-auto md:mx-0"
+      >
         <img
           src="./assest/logo.svg"
           alt="logo-img"
@@ -28,7 +33,7 @@
           >
         </div>
       </div>
-      <ul class="flex gap-4">
+      <ul class="md:!flex gap-4 hidden">
         <li>
           <a href="#home" class="font-[700] text-[16px] text-[#0E5185]">Home</a>
         </li>
@@ -42,61 +47,63 @@
         </li>
       </ul>
       <button
-        class="text-[16px] font-[500] text-[#FFFFFF] bg-[#0E5185] rounded-[12px] inline-block w-[153px] h-[47px] cursor-pointer"
+        class="text-[16px] font-[500] text-[#FFFFFF] bg-[#0E5185] rounded-[12px] md:!inline-block w-[153px] h-[47px] cursor-pointer hidden"
       >
         Request Demo
       </button>
     </nav>
     <!-- hero-section -->
     <div
-      class="hero-section relative z-2 !mt-[20px] flex flex-col items-center gap-14"
+      class="hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 outline outline-amber-700"
     >
       <div
-        class="card-1 bg-[#FFFFFF] border-[0.82px] border-[#E6E6E6] !px-[14px] !py-[8px] rounded-md shadow-[0px_2px_3px_0px_#00000014]"
+        class="card-1 w-[286.45px] md:w-fit bg-[#FFFFFF] border-[0.82px] border-[#E6E6E6] !px-[14px] !py-[8px] rounded-md shadow-[0px_2px_3px_0px_#00000014]"
       >
         <p
-          class="text-[18px] font-[500] bg-gradient-to-r from-[#0E5185] to-[#1FA2D0] bg-clip-text text-transparent"
+          class="text-[18px] text-center font-[500] bg-gradient-to-r from-[#0E5185] to-[#1FA2D0] bg-clip-text text-transparent"
         >
           Your AI Assistant for Effortless Dynamics 365 Customizations
         </p>
       </div>
-      <div class="card-2">
-        <div
-          class="text-[50px] font-[700] bg-gradient-to-r from-[#1FA2D0] to-[#0E5185] bg-clip-text text-transparent text-center leading-[100%]"
-        >
-          AI
-          <span class="font-[590px] text-[#082343]"
-            >That Understands Dynamics 365,</span
+      <div class="card-2 ">
+        <div class="w-[326px] md:w-fit mx-auto">
+          <div
+            class="text-[24px] md:text-[50px] font-[700] bg-gradient-to-r from-[#1FA2D0] to-[#0E5185] bg-clip-text text-transparent text-center leading-[120%] md:leading-[100%]"
           >
-        </div>
-        <div
-          class="text-[50px] font-[700] bg-gradient-to-r from-[#1FA2D0] to-[#0E5185] bg-clip-text text-transparent"
-        >
-          <span class="font-[590px] text-[#082343]"
-            >So You Don’t Have to Start</span
+            AI
+            <span class="font-[590px] text-[#082343]"
+              >That Understands Dynamics 365,</span
+            >
+          </div>
+          <div
+            class="text-[24px] md:text-[50px] font-[700] bg-gradient-to-r from-[#1FA2D0] to-[#0E5185] bg-clip-text text-transparent text-center leading-[120%] "
           >
-          from Scratch
+            <span class="font-[590px] text-[#082343]"
+              >So You Don’t Have to Start</span
+            >
+            from Scratch
+          </div>
         </div>
-        <p class="text-[#81817C] text-[18px] font-[400] text-center">
+        <p class="text-[#81817C] text-[13px] w-[326px] md:w-fit md:text-[18px] font-[400] text-center mx-auto ">
           Design entities, fix plugins, and resolve issues faster — all through
           guided, intelligent workflows. 
         </p>
       </div>
       <div
-        class="req-contact-btn-card flex gap-2.5 md:w-[346px] md:max-w-[346px] justify-between"
+        class="req-contact-btn-card flex gap-2.5 max-w-[305.19px] md:w-[346px] md:max-w-[346px] justify-between"
       >
         <button
-          class="text-[16px] font-[500] text-[#FFFFFF] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#0E5185] inline-block w-[153px] h-[47px] cursor-pointer"
+          class="text-[16px] font-[500] text-[#FFFFFF] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#0E5185] inline-block min-w-[143.23px] md:w-[153px] min-h-[44px] md:h-[47px] cursor-pointer"
         >
           Request Demo
         </button>
         <button
-          class="text-[16px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[153px] h-[47px] cursor-pointer border border-[#0E5185]"
-        >
+          class="text-[16px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block min-w-[143.23px] md:w-[153px] min-h-[44px] md:h-[47px]  cursor-pointer border border-[#0E5185]"
+        > 
           Contact Us
         </button>
       </div>
-      <video controls width="1172px" height="625px" class="!mt-[20px]">
+      <video controls class="mt-[30px] w-[281.25px] h-[150px] md:w-[1172px] md:max-w-[1172px] md:h-[625.05px] ">
         <source
           src="./assest/PowerMakerAi - Google Chrome 2025-07-02 18-11-38.mp4"
         />
@@ -831,7 +838,7 @@
     <div
       class="mt-[-50px] min-h-[315px] bg-[#FFFFFF] relative -z-1 flex items-center"
     >
-      <div class="w-full h-[216px] ">
+      <div class="w-full h-[216px]">
         <div
           class="w-full min-h-[182px] border-b border-[#DBE7F1] flex items-center"
         >
@@ -855,8 +862,10 @@
             </p>
           </div>
           <div class="border-l-1 border-[#DBE7F1] h-[182px] ml-[31.5px]"></div>
-          <div class="md:w-[493.02px] min-h-[77px] grid grid-cols-3 gap-x-[90px] gap-y-[8px] text-[14px] text-[#323B44] font-[400] ml-[38.5px]">
-            <div class="div1 ">Home</div>
+          <div
+            class="md:w-[493.02px] min-h-[77px] grid grid-cols-3 gap-x-[90px] gap-y-[8px] text-[14px] text-[#323B44] font-[400] ml-[38.5px]"
+          >
+            <div class="div1">Home</div>
             <div class="div2">Blogs</div>
             <div class="div3">Follow Us:</div>
             <div class="div4 whitespace-nowrap">Terms and Conditions</div>
@@ -864,7 +873,11 @@
             <div class="row-start-3">Privacy Policy</div>
           </div>
         </div>
-        <div class="text-[14px] font-[400] text-[#637381] leading-[22px] mt-4 ml-[97px]">&copy 2025 Power Maker AI, all rights reserved</div>
+        <div
+          class="text-[14px] font-[400] text-[#637381] leading-[22px] mt-4 ml-[97px]"
+        >
+          &copy 2025 Power Maker AI, all rights reserved
+        </div>
       </div>
     </div>
   </body>
