@@ -127,7 +127,7 @@
       <div class="w-full min-h-[566px] flex md:flex-row flex-col relative">
         <div class="our-vision-content-card">
           <h2
-            class="h-[50px] py-[7px] md:h-auto md:py-0 md:bg-gradient-to-r md:from-[#1FA2D0] md:to-[#1FA2D000] w-full md:w-[913px] !px-[138px] text-[24px] md:text-[50px] font-[500] text-[#082343]"
+            class="h-[50px] py-[7px] md:h-auto md:py-0 md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] w-full md:w-[913px] !px-[138px] text-[24px] md:text-[50px] font-[500] text-[#082343]"
             style="
               background: linear-gradient(
                 to right,
@@ -349,31 +349,31 @@
       </div>
     </div>
     <!-- key Features -->
-    <div class="key-features bg-[#FFFFFF] border border-[#FFFFFF] mt-[32px]">
+    <div class="key-features md:bg-[#FFFFFF] border border-[#F5F7FA] mt-[31px] md:mt-[71px]">
       <h2
-        class="text-[50px] font-[500] text-[#082343] md:w-[903px] md:max-w-[903px] md:min-h-[85px] !px-[147px] bg-gradient-to-r from-[#1FA2D0] to-[#1FA2D000] mt-[32px]"
+        class="text-[24px] md:text-[50px] text-center md:text-start font-[500] text-[#082343] w-full md:w-[903px] md:max-w-[903px] h-[50px] py-[7px] md:py-0 md:min-h-[85px] md:!px-[147px] md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] mt-[32px]"
+        style="
+          background: linear-gradient(to right, #1fa2d000, #1fa2d0, #1fa2d000);
+        "
       >
         Key Features
       </h2>
       <div
-        class="grid-box mt-[32px] mx-auto md:w-[1228px] md:max-w-[1228px] grid"
-        style="
-          grid-template-rows: repeat(3, 326px);
-          grid-template-columns: repeat(3, 370px);
-          gap: 26px 59px;
-        "
+        class="grid-box mt-[32px] md:mx-auto md:w-[1228px] md:max-w-[1228px] grid md:[grid-template-rows:repeat(3,_326px)]
+        md:[grid-template-columns:repeat(3,_370px)] md:gap-y-[26px] md:gap-x-[59px]  [grid-template-columns:repeat(2,_169px)] [grid-template-rows:repeat(4,215px)] gap-x-6 gap-y-4 ml-[30px] mr-[30px]"
+        
       >
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-1.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-4 gap-2 ">
+            <img src="./assest/key-feat-img-1.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="md:w-[254px] md:max-w-[254px] text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:w-[254px] md:max-w-[254px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%] "
             >
               Natural Language Entity Builder
             </h3>
-            <p class="text-[18px] text-[#81817C] font-[400] text-center">
+            <p class="w-fit text-[14px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center ">
               Create entities and attributes by simply describing them — no need
               to click through endless setup forms. 
             </p>
@@ -383,15 +383,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-2.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-4 gap-2">
+            <img src="./assest/key-feat-img-2.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="md:max-w-[211px] text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:max-w-[211px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Smart Plugin Trace Log Analyzer
             </h3>
             <p
-              class="text-[18px] md:max-w-[298px] text-[#81817C] font-[400] text-center"
+              class="w-fit text-[14px] leading-[110%] md:leading-[150%] md:text-[18px] md:max-w-[298px] text-[#81817C] font-[400] text-center"
             >
               Paste your logs and get instant summaries, root cause
               explanations, and fix suggestions. 
@@ -402,15 +402,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-3.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-4 gap-2">
+            <img src="./assest/key-feat-img-3.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="md:max-w-[220px] text-[24px] font-[500] text-[#082343] leading-[120%] text-center"
+              class="w-fit text-[16px] md:max-w-[220px] md:text-[24px] font-[500] text-[#082343] leading-[120%] text-center"
             >
               Code-Free Attribute Designer
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center md:max-w-[311px]"
+              class="w-fit text-[14px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[311px]"
             >
               Define field types, requirements, and relationships without
               writing a single line of code.  
@@ -421,14 +421,14 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-4.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-7 gap-2">
+            <img src="./assest/key-feat-img-4.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Conversational AI Assistant
             </h3>
-            <p class="text-[18px] text-[#81817C] font-[400] text-center">
+            <p class="text-[13px] leading-[110%]  md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center ">
               Chat with PowerMakerAI to create, update, or query CRM data — with
               context-aware, multi-turn interactions.  
             </p>
@@ -436,17 +436,17 @@
         </div>
 
         <div
-          class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
+          class="hidden md:!block bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-5.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-4 gap-2">
+            <img src="./assest/key-feat-img-5.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="md:max-w-[278px] text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:max-w-[278px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Auto-Generated Plugin & JS Snippets
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center md:max-w-[321px]"
+              class="text-[14px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[321px]"
             >
               Turn requirements into ready-to-deploy C# plugin or JavaScript
               code blocks, tailored for your CRM instance.  
@@ -457,15 +457,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-6.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-7 gap-2">
+            <img src="./assest/key-feat-img-6.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               One-Click CRM Export
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center md:max-w-[291px]"
+              class="text-[13.5px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[291px]"
             >
               Generate solution-ready JSON or metadata snippets and push to your
               CRM with a single action. 
@@ -476,15 +476,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-7.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-4 gap-2">
+            <img src="./assest/key-feat-img-7.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="md:max-w-[290px] text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:max-w-[290px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Built-in CRM Schema Visualizer
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center md:max-w-[291px]"
+              class="text-[13px] leading-[120%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[291px]"
             >
               View entity relationships, attributes, and data types in an
               interactive, user-friendly diagram. 
@@ -495,15 +495,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-8.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-7 gap-2">
+            <img src="./assest/key-feat-img-8.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Enterprise-Ready Security
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center md:max-w-[339px]"
+              class="text-[13.5px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[339px]"
             >
               Your data is safe — encrypted handling, API token-based access,
               and deployment-ready for secure environments.  
@@ -514,15 +514,15 @@
         <div
           class="bg-[#FFFFFF] !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
         >
-          <div class="flex flex-col justify-between items-center gap-4">
-            <img src="./assest/key-feat-img-9.svg" alt="key-feat-img-1" />
+          <div class="flex flex-col justify-between items-center md:gap-7 gap-2">
+            <img src="./assest/key-feat-img-9.svg" alt="key-feat-img-1" class="w-[50px] h-[50px] md:w-[120px] md:h-[120px]"/>
             <h3
-              class="text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
+              class="w-fit text-[16px] md:text-[24px] font-[500] text-[#082343] text-center leading-[120%]"
             >
               Scalable & Extendabler
             </h3>
             <p
-              class="text-[18px] text-[#81817C] font-[400] text-center nd:max-w-[339px]"
+              class="text-[13.5px] leading-[110%] md:leading-[150%] md:text-[18px] text-[#81817C] font-[400] text-center md:max-w-[339px]"
             >
               Built to grow with your team. Add more models, integrate deeper
               with CRM APIs, or plug into CI/CD pipelines. 
