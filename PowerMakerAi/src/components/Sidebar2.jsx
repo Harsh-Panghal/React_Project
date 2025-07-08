@@ -10,15 +10,21 @@ import HelpCard from './HelpCard';
 
 
 function Sidebar2({ onToggleDeleteChatAccount, onToggleSidebar, isInviteCardVisible, isDeleteChatAccountVisible, onToggleFeedbackCard, onToggleCrmCard, isCrmCardVisible, isFeedbackCardVisible, onToggleHelpCard, setIsNewChatPageVisible, setIsChatPageVisible, setIsChatPageWithTableVisible, isAttributeSideDrawerOpen, isPluginTraceDrawerOpen }) {
+
+  const [isPromptMenuOpen, setIsPromptMenuOpen] = useState(false);
+
+  const handleTogglePromptMenu = () => {
+    setIsPromptMenuOpen(prev => !prev);
+  };
   
   return (
     <div className={`expanded-sidebar ${isInviteCardVisible || isAttributeSideDrawerOpen || isPluginTraceDrawerOpen || isDeleteChatAccountVisible || isFeedbackCardVisible || isCrmCardVisible ? 'blurred' : ''} shadow-[inset_-1px_-1px_2px_0px_rgba(139,139,139,0.5)]`}>
-      <PromptMenu  />
+      <PromptMenu  isPromptMenuOpen={isPromptMenuOpen} />
       <div className="expandedsidebar-card1 h-auto gap-[1rem]">
         <LogoTitle onToggleSidebar={onToggleSidebar}/>
         <NewChatButton isInviteCardVisible={isInviteCardVisible} isDeleteChatAccountVisible={isDeleteChatAccountVisible} setIsNewChatPageVisible={setIsNewChatPageVisible} setIsChatPageVisible={setIsChatPageVisible} setIsChatPageWithTableVisible={setIsChatPageWithTableVisible}/>
         <RecentSection />
-        <HistoryList setIsChatPageVisible={setIsChatPageVisible} setIsNewChatPageVisible={setIsNewChatPageVisible} setIsChatPageWithTableVisible={setIsChatPageWithTableVisible} />
+        <HistoryList setIsChatPageVisible={setIsChatPageVisible} setIsNewChatPageVisible={setIsNewChatPageVisible} setIsChatPageWithTableVisible={setIsChatPageWithTableVisible} handleTogglePromptMenu={handleTogglePromptMenu}/>
         <MoreSection />
       </div>
       <div className="expandedsidebar-card2">

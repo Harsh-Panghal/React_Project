@@ -4,15 +4,11 @@ import editIcon from '../assets/edit-icon.svg';
 import deleteIcon from '../assets/delete-icon.svg';
 import { useState } from 'react';
 
-function PromptMenu() {
-  const [isPromptMenuOpen, setIsPromptMenuOpen] = useState(false);
-
-  const handleTogglePromptMenu = () => {
-    setIsPromptMenuOpen(prev => !prev);
-  };
+function PromptMenu({isPromptMenuOpen}) {
+  
   return (
     <>
-      <span className="prompt" onClick={handleTogglePromptMenu}>...</span>
+      {/* <span className="prompt" onClick={handleTogglePromptMenu}>...</span> */}
       {isPromptMenuOpen &&
         <div className="prompt-dropdown"><div className="share">
           <img src={shareIcon} alt="share" />
