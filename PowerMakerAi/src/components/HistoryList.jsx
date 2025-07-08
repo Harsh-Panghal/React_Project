@@ -23,11 +23,11 @@ function HistoryList({
   const [selectedIndex, setSelectedIndex] = useState(0); // First item selected by default
 
   return (
-    <div className="history w-[225px] md:w-[196px]">
+    <div className="history w-[228px] md:w-[198px]">
       {historyItems.map((item, index) => (
         <div
           key={index}
-          className={`history-item relative group h-[25px] hover:bg-[#e3eef1ac] hover:rounded-sm cursor-pointer flex justify-between items-center px-2 py-1 ${selectedIndex === index ? 'bg-[#e3eef1ac] rounded-sm' : ''
+          className={`history-item relative group h-[25px] hover:bg-gray-200 hover:rounded-sm cursor-pointer flex justify-between items-center !px-1.5 py-1 ${selectedIndex === index ? 'bg-gray-200 rounded-sm' : ''
             }`}
           onClick={() => {
             setSelectedIndex(index);

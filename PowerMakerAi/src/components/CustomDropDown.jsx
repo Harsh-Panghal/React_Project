@@ -30,11 +30,11 @@ function CustomModelSelector() {
             </div>
 
             {isOpen && (
-                <div className="w-[145px] absolute z-10 bg-white border !mt-0.5 border-[#E6E6E6] rounded-md shadow-md !px-[11.25px] !py-[5px]">
+                <div className="w-[145px] absolute z-10 bg-white border !mt-0.5 border-[#E6E6E6] rounded-md shadow-md !px-[7.25px] !py-[5px]">
                     {options.map((opt) => (
                         <div
                             key={opt.value}
-                            className="!p-1 rounded-sm hover:bg-gray-100 cursor-pointer flex gap-2 items-center"
+                            className="!px-2 !py-1 rounded-sm hover:bg-gray-100 cursor-pointer flex gap-2 items-center"
                             onClick={() => {
                                 setSelected(opt);
                                 setIsOpen(false);
