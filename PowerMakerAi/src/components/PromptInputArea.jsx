@@ -1,21 +1,20 @@
 import React from 'react';
 import submitIcon from '../assets/submit-icon.svg';
 import attachIcon from '../assets/attach-icon.svg';
+import modelIcon02 from '../assets/model-0.2-icon.svg';
+import modelIcon01 from '../assets/model-0.1-icon.svg';
+import CustomModelSelector from './CustomDropDown';
 
-const PromptInputArea = ({ isDeleteChatAccountVisible, isInviteCardVisible}) => (
+
+
+const PromptInputArea = ({ isDeleteChatAccountVisible, isInviteCardVisible }) => (
   <div className="textarea-wrapper max-w-[331px] md:max-w-none !mx-auto md:!mx-0 !mb-[80px] md:!mb-0">
     <div className={`textarea-box ${isDeleteChatAccountVisible || isInviteCardVisible ? 'blurred' : ''}`}>
       <div className="box1">
         <textarea placeholder='Enter Prompt Here'></textarea>
-        <div className="model-selector">
-          <select defaultValue="model-0.2" id="model-selector">
-            <option value="model-0.1">Model 0.1</option>
-            <option value="model-0.2">Model 0.2</option>
-            <option value="model-0.3">Model 0.3</option>
-            <option value="model-0.4">Model 0.4</option>
-          </select>
-        </div>
+        <CustomModelSelector />
       </div>
+      
       <div className="box2">
         <div className="attachment-icon">
           <img src={attachIcon} alt="Attach" className='addicon' />
