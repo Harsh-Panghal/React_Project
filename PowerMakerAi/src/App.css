@@ -429,8 +429,8 @@ input:not(:placeholder-shown) input:not(:focus) ~ label {
   /* max-width: max-content; */
   height: 108px;
   position: absolute;
-  top: 194px;
-  left: 214px;
+  /* top: 194px;
+  left: 214px; */
 
   font-size: 14px;
   font-weight: bold;
