@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind Config -->
@@ -21,6 +25,8 @@
           extend: {
             fontFamily: {
               roboto: ['Roboto', 'sans-serif'],
+              satoshi: ['Satoshi', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
             },
           },
         },
@@ -39,7 +45,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#F5F7FA] font-['Roboto']">
+  <body class="bg-[#F5F7FA] font-['Satoshi']">
     <!-- big-screen-bg-img -->
     <img
       src="./assest/landingPage-bg.svg"
@@ -144,7 +150,7 @@
       </div>
       <video
         controls
-        class="mt-0 md:mt-[30px] w-[281.25px] h-[150px] md:w-[1172px] md:max-w-[1172px] md:h-[625.05px]"
+        class="mt-0 w-[281.25px] h-[150px] md:w-[1172px] md:max-w-[1071px] md:h-[601.05px]"
       >
         <source
           src="./assest/PowerMakerAi - Google Chrome 2025-07-02 18-11-38.mp4"
@@ -155,25 +161,20 @@
 
     <!-- our-vision -->
     <div
-      class="min-h-[610px] md:h-[610px] !mt-[71px] md:flex md:items-center md:bg-[#ffffff]"
+      class="min-h-[610px] md:h-[610px] md:flex md:items-center mt-[30px] w-[90%] mx-auto"
     >
       <div class="w-full min-h-[566px] flex md:flex-row flex-col relative">
         <div class="our-vision-content-card">
           <h2
-            class="h-[50px] py-[7px] md:h-[60px] md:py-0 md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] w-full md:w-[913px] !px-[138px] text-[24px] md:text-[35px] font-[500] text-[#082343] mt-[20px]"
-            style="
-              background: linear-gradient(
-                to right,
-                #1fa2d000,
-                #1fa2d0,
-                #1fa2d000
-              );
-            "
-          >
-            Our Vision
-          </h2>
+        class="mt-[172px] h-[50px] py-[7px] md:h-[60px] md:py-0 md:!mt-[20px] w-full md:w-[903px] md:max-w-[903px] pl-[138px] font-[500]  text-[24px] md:text-[35px] text-[#082343] !mx-auto"
+        style="
+          background: linear-gradient(to right, #1fa2d000, #1fa2d0, #1fa2d000);
+        "
+      >
+        Our Vision
+      </h2>
           <p
-            class="text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] text-center md:text-start !mt-[25px] leading-[120%] md:!pl-[138px]"
+            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] text-center md:text-start !mt-[25px] leading-[120%] md:!pl-[138px]"
           >
             PowerMakerAI is more than a tool — it’s your AI pair programmer for
             Dynamics 365. Whether you're a solo consultant or an enterprise
@@ -181,30 +182,30 @@
             confidently. 
           </p>
           <p
-            class="text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] !mt-[31px] leading-[120%] md:pl-[138px] text-center md:text-start"
+            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] !mt-[31px] leading-[120%] md:pl-[138px] text-center md:text-start"
           >
             PowerMakerAI is built with the vision of simplifying Dynamics 365
             customizations using AI. The MVP is already live and evolving
             rapidly based on developer and consultant feedback.  
           </p>
           <button
-            class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[153px] h-[47px] cursor-pointer border border-[#0E5185] !ml-[138px] md:!mt-[133px] mt-[30.5px]
+            class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[153px] h-[47px] cursor-pointer border border-[#0E5185] !ml-[138px] mt-[30.5px]
             hover:bg-sky-50 hover:border-sky-50
              "
           >
             Contact Us
           </button>
         </div>
-        <div class="our-vision-img-card">
+        <div class="our-vision-img-card ">
           <img
             src="./assest/our-vision-img.svg"
             alt=""
-            class="absolute z-1 top-[470px] left-[85.2px] md:top-0 md:left-[871px] md:w-[385px] md:h-[500px] w-[225.27px] h-[265.02px]"
+            class="absolute z-1 top-[470px] left-[85.2px] md:top-[-20px] md:left-[871px] md:w-[320px] md:h-[450px] w-[225.27px] h-[265.02px]"
           />
           <img
             src="./assest/our-vision-img-trans.svg"
             alt=""
-            class="absolute md:w-[240px] md:h-[365px] bottom-[-205px] right-[63.2px] md:-bottom-3 md:right-[190px] z-0 w-[149.47px] h-[193.46px]"
+            class="absolute md:w-[210px] md:h-[325px] bottom-[-205px] right-[63.2px] md:bottom-[85px] md:right-[110px] z-0 w-[149.47px] h-[193.46px]"
           />
         </div>
       </div>
@@ -213,7 +214,7 @@
     <!-- Current Features -->
     <div class="bg-[#F5F7FA] border border-[#F5F7FA] ">
       <h2
-        class="mt-[172px] h-[50px] py-[7px] md:h-[60px] md:py-0 md:!mt-[71px] w-full md:w-[903px] md:max-w-[903px] text-center font-[500] text-[24px] md:text-[35px] text-[#082343] !mx-auto"
+        class="mt-[172px] h-[50px] py-[7px] md:h-[60px] md:py-0 md:!mt-[-71px] w-full md:w-[903px] md:max-w-[903px] text-center font-[500] text-[24px] md:text-[35px] text-[#082343] !mx-auto"
         style="
           background: linear-gradient(to right, #1fa2d000, #1fa2d0, #1fa2d000);
         "
@@ -381,7 +382,7 @@
     </div>
     <!-- key Features -->
     <div
-      class="key-features md:bg-[#FFFFFF] border border-[#F5F7FA] mt-[31px] md:mt-[71px]"
+      class="key-features border border-[#F5F7FA] mt-[31px] md:mt-[30px]"
     >
       <h2
         class="text-[24px] md:text-[35px] text-center md:text-start font-[500] text-[#082343] w-full md:w-[903px] md:max-w-[903px] h-[50px] py-[7px] md:py-0 md:min-h-[60px] md:!px-[147px] md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] mt-[32px]"
