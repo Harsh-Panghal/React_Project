@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind Config -->
@@ -19,6 +23,7 @@
           extend: {
             fontFamily: {
               roboto: ['Roboto', 'sans-serif'],
+              clash: ['"Clash Grotesk"', 'sans-serif'],
             },
           },
         },
@@ -26,6 +31,9 @@
     </script>
     <!-- Custom CSS for Tailwind -->
     <style type="text/tailwindcss">
+      * {
+        font-family: "Clash Grotesk", sans-serif;
+      }
       @layer utilities {
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
@@ -37,7 +45,7 @@
       }
     </style>
   </head>
-  <body class="overflow-hidden h-[100vh]">
+  <body class="overflow-hidden h-[100vh] font-['Clash Grotesk']">
     <header class="mt-[36px] mx-[60px] flex items-center justify-between">
       <div class="logo-title flex items-center">
         <img
@@ -60,39 +68,89 @@
     </header>
     <main class="flex h-full overflow-hidden mt-[20px]">
       <div
-        class="sidebar border border-amber-600 md:w-[250px] md:max-w-[250px] h-full bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px]"
+        class="sidebar  md:w-[250px] md:max-w-[250px] h-full bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px]"
       >
         <div class="flex flex-col gap-[10px]">
           <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
             Get Into Power Maker
           </h2>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
         </div>
         <div class="flex flex-col gap-[10px] mt-[15px]">
           <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
             Lorem ipsum
           </h2>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
         </div>
         <div class="flex flex-col gap-[10px] mt-[15px]">
           <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
             Lorem ipsum
           </h2>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
-          <a href="" class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]">Lorem ipsum</a>
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
+          <a
+            href=""
+            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Lorem ipsum</a
+          >
         </div>
-        <div class="w-[250px] relative left-[-25px] border border-[#E6E6E6] mt-[80px]"></div>
-        <div>
-            <img src="" alt="help-icon">
-            <span>Help</span>
+        <div
+          class="w-[250px] relative left-[-25px] border border-[#E6E6E6] mt-[80px]"
+        ></div>
+        <div class="mt-4 flex gap-[5px]">
+          <img src="./public/assest/questionmark-icon.svg" alt="help-icon" class="w-[18px] h-[18px]"/>
+          <span class="text-[#81817C] text-[16px] font-[400]">Help</span>
         </div>
       </div>
       <div class="content"></div>
