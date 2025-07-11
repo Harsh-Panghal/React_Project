@@ -68,7 +68,7 @@
     </header>
     <main class="flex h-full overflow-hidden mt-[20px]">
       <div
-        class="sidebar  md:w-[250px] md:max-w-[250px] h-full bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px]"
+        class="sidebar md:w-[250px] md:max-w-[250px] h-full bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px]"
       >
         <div class="flex flex-col gap-[10px]">
           <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
@@ -149,11 +149,529 @@
           class="w-[250px] relative left-[-25px] border border-[#E6E6E6] mt-[80px]"
         ></div>
         <div class="mt-4 flex gap-[5px] items-center">
-          <img src="./public/assest/questionmark-icon.svg" alt="help-icon" class="w-[18px] h-[18px]"/>
+          <img
+            src="./public/assest/questionmark-icon.svg"
+            alt="help-icon"
+            class="w-[18px] h-[18px]"
+          />
           <span class="text-[#81817C] text-[16px] font-[400]">Help</span>
         </div>
       </div>
-      <div class="content"></div>
+      <div class="content h-[85%] grow overflow-auto ">
+        <div
+          class="content-card mt-[30px] ml-[60px] md:w-[1000px] md:max-w-[1000px]"
+        >
+          <h2 class="text-[30px] font-semibold text-[#202123] leading-[39px]">
+            AI developer platform
+          </h2>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+          <div
+            class="w-full md:h-[294px] mt-[20px] border border-[#ECECF1] rounded-[8px] bg-gradient-to-r from-[#F7F7F880] to-[#F7F7F8] flex items-center gap-5"
+          >
+            <div class="md:w-[220px] md:max-w-[220px] md:h-[124px] ml-[43px]">
+              <h3
+                class="w-fit text-[15.63px] font-bold text-[#202123] leading-[24px] tracking-[-0.16px]"
+              >
+                Developer quickstart
+              </h3>
+              <p
+                class="text-[14px] text-[#353740] font-bold leading-[20px] tracking-[-0.16px]"
+              >
+                Make your first API request in minutes. Learn the basics of the
+                Power maker AI platform.
+              </p>
+              <div class="flex items-center gap-2 mt-[18px]">
+                <img
+                  src="./public/assest/doc-timer-icon.svg"
+                  alt="timer-icon"
+                />
+                <span
+                  class="text-[12px] font-bold text-[#6E6E80] leading-[16px]"
+                  >5 min</span
+                >
+              </div>
+            </div>
+            <div class="md:w-[692px] md:max-w-[692px] ">
+              <div
+                class="w-full md:h-[36px] flex items-center justify-between pl-[16px] py-[8px] pr-[11.33px]"
+              >
+                <div class="flex gap-1 cursor-pointer">
+                  <h3
+                    class="text-[14px] font-bold text-[#202123] leading-[20px] tracking-[-0.14px]"
+                  >
+                    javascript
+                  </h3>
+                  <img
+                    src="./public/assest/doc-up-down-icon.svg"
+                    alt="up-down-icon"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./public/assest/doc-copy-icon.svg"
+                    alt="copy-icon"
+                    class="cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="w-full md:h-auto pl-[16px]">
+                <div class="flex gap-[24px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >1</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >import <span class="text-[#353740]">OpenAI</span> from
+                    <span class="text-[#008C6A]">"openai"</span>;
+                  </span>
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >2</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">client</span> = new
+                    <span class="text-[#353740]">AI()</span>
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >3</span
+                  >
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >4</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">response = </span>await
+                    <span class="text-[#353740]"
+                      >client.responses.create({</span
+                    >
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >5</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">model</span>:
+                    <span class="text-[#008C6A]">"Power-maker-AI"</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >6</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">input</span>: <span class="text-[#008C6A]">"Write a one-sentence bedtime story about a
+                    unicorn."</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >7</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    >});
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >8</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >9</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    ><span class="text-[#C0660D]">console</span>.log(response.output_text);
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-fit flex gap-[8px] mt-[19px]">
+            <img src="./public/assest/doc-up-icon.svg" alt="" class="cursor-pointer"/>
+            <h3
+              class="text-[17.72px] font-semibold text-[#202123] leading-[28px] tracking-[-0.16px]"
+            >
+              Lorem ipsum dolor sit amet
+            </h3>
+          </div>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+        </div>
+        <div
+          class="content-card mt-[50px] ml-[60px] md:w-[1000px] md:max-w-[1000px]"
+        >
+          <h2 class="text-[30px] font-semibold text-[#202123] leading-[39px]">
+            AI developer platform
+          </h2>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+          <div
+            class="w-full md:h-[294px] mt-[20px] border border-[#ECECF1] rounded-[8px] bg-gradient-to-r from-[#F7F7F880] to-[#F7F7F8] flex items-center gap-5"
+          >
+            <div class="md:w-[220px] md:max-w-[220px] md:h-[124px] ml-[43px]">
+              <h3
+                class="w-fit text-[15.63px] font-bold text-[#202123] leading-[24px] tracking-[-0.16px]"
+              >
+                Developer quickstart
+              </h3>
+              <p
+                class="text-[14px] text-[#353740] font-bold leading-[20px] tracking-[-0.16px]"
+              >
+                Make your first API request in minutes. Learn the basics of the
+                Power maker AI platform.
+              </p>
+              <div class="flex items-center gap-2 mt-[18px]">
+                <img
+                  src="./public/assest/doc-timer-icon.svg"
+                  alt="timer-icon"
+                />
+                <span
+                  class="text-[12px] font-bold text-[#6E6E80] leading-[16px]"
+                  >5 min</span
+                >
+              </div>
+            </div>
+            <div class="md:w-[692px] md:max-w-[692px] ">
+              <div
+                class="w-full md:h-[36px] flex items-center justify-between pl-[16px] py-[8px] pr-[11.33px]"
+              >
+                <div class="flex gap-1 cursor-pointer">
+                  <h3
+                    class="text-[14px] font-bold text-[#202123] leading-[20px] tracking-[-0.14px]"
+                  >
+                    javascript
+                  </h3>
+                  <img
+                    src="./public/assest/doc-up-down-icon.svg"
+                    alt="up-down-icon"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./public/assest/doc-copy-icon.svg"
+                    alt="copy-icon"
+                    class="cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="w-full md:h-auto pl-[16px]">
+                <div class="flex gap-[24px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >1</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >import <span class="text-[#353740]">OpenAI</span> from
+                    <span class="text-[#008C6A]">"openai"</span>;
+                  </span>
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >2</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">client</span> = new
+                    <span class="text-[#353740]">AI()</span>
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >3</span
+                  >
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >4</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">response = </span>await
+                    <span class="text-[#353740]"
+                      >client.responses.create({</span
+                    >
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >5</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">model</span>:
+                    <span class="text-[#008C6A]">"Power-maker-AI"</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >6</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">input</span>: <span class="text-[#008C6A]">"Write a one-sentence bedtime story about a
+                    unicorn."</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >7</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    >});
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >8</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >9</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    ><span class="text-[#C0660D]">console</span>.log(response.output_text);
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-fit flex gap-[8px] mt-[19px]">
+            <img src="./public/assest/doc-up-icon.svg" alt="" class="cursor-pointer"/>
+            <h3
+              class="text-[17.72px] font-semibold text-[#202123] leading-[28px] tracking-[-0.16px]"
+            >
+              Lorem ipsum dolor sit amet
+            </h3>
+          </div>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+        </div>
+        <div
+          class="content-card mt-[50px] ml-[60px] md:w-[1000px] md:max-w-[1000px]"
+        >
+          <h2 class="text-[30px] font-semibold text-[#202123] leading-[39px]">
+            AI developer platform
+          </h2>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+          <div
+            class="w-full md:h-[294px] mt-[20px] border border-[#ECECF1] rounded-[8px] bg-gradient-to-r from-[#F7F7F880] to-[#F7F7F8] flex items-center gap-5"
+          >
+            <div class="md:w-[220px] md:max-w-[220px] md:h-[124px] ml-[43px]">
+              <h3
+                class="w-fit text-[15.63px] font-bold text-[#202123] leading-[24px] tracking-[-0.16px]"
+              >
+                Developer quickstart
+              </h3>
+              <p
+                class="text-[14px] text-[#353740] font-bold leading-[20px] tracking-[-0.16px]"
+              >
+                Make your first API request in minutes. Learn the basics of the
+                Power maker AI platform.
+              </p>
+              <div class="flex items-center gap-2 mt-[18px]">
+                <img
+                  src="./public/assest/doc-timer-icon.svg"
+                  alt="timer-icon"
+                />
+                <span
+                  class="text-[12px] font-bold text-[#6E6E80] leading-[16px]"
+                  >5 min</span
+                >
+              </div>
+            </div>
+            <div class="md:w-[692px] md:max-w-[692px] ">
+              <div
+                class="w-full md:h-[36px] flex items-center justify-between pl-[16px] py-[8px] pr-[11.33px]"
+              >
+                <div class="flex gap-1 cursor-pointer">
+                  <h3
+                    class="text-[14px] font-bold text-[#202123] leading-[20px] tracking-[-0.14px]"
+                  >
+                    javascript
+                  </h3>
+                  <img
+                    src="./public/assest/doc-up-down-icon.svg"
+                    alt="up-down-icon"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./public/assest/doc-copy-icon.svg"
+                    alt="copy-icon"
+                    class="cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="w-full md:h-auto pl-[16px]">
+                <div class="flex gap-[24px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >1</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >import <span class="text-[#353740]">OpenAI</span> from
+                    <span class="text-[#008C6A]">"openai"</span>;
+                  </span>
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >2</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">client</span> = new
+                    <span class="text-[#353740]">AI()</span>
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >3</span
+                  >
+                </div>
+                <div class="flex gap-[19.8px]">
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >4</span
+                  >
+                  <span
+                    class="text-[12.2px] font-[400] leading-[20px] text-[#1971A8]"
+                    >const <span class="text-[#353740]">response = </span>await
+                    <span class="text-[#353740]"
+                      >client.responses.create({</span
+                    >
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >5</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">model</span>:
+                    <span class="text-[#008C6A]">"Power-maker-AI"</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >6</span
+                  >
+                  <span
+                    class="ml-[26px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                  >
+                    <span class="text-[#E62C7A]">input</span>: <span class="text-[#008C6A]">"Write a one-sentence bedtime story about a
+                    unicorn."</span>,
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >7</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    >});
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >8</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="text-[11.4px] text-[#8E8EA0] font-[400] leading-[20px]"
+                    >9</span
+                  >
+                  <span
+                    class="ml-[19.8px] text-[12.2px] font-[400] leading-[20px] text-[#353740]"
+                    ><span class="text-[#C0660D]">console</span>.log(response.output_text);
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-fit flex gap-[8px] mt-[19px]">
+            <img src="./public/assest/doc-up-icon.svg" alt="" class="cursor-pointer"/>
+            <h3
+              class="text-[17.72px] font-semibold text-[#202123] leading-[28px] tracking-[-0.16px]"
+            >
+              Lorem ipsum dolor sit amet
+            </h3>
+          </div>
+          <p
+            class="mt-[13px] text-[18px] font-[400] text-[#81817C] md:max-w-[631px] leading-[130%]"
+          >
+            Lorem ipsum dolor sit amet. Cum reprehenderit quos non officiis
+            numquam aut blanditiis error. Ea vero commodi qui placeat veniam
+          </p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
