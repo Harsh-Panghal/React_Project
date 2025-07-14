@@ -95,12 +95,14 @@
       </div>
       <ul class="md:!flex gap-4 hidden">
         <li>
-          <a href="#home" class="font-[700] text-[15px] text-[#0E5185]">Home</a>
+          <a href="#home" class="nav-link font-[700] text-[15px] text-[#0E5185]"
+            >Home</a
+          >
         </li>
         <li class="hidden">
           <a
             href="#blog"
-            class="font-[700] text-[15px] text-[#81817C] hover:text-[#0E5185]"
+            class="nav-link font-[700] text-[15px] text-[#81817C] hover:text-[#0E5185]"
             >Blog</a
           >
         </li>
@@ -108,14 +110,14 @@
           <a
             href="../Documentation/index.html"
             target="_blank"
-            class="font-[510] text-[15px] text-[#81817C] hover:text-[#0E5185]"
+            class="nav-link font-[510] text-[15px] text-[#81817C] hover:text-[#0E5185]"
             >Documentation</a
           >
         </li>
         <li>
           <a
             href="#contactUs"
-            class="font-[510] text-[15px] text-[#81817C] hover:text-[#0E5185]"
+            class="nav-link font-[510] text-[15px] text-[#81817C] hover:text-[#0E5185]"
             >Contact Us</a
           >
         </li>
@@ -669,7 +671,7 @@
 
     <!-- our goal -->
     <div
-      class=" w-[340px] md:w-[1320px] md:max-w-[1320px] mx-auto our-goal mt-[35px] md:mt-[71px] flex items-center justify-center relative border border-[#F5F7FA] md:min-h-[670px] scroll-animate"
+      class="w-[340px] md:w-[1320px] md:max-w-[1320px] mx-auto our-goal mt-[35px] md:mt-[71px] flex items-center justify-center relative border border-[#F5F7FA] md:min-h-[670px] scroll-animate"
     >
       <img
         src="./assest/our-goal-union-lt.svg"
@@ -709,40 +711,62 @@
     </div>
 
     <!-- Payment -->
-     <div
-      class="payment w-[340px] md:w-[1320px] md:max-w-[1320px] mx-auto mt-[60px] md:mt-[70px] scroll-animate ">
+    <div
+      class="payment w-[340px] md:w-[1320px] md:max-w-[1320px] mx-auto mt-[60px] md:mt-[70px] scroll-animate"
+    >
       <h2
-        class="w-fit text-[24px] md:text-[30px] text-[#082343] font-[500] md:font-[700] mx-auto leading-[100%] tracking-[2%] "
+        class="w-fit text-[24px] md:text-[30px] text-[#082343] font-[500] md:font-[700] mx-auto leading-[100%] tracking-[2%]"
       >
         Purchase a subscription
       </h2>
-      <p class="mt-[16px] text-[14px] font-[400] text-[#81817C] leading-[100%] w-fit mx-auto">Choose the plan that works for you.</p>
-      <div class="h-[355px] md:h-[563px] bg-[#FFFFFF66] mt-[16px] flex items-center justify-center relative rounded-md border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F]">
+      <p
+        class="mt-[16px] text-[14px] font-[400] text-[#81817C] leading-[100%] w-fit mx-auto"
+      >
+        Choose the plan that works for you.
+      </p>
+      <div class="mt-[25px] md:h-[673px] relative">
+        <img src="./assest/pay-screen.png" alt="payment-screen" />
         <img
           src="./assest/pay-icon.svg"
           alt="payment-bg-img"
-          class="absolute md:top-[122px] md:left-[325px] w-[15%] z-[-10]"
+          class="absolute top-[35px] left-[60px] md:top-[172px] md:left-[320px] w-[22%] md:w-[15%]"
         />
         <img
           src="./assest/pay-icon.svg"
           alt="payment-bg-img"
-          class="absolute md:top-[350px] md:left-[785px] w-[15%] z-[-10]"
+          class="absolute bottom-[32px] right-[65px] md:bottom-[175px] md:right-[336px] w-[22%] md:w-[15%]"
         />
-        <div class="h-[185px] w-[275px] md:w-[541px] md:max-w-[741px] md:h-[260px] rounded-[30px] bg-[#1FA2D0CC] -skew-x-12 absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] z-0">   
-        </div>
-        <div class="md:w-[541px] md:max-w-[741px] md:h-[260px] z-1 flex flex-col items-center justify-center px-[20px] py-[30px] ">
-          <div class="flex gap-[10px] items-center">
-            <img src="./assest/🎉.png" alt="celeberate-icon" class="w-[30px]">            
-            <span class="text-[24px] md:text-[40px] font-[700] text-[#082343] leading-[100%]">For All Users</span>
-            <img src="./assest/🎉 (1).png" alt="celeberate-icon" class="w-[30px]"> 
+        <div
+          class="h-[85px] w-[175px] md:w-[541px] md:max-w-[741px] md:h-[260px] rounded-[8.44px] md:rounded-[30px] bg-[#1FA2D0CC] -skew-x-12 absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] z-0"
+        ></div>
+        <div
+          class="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] h-[85px] w-[175px] md:w-[541px] md:max-w-[741px] md:h-[260px] z-1 flex flex-col items-center justify-center px-[20px] py-[30px]"
+        >
+          <div class="flex gap-[4px] md:gap-[10px] items-end">
+            <img
+              src="./assest/Party Popper.svg"
+              alt="celeberate-icon"
+              class="w-[15px] md:w-[30px] rotate-[-90deg]"
+            />
+            <span
+              class="text-[16px] md:text-[40px] font-[700] text-[#082343] leading-[100%]"
+              >For All Users</span
+            >
+            <img
+              src="./assest/Party Popper.svg"
+              alt="celeberate-icon"
+              class="w-[15px] md:w-[30px]"
+            />
           </div>
-          <div class="text-[20px] font-medium text-[#FFFFFF]">During Beta</div>
-          <span class="text-[12px] md:text-[16px] font-light leading-[100%] text-[#FFFFFF] relative -bottom-10  -right-10 md:-bottom-19 md:-right-35 opacity-70">No credit card required*</span>
+          <div class="text-[12px] md:text-[20px] font-medium text-[#FFFFFF]">
+            During Beta
+          </div>
+          <span
+            class="text-[8px] md:text-[16px] font-light leading-[100%] text-[#FFFFFF] relative -bottom-4 -right-8 md:-bottom-19 md:-right-35 opacity-70"
+            >No credit card required*</span
+          >
         </div>
-        
       </div>
-
-
     </div>
 
     <!-- FAQ -->
@@ -1143,7 +1167,7 @@
     <!-- contactUs -->
     <div
       id="contactUs"
-      class="md:mt-[71px] mx-auto mt-[50px] w-[340px] h-[415px] md:w-[1320px] md:max-w-[1320px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate"
+      class="md:mt-[71px] mx-auto mt-[50px] w-[330px] h-[415px] md:w-[1240px] md:max-w-[1240px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate"
     >
       <div
         class="ml-[14px] mt-[14px] md:mt-0 md:ml-[44px] flex flex-col md:gap-4"
@@ -1165,7 +1189,7 @@
       </div>
 
       <div
-        class="mt-[15px] md:mt-0 w-[315px] grid-box ml-[14px] md:ml-[187px] md:w-[455px] md:max-w-[455px] grid md:grid-cols-2 grid-cols-1 md:grid-rows-4 [grid-template-rows:repeat(5,44px)] md:gap-x-5 md:gap-y-3 gap-y-[10px]"
+        class="mt-[15px] md:mt-0 w-[300px] grid-box ml-[14px] md:ml-[187px] md:w-[455px] md:max-w-[455px] grid md:grid-cols-2 grid-cols-1 md:grid-rows-4 [grid-template-rows:repeat(5,44px)] md:gap-x-5 md:gap-y-3 gap-y-[10px]"
       >
         <div class="relative w-full h-[44px] md:h-[48px] md:w-[218px]">
           <input
@@ -1234,7 +1258,7 @@
     </div>
     <!-- footer -->
     <div
-      class="mt-[-95px] md:mt-[-50px] h-[473px] md:max-h-[315px] relative -z-1 flex items-center scroll-animate md:max-w-[1320px] md:mx-auto"
+      class="bg-[#FFFFFF] mt-[-95px] md:mt-[-50px] w-[360px] h-[473px] md:w-[1320px] md:max-h-[315px] relative -z-1 flex items-center scroll-animate md:max-w-[1320px] mx-auto"
     >
       <div class="w-full md:h-[216px]">
         <div
@@ -1284,6 +1308,46 @@
     </div>
     <!-- Custom Scripts -->
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function setActiveLinkOnScroll() {
+          let scrollPos = window.scrollY + 100; // offset for fixed nav
+
+          sections.forEach((section) => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.getAttribute("id");
+
+            if (scrollPos >= top && scrollPos < top + height) {
+              navLinks.forEach((link) => {
+                link.classList.remove("text-[#0E5185]", "font-[700]");
+                link.classList.add("text-[#81817C]");
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add("text-[#0E5185]", "font-[700]");
+                }
+              });
+            }
+          });
+        }
+
+        // Initial call
+        setActiveLinkOnScroll();
+
+        // On scroll
+        window.addEventListener("scroll", setActiveLinkOnScroll);
+
+        // On click, scroll to section and apply active style
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((l) =>
+              l.classList.remove("text-[#0E5185]", "font-[700]")
+            );
+            this.classList.add("text-[#0E5185]", "font-[700]");
+          });
+        });
+      });
       function toggleFAQ(imgElement) {
         const answerBox = imgElement.parentElement.nextElementSibling;
         answerBox.classList.toggle("hidden");
