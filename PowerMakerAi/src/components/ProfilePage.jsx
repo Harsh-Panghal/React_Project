@@ -1,6 +1,6 @@
 import picSelectIcon from '../assets/pic-select-icon.svg';
 import moreIcon from '../assets/more-icon.svg';
-import tokenIcon from '../assets/token-icon.svg';
+import ProfileTokenCard from './ProfileTokenCard';
 import logo from '../assets/logo.svg';
 import React, { useState } from 'react';
 import tokenIconMobile from '../assets/token-icon-mobile.svg';
@@ -44,11 +44,7 @@ function ProfilePage({ onToggleProfilePage, onToggleDeleteChatAccount }) {
         <>
             <div className="profile-page gap-2 w-full h-full md:h-auto absolute md:top-[52%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] md:bg-white/90 bg-white border-1 border-solid border-[#E6E6E6CC] md:max-w-[1125px] md:w-[1125px] md:max-h-[900px] rounded-[6px] z-2 flex flex-col flex-wrap items-center justify-around shadow-md">
                 {/* Desktop / Tablet Image */}
-                <img
-                    src={tokenIcon}
-                    alt="token area"
-                    className="token-icon md:block absolute top-[2%] right-[2%]  cursor-pointer max-w-[120px] h-auto"
-                />
+                <ProfileTokenCard />
 
                 {/* Mobile Image */}
                 <img
