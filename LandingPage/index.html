@@ -62,7 +62,7 @@
     </style>
   </head>
 
-  <body class="bg-[#F5F7FA] font-['Satoshi']">
+  <body class="bg-[#F5F7FA] font-['Satoshi']" id="home">
     <!-- big-screen-bg-img -->
     <img
       src="./public/assest/landingPage-bg.svg"
@@ -93,6 +93,7 @@
         class="logo-title md:w-fit flex items-center md:justify-between md:gap-[15px] md:mx-0 mt-[30px] md:mt-0"
       >
         <img
+          id="menu-icon"
           src="./public/assest/three-line-icon.svg"
           alt=""
           class="md:hidden cursor-pointer"
@@ -146,7 +147,6 @@
     </nav>
     <!-- hero-section -->
     <div
-      id="home"
       class="hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate"
     >
       <div
@@ -1206,7 +1206,7 @@
     <!-- contactUs -->
     <div
       id="contactUs"
-      class="md:mt-[71px] mx-auto mt-[50px] w-[330px] h-[415px] md:w-[1240px] md:max-w-[1240px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate"
+      class="md:mt-[71px] mx-auto mt-[50px] w-[330px] h-[415px] md:w-[1240px] md:max-w-[1240px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate relative z-2"
     >
       <div
         class="ml-[14px] mt-[14px] md:mt-0 md:ml-[44px] flex flex-col md:gap-4"
@@ -1297,7 +1297,7 @@
     </div>
     <!-- footer -->
     <div
-      class="!bg-[#FFFFFF] mt-[-95px] md:mt-[-50px] w-[360px] h-[473px] md:w-[1320px] md:max-h-[315px] relative -z-1 flex items-center scroll-animate md:max-w-[1320px] mx-auto"
+      class="!bg-[#FFFFFF] mt-[-95px] md:mt-[-50px] w-[360px] h-[473px] md:w-[1320px] md:max-h-[315px] relative flex items-center scroll-animate md:max-w-[1320px] mx-auto"
     >
       <div class="w-full md:h-[216px]">
         <div
@@ -1328,39 +1328,27 @@
             class="mt-[20px] md:mt-0 border-1 border-[#DBE7F1] md:h-[182px] w-[250px] md:w-0 md:ml-[31.5px]"
           ></div>
           <div
-            class="w-[275px] md:w-[493.02px] max-h-[77px] grid md:grid-cols-3 grid-cols-2 gap-x-[90px] gap-y-[14px] md:gap-y-[8px] text-[14px] text-[#323B44] font-[400] md:ml-[38.5px] mt-[20px] md:mt-0 relative z-10"
+            class="w-[275px] md:w-[493.02px] max-h-[77px] grid md:grid-cols-3 grid-cols-2 gap-x-[90px] gap-y-[14px] md:gap-y-[8px] text-[14px] text-[#323B44] font-[400] md:ml-[38.5px] mt-[20px] md:mt-0"
           >
             <div class="">
-              <a
-                href="#home"
-                class="inline-block cursor-pointer hover:text-[#0E5185]"
-                >Home</a
-              >
+              <a href="#home" class="hover:text-[#0E5185]">Home</a>
             </div>
             <div>
-              <a href="#blog" class="cursor-pointer hover:text-[#0E5185]"
-                >Blogs</a
-              >
+              <a href="#blog" class="hover:text-[#0E5185]">Blogs</a>
             </div>
             <div class="hidden md:block">
-              <a href="#follow" class="cursor-pointer hover:text-[#0E5185]"
-                >Follow Us:</a
-              >
+              <a href="#follow" class="hover:text-[#0E5185]">Follow Us:</a>
             </div>
             <div class="whitespace-nowrap">
-              <a href="#terms" class="cursor-pointer hover:text-[#0E5185]"
+              <a href="./src/terms.html" target="_blank" class="hover:text-[#0E5185]"
                 >Terms and Conditions</a
               >
             </div>
             <div class="md:col-span-2 whitespace-nowrap">
-              <a href="#help" class="cursor-pointer hover:text-[#0E5185]"
-                >Help and Support</a
-              >
+              <a href="#help" class="hover:text-[#0E5185]">Help and Support</a>
             </div>
             <div class="md:row-start-3">
-              <a href="#privacy" class="cursor-pointer hover:text-[#0E5185]"
-                >Privacy Policy</a
-              >
+              <a href="./src/privacyPolicy.html" target="_blank" class="hover:text-[#0E5185]">Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -1373,46 +1361,11 @@
     </div>
     <!-- Custom Scripts -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("hidden");
+      }
 
-        function setActiveLinkOnScroll() {
-          let scrollPos = window.scrollY + 100; // offset for fixed nav
-
-          sections.forEach((section) => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute("id");
-
-            if (scrollPos >= top && scrollPos < top + height) {
-              navLinks.forEach((link) => {
-                link.classList.remove("text-[#0E5185]", "font-[700]");
-                link.classList.add("text-[#81817C]");
-                if (link.getAttribute("href") === `#${id}`) {
-                  link.classList.add("text-[#0E5185]", "font-[700]");
-                }
-              });
-            }
-          });
-        }
-
-        // Initial call
-        setActiveLinkOnScroll();
-
-        // On scroll
-        window.addEventListener("scroll", setActiveLinkOnScroll);
-
-        // On click, scroll to section and apply active style
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            navLinks.forEach((l) =>
-              l.classList.remove("text-[#0E5185]", "font-[700]")
-            );
-            this.classList.add("text-[#0E5185]", "font-[700]");
-          });
-        });
-      });
       function toggleFAQ(icon) {
         const faqItem = icon.closest(".faq-item");
         const answer = faqItem.querySelector(".faq-answer");
