@@ -69,22 +69,61 @@
       alt="bg-image-of-landing-page"
       class="hidden md:!inline-block md:w-full md:mx-auto md:h-[1007px] h-[547px] absolute top-0 left-0 z-1"
     />
-    <img
-      src="./public/assest/our-goal-union-lt.svg"
-      alt=""
-      class="hidden md:!inline-block absolute top-[350px] left-[115px] md:w-[187px] md:h-[187px] z-2"
-    />
-    <img
-      src="./public/assest/our-goal-union-rt.svg"
-      alt=""
-      class="hidden md:!inline-block absolute top-[420px] right-[110px] z-2 md:w-[187px] md:h-[187px]"
-    />
+
     <!-- mobile-bg-img -->
     <img
       src="./public/assest/mobile-bg-img.svg"
       alt=""
       class="w-full inline-block md:!hidden h-[547px] absolute top-[-20px] left-0 z-1 opacity-100"
     />
+    <!-- mobile-menu-conatiner -->
+    <div
+      id="menu"
+      class="mobile-menu-container hidden absolute top-0 left-0 z-5 w-[282px] h-[100vh] bg-[#FFFFFF] pl-[20px] pr-[24px] pt-[60px]"
+    >
+      <div class="flex justify-between">
+        <img src="./public/assest/logo.svg" alt="logo-img" />
+        <img
+          src="./public/assest/mobile-menu-cross-icon.svg"
+          alt="logo-img"
+          onclick="toggleMenu()"
+        />
+      </div>
+      <ul class="mt-[15px] flex flex-col gap-[16px] font-['Inter']">
+        <li>
+          <a
+            href="#home"
+            class="text-[16px] font-bold leading-[100%] text-[#0E5185]"
+            onclick="toggleMenu()"
+            >Home</a
+          >
+        </li>
+        <li class="hidden">
+          <a
+            href="#blog"
+            class="text-[16px] font-bold leading-[100%] text-[#81817C] hover:text-[#0E5185]"
+            onclick="toggleMenu()"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="../Documentation/index.html"
+            class="text-[16px] font-bold leading-[100%] text-[#81817C] hover:text-[#0E5185]"
+            onclick="toggleMenu()"
+            >Documentation</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contactUs"
+            class="text-[16px] font-bold leading-[100%] text-[#81817C] hover:text-[#0E5185]"
+            onclick="toggleMenu()"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
     <!-- nav-area -->
     <nav
       class="!mt-[30px] !ml-[30px] flex justify-between items-center z-2 relative scroll-animate md:!mx-auto md:w-[1320px] md:max-w-[1320px]"
@@ -97,6 +136,7 @@
           src="./public/assest/three-line-icon.svg"
           alt=""
           class="md:hidden cursor-pointer"
+          onclick="toggleMenu()"
         />
         <img
           src="./public/assest/logo.svg"
@@ -147,8 +187,18 @@
     </nav>
     <!-- hero-section -->
     <div
-      class="hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate"
+      class="md:w-[1320px] md:max-w-[1320px] mx-auto hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate"
     >
+      <img
+        src="./public/assest/our-goal-union-lt.svg"
+        alt=""
+        class="hidden md:!inline-block absolute top-[220px] left-[20px] md:w-[187px] md:h-[187px] z-2"
+      />
+      <img
+        src="./public/assest/our-goal-union-rt.svg"
+        alt=""
+        class="hidden md:!inline-block absolute top-[295px] right-[15px] z-2 md:w-[187px] md:h-[187px]"
+      />
       <div
         class="card-1 w-[286.45px] h-[58px] md:h-auto md:w-fit bg-[#FFFFFF] border-[0.82px] border-[#E6E6E6] !px-[14px] !py-[8px] rounded-md shadow-[0px_2px_3px_0px_#00000014]"
       >
@@ -1340,7 +1390,10 @@
               <a href="#follow" class="hover:text-[#0E5185]">Follow Us:</a>
             </div>
             <div class="whitespace-nowrap">
-              <a href="./src/terms.html" target="_blank" class="hover:text-[#0E5185]"
+              <a
+                href="./src/terms.html"
+                target="_blank"
+                class="hover:text-[#0E5185]"
                 >Terms and Conditions</a
               >
             </div>
@@ -1348,7 +1401,12 @@
               <a href="#help" class="hover:text-[#0E5185]">Help and Support</a>
             </div>
             <div class="md:row-start-3">
-              <a href="./src/privacyPolicy.html" target="_blank" class="hover:text-[#0E5185]">Privacy Policy</a>
+              <a
+                href="./src/privacyPolicy.html"
+                target="_blank"
+                class="hover:text-[#0E5185]"
+                >Privacy Policy</a
+              >
             </div>
           </div>
         </div>
