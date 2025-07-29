@@ -138,11 +138,11 @@
           class="md:hidden cursor-pointer"
           onclick="toggleMenu()"
         />
-        <div class="flex items-center mx-auto ">
+        <div class="flex items-center mx-auto">
           <img
             src="./public/assest/logo.svg"
             alt="logo-img"
-            class="w-[36.05px] h-[45px] "
+            class="w-[36.05px] h-[45px]"
           />
           <div
             class="text-[14.43px] font-[500] text-[#1C1C1C] ml-[8px] md:!ml-0"
@@ -191,7 +191,7 @@
     </nav>
     <!-- hero-section -->
     <div
-      class="w-[90%] md:w-[1320px] md:max-w-[1320px] mx-auto hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate outline"
+      class="w-[85%] md:w-[1320px] md:max-w-[1320px] mx-auto hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate"
     >
       <img
         src="./public/assest/our-goal-union-lt.svg"
@@ -265,10 +265,12 @@
 
     <!-- our-vision -->
     <div
-      class="w-[340px] min-h-[610px] md:h-[610px] md:flex mt-[71px] md:w-[1320px] md:max-w-[1320px] mx-auto md:py-[45px] scroll-animate"
+      class="w-[85%] md:min-h-[610px] md:h-[610px] md:flex mt-[30px] md:w-[1320px] md:max-w-[1320px] mx-auto md:py-[45px] scroll-animate"
     >
       <div class="w-full flex md:flex-row flex-col relative">
-        <div class="our-vision-content-card">
+        <div
+          class="our-vision-content-card  w-full md:w-fit flex flex-col items-center md:items-start"
+        >
           <h2
             class="text-[24px] md:text-[35px] text-center md:text-start font-[500] text-[#082343] w-full md:w-[903px] md:max-w-[903px] h-[50px] py-[7px] md:py-0 md:min-h-[60px] md:!px-[138px] md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] mt-[32px] md:mt-0"
             style="
@@ -283,7 +285,7 @@
             Our Vision
           </h2>
           <p
-            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] text-center md:text-start !mt-[25px] leading-[120%] md:!pl-[138px]"
+            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-full md:w-[699px] text-center md:text-start !mt-[25px] leading-[120%] md:!pl-[138px]"
           >
             PowerMakerAI is more than a tool — it’s your AI pair programmer for
             Dynamics 365. Whether you're a solo consultant or an enterprise
@@ -291,28 +293,28 @@
             confidently. 
           </p>
           <p
-            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-[344px] md:w-[699px] !mt-[31px] leading-[120%] md:pl-[138px] text-center md:text-start"
+            class="font-[inter] text-[17px] font-[400] text-[#81817C] mx-auto md:mx-[0px] w-full md:w-[699px] !mt-[31px] leading-[120%] md:pl-[138px] text-center md:text-start"
           >
             PowerMakerAI is built with the vision of simplifying Dynamics 365
             customizations using AI. The MVP is already live and evolving
             rapidly based on developer and consultant feedback.  
           </p>
           <button
-            class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[153px] h-[47px] cursor-pointer border border-[#0E5185] ml-[90px] md:!ml-[138px] mt-[30.5px] hover:bg-sky-50 hover:border-sky-50"
+            class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[153px] h-[47px] cursor-pointer border border-[#0E5185] !mx-auto md:!ml-[138px] mt-[30.5px] hover:bg-sky-50 hover:border-sky-50 "
           >
             Contact Us
           </button>
         </div>
-        <div class="our-vision-img-card">
+        <div class="our-vision-img-card hidden md:block">
           <img
             src="./public/assest/our-vision-img.svg"
             alt=""
-            class="absolute z-1 top-[470px] left-[60.2px] md:top-[-38px] md:left-[871px] md:w-[320px] md:h-[450px] w-[225.27px] h-[265.02px]"
+            class="hidden md:inline-block absolute z-1 top-[108%] left-[20%] md:top-[-38px] md:left-[871px] md:w-[320px] md:h-[450px] w-[70%] h-[265.02px]"
           />
           <img
             src="./public/assest/our-vision-img-trans.svg"
             alt=""
-            class="absolute md:w-[210px] md:h-[325px] bottom-[-345px] right-[10.2px] md:bottom-[50px] md:right-[60px] z-0 w-[149.47px] h-[193.46px]"
+            class="hidden md:inline-block absolute md:w-[210px] md:h-[325px] bottom-[-73%] right-[2%] md:bottom-[50px] md:right-[60px] z-0 w-[50%] h-[193.46px]"
           />
         </div>
       </div>
@@ -320,7 +322,7 @@
 
     <!-- Current Features -->
     <div
-      class="mt-[215px] md:mt-0 bg-[#F5F7FA] border border-[#F5F7FA] w-[340px] md:w-[1320px] md:max-w-[1320px] mx-auto scroll-animate"
+      class="mt-[40px] md:mt-0 bg-[#F5F7FA] border border-[#F5F7FA] w-[85%] md:w-[1320px] md:max-w-[1320px] mx-auto scroll-animate"
     >
       <h2
         class="h-[50px] py-[7px] md:h-[60px] md:py-0 md:!mt-[-71px] w-full md:w-[903px] md:max-w-[903px] text-center font-[500] text-[24px] md:text-[35px] text-[#082343] !mx-auto"
@@ -331,7 +333,7 @@
         Current Features
       </h2>
       <div
-        class="!mt-10 w-[330px] md:w-[1237px] md:max-w-[1237px] md: rounded-xl !mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] px-4 md:px-0 py-[20px] md:pb-6.5 flex flex-col md:flex-row gap-14"
+        class="!mt-10 w-full md:w-[1237px] md:max-w-[1237px] md: rounded-xl !mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] px-4 md:px-0 py-[20px] md:pb-6.5 flex flex-col md:flex-row gap-14"
       >
         <img
           src="./public/assest/current-feat-img1-icon.svg"
@@ -391,7 +393,7 @@
       </div>
 
       <div
-        class="!mt-10 w-[330px] md:w-[1237px] md:max-w-[1237px] rounded-xl mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] pl-4 py-[20px] md:pb-6.5 flex flex-col md:flex-row gap-14 justify-between"
+        class="!mt-10 w-full md:w-[1237px] md:max-w-[1237px] rounded-xl mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] pl-4 py-[20px] md:pb-6.5 flex flex-col md:flex-row gap-14 justify-between"
       >
         <div
           class="w-full md:w-[743.5px] md:max-w-[743.5px] mx-auto md:mx-0 md:!ml-[30px] md:!mt-[20px]"
@@ -450,7 +452,7 @@
       </div>
 
       <div
-        class="!mt-10 w-[330px] md:w-[1237px] md:max-w-[1237px] rounded-xl !mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] px-4 md:px-0 py-[20px] md:pt-[40px] md:pb-6.5 flex flex-col md:flex-row gap-18"
+        class="!mt-10 w-full md:w-[1237px] md:max-w-[1237px] rounded-xl !mx-auto bg-[#FFFFFF] border border-[#E6E6E6] shadow-[0px_0px_4px_0px_#0000000A] px-4 md:px-0 py-[20px] md:pt-[40px] md:pb-6.5 flex flex-col md:flex-row gap-18"
       >
         <img
           src="./public/assest/current-feat-img3-icon.svg"
@@ -510,7 +512,7 @@
     </div>
     <!-- key Features -->
     <div
-      class="key-features rounded-sm bg-[#FFFFFF] border border-[#F5F7FA] mt-[31px] md:mt-[70px] w-[350px] md:w-[1320px] md:max-w-[1320px] mx-auto scroll-animate relative"
+      class="key-features rounded-sm bg-[#FFFFFF] border border-[#F5F7FA] mt-[31px] md:mt-[70px] w-[85%] md:w-[1320px] md:max-w-[1320px] mx-auto scroll-animate relative"
     >
       <h2
         class="text-[24px] md:text-[35px] text-center md:text-start font-[500] text-[#082343] w-full md:w-[903px] md:max-w-[903px] h-[50px] py-[7px] md:py-0 md:min-h-[60px] md:!px-[147px] md:!bg-gradient-to-r md:!from-[#1FA2D0] md:!to-[#1FA2D000] mt-[32px]"
@@ -521,7 +523,7 @@
         Key Features
       </h2>
       <div
-        class="grid-box mt-[32px] md:mx-[147px] w-[330px] md:w-[1025px] md:max-w-[1025px] grid md:[grid-template-rows:repeat(3,_270px)] md:[grid-template-columns:repeat(3,_303px)] md:gap-y-[26px] md:gap-x-[59px] [grid-template-columns:repeat(2,_155px)] [grid-template-rows:repeat(4,200px)] gap-x-5 gap-y-4 mx-auto md:mb-[91px]"
+        class="grid-box mt-[32px] md:mx-[147px] w-full md:w-[1025px] md:max-w-[1025px] grid md:[grid-template-rows:repeat(3,_270px)] md:[grid-template-columns:repeat(3,_303px)] md:gap-y-[26px] md:gap-x-[59px] [grid-template-columns:repeat(2,_47%)] [grid-template-rows:repeat(4,auto)] gap-x-5 gap-y-4 mx-auto md:mb-[91px] px-1"
       >
         <div
           class="bg-[#FFFFFF] hover:-translate-y-2 hover:shadow-[0_0_10px_rgba(120,120,130,0.5)] cursor-pointer transition-transform duration-300 ease-in-out !px-2.5 !py-4 border border-[#E6E6E6] shadow-[0px_4px_8px_0px_#0000000F] rounded-md"
@@ -734,7 +736,7 @@
               <h2
                 class="text-[#FFFFFF] text-[14px] md:text-[20px] text-center leading-[100%] font-bold whitespace-nowrap text-ellipsis"
               >
-                One-Click CRM <span class="hidden md:inline">Export</span>
+                One-Click<span class="md:hidden">...</span> <span class="hidden md:inline">CRM Export</span>
               </h2>
             </div>
             <div
