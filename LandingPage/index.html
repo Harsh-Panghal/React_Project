@@ -126,10 +126,10 @@
     </div>
     <!-- nav-area -->
     <nav
-      class="!mt-[30px] !ml-[30px] flex justify-between items-center z-2 relative scroll-animate md:!mx-auto md:w-[1320px] md:max-w-[1320px]"
+      class="!mt-[30px] flex justify-between items-center z-2 relative scroll-animate !mx-auto md:w-[1320px] md:max-w-[1320px] w-[90%]"
     >
       <div
-        class="logo-title md:w-fit flex items-center md:justify-between md:gap-[15px] md:mx-0 mt-[30px] md:mt-0"
+        class="logo-title w-full md:w-fit flex items-center md:justify-between md:gap-[15px] md:mx-0 mt-[30px] md:mt-0"
       >
         <img
           id="menu-icon"
@@ -138,16 +138,20 @@
           class="md:hidden cursor-pointer"
           onclick="toggleMenu()"
         />
-        <img
-          src="./public/assest/logo.svg"
-          alt="logo-img"
-          class="w-[36.05px] h-[45px] ml-[45px] md:ml-0"
-        />
-        <div class="text-[14.43px] font-[500] text-[#1C1C1C] ml-[8px] md:!ml-0">
-          Power Maker AI<span
-            class="text-[8.57px] text-[#81817C] !mr-auto ml-0.5"
-            >(Beta)</span
+        <div class="flex items-center mx-auto ">
+          <img
+            src="./public/assest/logo.svg"
+            alt="logo-img"
+            class="w-[36.05px] h-[45px] "
+          />
+          <div
+            class="text-[14.43px] font-[500] text-[#1C1C1C] ml-[8px] md:!ml-0"
           >
+            Power Maker AI<span
+              class="text-[8.57px] text-[#81817C] !mr-auto ml-0.5"
+              >(Beta)</span
+            >
+          </div>
         </div>
       </div>
       <ul class="md:!flex gap-4 hidden">
@@ -187,7 +191,7 @@
     </nav>
     <!-- hero-section -->
     <div
-      class="md:w-[1320px] md:max-w-[1320px] mx-auto hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate"
+      class="w-[90%] md:w-[1320px] md:max-w-[1320px] mx-auto hero-section relative z-2 mt-[40px] md:mt-[52px] flex flex-col items-center gap-14 scroll-animate outline"
     >
       <img
         src="./public/assest/our-goal-union-lt.svg"
@@ -200,7 +204,7 @@
         class="hidden md:!inline-block absolute top-[295px] right-[15px] z-2 md:w-[187px] md:h-[187px]"
       />
       <div
-        class="card-1 w-[286.45px] h-[58px] md:h-auto md:w-fit bg-[#FFFFFF] border-[0.82px] border-[#E6E6E6] !px-[14px] !py-[8px] rounded-md shadow-[0px_2px_3px_0px_#00000014]"
+        class="w-[85%] card-1 h-[58px] md:h-auto md:w-fit bg-[#FFFFFF] border-[0.82px] border-[#E6E6E6] !px-[14px] !py-[8px] rounded-md shadow-[0px_2px_3px_0px_#00000014]"
       >
         <p
           class="text-[16px] text-center font-[500] bg-gradient-to-r from-[#0E5185] to-[#1FA2D0] bg-clip-text text-transparent leading-[120%] md:leading-[160%]"
@@ -208,8 +212,8 @@
           Your AI Assistant for Effortless Dynamics 365 Customizations
         </p>
       </div>
-      <div class="card-2 mt-[-28px] md:mt-0">
-        <div class="w-[326px] md:w-fit mx-auto">
+      <div class="card-2 mt-[-28px] md:mt-0 w-[99%] md:w-fit">
+        <div class="w-[97%] md:w-fit mx-auto">
           <div
             class="text-[24px] md:text-[45px] font-[700] bg-gradient-to-r from-[#1FA2D0] to-[#0E5185] bg-clip-text text-transparent text-center leading-[120%] md:leading-[110%]"
           >
@@ -228,29 +232,29 @@
           </div>
         </div>
         <p
-          class="text-[#81817C] text-[13px] w-[326px] md:w-fit md:text-[17px] font-[400] text-center mx-auto mt-[7px]"
+          class="text-[#81817C] text-[13px] w-[100%] md:w-fit md:text-[17px] font-[400] text-center mx-auto mt-[7px]"
         >
           Design entities, fix plugins, and resolve issues faster — all through
           guided, intelligent workflows. 
         </p>
       </div>
       <div
-        class="req-contact-btn-card flex gap-2.5 max-w-[305.19px] md:w-[346px] md:max-w-[346px] justify-between mt-[-40px] md:mt-0"
+        class="req-contact-btn-card flex gap-2.5 w-[90%] md:w-[346px] md:max-w-[346px] justify-between mt-[-40px] md:mt-0"
       >
         <button
-          class="text-[15px] font-[500] text-[#FFFFFF] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#0E5185] inline-block min-w-[143.23px] md:w-[153px] min-h-[44px] md:h-[47px] cursor-pointer hover:bg-[#051F3D] hover:scale-[0.99] transition-all duration-200 ease-out"
+          class="text-[15px] font-[500] text-[#FFFFFF] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#0E5185] inline-block w-[50%] md:w-[153px] min-h-[44px] md:h-[47px] cursor-pointer hover:bg-[#051F3D] hover:scale-[0.99] transition-all duration-200 ease-out"
         >
           Request Demo
         </button>
         <button
-          class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block min-w-[143.23px] md:w-[153px] min-h-[44px] md:h-[47px] cursor-pointer border border-[#0E5185] hover:bg-sky-50 hover:border-sky-50"
+          class="text-[15px] font-[500] text-[#0E5185] rounded-xl shadow-[0px_8px_16px_0px_#00000014] bg-[#FFFFFF] inline-block w-[50%] md:w-[153px] min-h-[44px] md:h-[47px] cursor-pointer border border-[#0E5185] hover:bg-sky-50 hover:border-sky-50"
         >
           Contact Us
         </button>
       </div>
       <video
         controls
-        class="mt-0 w-[281.25px] h-[150px] md:w-[1172px] md:max-w-[1071px] md:h-[601.05px]"
+        class="mt-0 w-[80%] h-[150px] md:w-[1172px] md:max-w-[1071px] md:h-[601.05px]"
       >
         <source
           src="./public/assest/PowerMakerAi - Google Chrome 2025-07-02 18-11-38.mp4"
@@ -775,7 +779,8 @@
                 <h2
                   class="text-[#FFFFFF] text-[14px] md:text-[20px] text-center leading-[100%] font-bold whitespace-nowrap text-ellipsis"
                 >
-                  Built-in CRM <span class="md:hidden">...</span> <span class="hidden md:inline">Schema...</span>
+                  Built-in CRM <span class="md:hidden">...</span>
+                  <span class="hidden md:inline">Schema...</span>
                 </h2>
                 <div
                   class="absolute bottom-full -mb-0.5 left-full -translate-x-full hidden group-hover:block bg-[#0E5185] text-white text-xs rounded px-2 py-1 whitespace-nowrap z-50"
@@ -825,7 +830,8 @@
               <h2
                 class="text-[#FFFFFF] text-[14px] md:text-[20px] text-center leading-[100%] font-bold whitespace-nowrap text-ellipsis"
               >
-                Scalable &<span class="md:hidden">...</span><span class="hidden md:!inline"> Extendable</span> 
+                Scalable &<span class="md:hidden">...</span
+                ><span class="hidden md:!inline"> Extendable</span>
               </h2>
             </div>
             <div
