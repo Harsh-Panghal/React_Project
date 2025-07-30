@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js" defer></script>
 
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -79,7 +80,7 @@
     <!-- mobile-menu-conatiner -->
     <div
       id="menu"
-      class="mobile-menu-container hidden absolute top-0 left-0 z-5 w-[282px] h-[100vh] bg-[#FFFFFF] pl-[20px] pr-[24px] pt-[60px]"
+      class="mobile-menu-container hidden absolute top-0 left-0 z-5 w-[40vmax] h-[100dvh] bg-[#FFFFFF] pl-[20px] pr-[24px] pt-[40px]"
     >
       <div class="flex justify-between">
         <img src="./public/assest/logo.svg" alt="logo-img" />
@@ -953,7 +954,7 @@
 
     <!-- FAQ -->
     <div
-      class="FAQ mt-[55px] md:mt-[45px] w-[85%] md:w-[1320px] md:max-w-[1320px] mx-auto min-h-[440px] md:px-[141px] scroll-animate outline"
+      class="FAQ mt-[55px] md:mt-[45px] w-[85%] md:w-[1320px] md:max-w-[1320px] mx-auto min-h-[440px] md:px-[141px] scroll-animate"
     >
       <h2
         class="w-fit text-[24px] md:text-[30px] text-[#082343] font-[500] md:font-[700] mx-auto leading-[35px]"
@@ -962,7 +963,7 @@
       </h2>
 
       <div
-        class="mx-auto md:mx-0 md:w-full mt-[30px] md:mt-[58px] min-h-[40px] flex justify-between flex-col gap-[10px] leading-[100%] "
+        class="mx-auto md:mx-0 md:w-full mt-[30px] md:mt-[58px] min-h-[40px] flex justify-between flex-col gap-[10px] leading-[100%]"
       >
         <!-- Question Container -->
         <div class="faq-item">
@@ -980,16 +981,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md mt-[6px]"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            PowerMakerAI is an AI-powered assistant that helps Dynamics CRM
-            users streamline customizations, generate entities, analyze plugin
-            trace logs, and automate routine tasks using natural language
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              PowerMakerAI is an AI-powered assistant that helps Dynamics CRM
+              users streamline customizations, generate entities, analyze plugin
+              trace logs, and automate routine tasks using natural language.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1011,16 +1015,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            Not necessarily. While some features are helpful for developers,
-            many tasks can be performed using plain English — no deep technical
-            skills required.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              Not necessarily. While some features are helpful for developers,
+              many tasks can be performed using plain English — no deep
+              technical skills required.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1042,16 +1049,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            PowerMakerAI is designed to work with modern Dynamics 365 Online
-            environments. Compatibility with on-premise or older versions may be
-            limited.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              PowerMakerAI is designed to work with modern Dynamics 365 Online
+              environments. Compatibility with on-premise or older versions may
+              be limited.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1073,16 +1083,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            You can generate entities, update schema fields, fetch plugin trace
-            logs, create sample plugins, and even trigger CRM actions using
-            simple prompts.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              You can generate entities, update schema fields, fetch plugin
+              trace logs, create sample plugins, and even trigger CRM actions
+              using simple prompts.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1104,16 +1117,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            Absolutely. We don’t store or access your Dynamics CRM data without
-            your permission. All processing is handled securely, and you
-            maintain full control of your environment.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              Absolutely. We don’t store or access your Dynamics CRM data
+              without your permission. All processing is handled securely, and
+              you maintain full control of your environment.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1135,16 +1151,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            Yes! One of the core features is Plugin Trace Log analysis. You can
-            upload or query logs, and the AI will explain errors in plain
-            language — with suggestions.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              Yes! One of the core features is Plugin Trace Log analysis. You
+              can upload or query logs, and the AI will explain errors in plain
+              language — with suggestions.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1167,16 +1186,19 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            PowerMakerAI is designed to enhance developer productivity with AI
-            guidance — not replace Power Platform tools, but complement them by
-            offering quick insights and automation.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              PowerMakerAI is designed to enhance developer productivity with AI
+              guidance — not replace Power Platform tools, but complement them
+              by offering quick insights and automation.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1198,15 +1220,18 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            Yes. You can sign up and explore the beta version of PowerMakerAI
-            with access to core features.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              Yes. You can sign up and explore the beta version of PowerMakerAI
+              with access to core features.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1228,15 +1253,18 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            You can use the “Contact Us” section or email us directly at
-            [support@powermaker.ai].
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              You can use the “Contact Us” section or email us directly at
+              [support@powermaker.ai].
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
 
       <div
@@ -1258,15 +1286,18 @@
             />
           </div>
           <div
-            class="faq-answer hidden bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-[6px]"
           >
-            Definitely! We’re actively working on integrations, form scripting
-            support, and full PowerApps integration. Stay tuned.
+            <!-- Padding is now safely inside -->
+            <div
+              class="bg-white text-[#333] text-[15px] px-4 py-3 rounded-md shadow-md"
+            >
+              Definitely! We’re actively working on integrations, form scripting
+              support, and full PowerApps integration. Stay tuned.
+            </div>
           </div>
         </div>
-        <div
-          class="w-full border border-[#000000] opacity-10"
-        ></div>
+        <div class="w-full border border-[#000000] opacity-10"></div>
       </div>
     </div>
 
@@ -1456,7 +1487,7 @@
     <!-- contactUs -->
     <div
       id="contactUs"
-      class="md:mt-[71px] mx-auto mt-[50px] w-[330px] h-[415px] md:w-[1240px] md:max-w-[1240px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate relative z-2"
+      class="md:mt-[71px] mx-auto mt-[50px] w-[86%] h-[415px] md:w-[1240px] md:max-w-[1240px] md:h-[342px] bg-[#D2ECF6] rounded-md flex flex-col md:flex-row md:items-center scroll-animate relative z-2"
     >
       <div
         class="ml-[14px] mt-[14px] md:mt-0 md:ml-[44px] flex flex-col md:gap-4"
@@ -1477,7 +1508,7 @@
       </div>
 
       <div
-        class="mt-[15px] md:mt-0 w-[300px] grid-box ml-[14px] md:ml-[187px] md:w-[455px] md:max-w-[455px] grid md:grid-cols-2 grid-cols-1 md:grid-rows-4 [grid-template-rows:repeat(5,44px)] md:gap-x-5 md:gap-y-3 gap-y-[10px]"
+        class="mt-[15px] md:mt-0 w-[95%] grid-box ml-[14px] md:ml-[187px] md:w-[455px] md:max-w-[455px] grid md:grid-cols-2 grid-cols-1 md:grid-rows-4 [grid-template-rows:repeat(5,44px)] md:gap-x-5 md:gap-y-3 gap-y-[10px]"
       >
         <div class="relative w-full h-[44px] md:h-[48px] md:w-[218px]">
           <input
@@ -1546,7 +1577,7 @@
     </div>
     <!-- footer -->
     <div
-      class="!bg-[#FFFFFF] mt-[-95px] md:mt-[-50px] w-[360px] h-[473px] md:w-[1320px] md:max-h-[315px] relative flex items-center scroll-animate md:max-w-[1320px] mx-auto"
+      class="!bg-[#FFFFFF] mt-[-95px] md:mt-[-50px] w-[96%] h-[473px] md:w-[1320px] md:max-h-[315px] relative flex items-center scroll-animate md:max-w-[1320px] mx-auto"
     >
       <div class="w-full md:h-[216px]">
         <div
@@ -1616,71 +1647,5 @@
         </div>
       </div>
     </div>
-    <!-- Custom Scripts -->
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("menu");
-        menu.classList.toggle("hidden");
-      }
-
-      function toggleFAQ(icon) {
-        const faqItem = icon.closest(".faq-item");
-        const answer = faqItem.querySelector(".faq-answer");
-
-        const isOpen = !answer.classList.contains("hidden");
-
-        // Toggle visibility
-        answer.classList.toggle("hidden");
-
-        // Change icon
-        if (isOpen) {
-          icon.src = "./public/assest/faq-add-icon.svg";
-        } else {
-          icon.src = "./public/assest/faq-minus-icon.svg";
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // --- Scroll-in Animation ---
-        const animatedElements = document.querySelectorAll(".scroll-animate");
-        if ("IntersectionObserver" in window) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  // Optional: Stop observing the element once it's visible
-                  // observer.unobserve(entry.target);
-                }
-              });
-            },
-            {
-              threshold: 0.1, // Trigger when 10% of the element is visible
-            }
-          );
-
-          animatedElements.forEach((element) => {
-            observer.observe(element);
-          });
-        } else {
-          // Fallback for older browsers that don't support IntersectionObserver
-          animatedElements.forEach((element) => {
-            element.classList.add("visible");
-          });
-        }
-
-        // --- Card Slider Control ---
-        window.scrollCards = function (direction) {
-          const container = document.getElementById("card-container");
-          const scrollAmount = container.offsetWidth * 0.8; // Scroll by 80% of the container's width
-
-          if (direction === "left") {
-            container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-          } else {
-            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-          }
-        };
-      });
-    </script>
   </body>
 </html>
