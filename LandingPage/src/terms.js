@@ -42,15 +42,16 @@ fetch("terms.json")
     });
   });
 
+
 // Add active class to the clicked link
 const links = document.querySelectorAll(".nav-link");
 
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      links.forEach((l) => l.classList.remove("text-[#1FA2D0]"));
-      links.forEach((l) => l.classList.add("text-[#828282]"));
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    links.forEach((l) => l.classList.remove("text-[#1FA2D0]"));
+    links.forEach((l) => l.classList.add("text-[#828282]"));
 
-      link.classList.remove("text-[#828282]");
-      link.classList.add("text-[#1FA2D0]");
-    });
+    link.classList.remove("text-[#828282]");
+    link.classList.add("text-[#1FA2D0]");
   });
+});
