@@ -15,7 +15,7 @@ fetch("privacy.json")
     if (data.intro) {
       const intro = document.createElement("p");
       intro.className =
-        "text-[16px] font-[400] text-[#656262] leading-[110%] mb-[1.5rem]";
+        "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[130%] md:leading-[110%] mb-[1.5rem]";
       intro.textContent = data.intro;
       container.appendChild(intro);
     }
@@ -25,7 +25,7 @@ fetch("privacy.json")
       // Section Title
       const title = document.createElement("h2");
       title.className =
-        "text-[20px] font-semibold text-[#000000] leading-[110%] mt-[1rem]";
+        "text-[18px] md:text-[20px] font-semibold text-[#000000] leading-[110%] mt-[0.5rem] md:mt-[1rem]";
       title.textContent = section.title;
       title.id = section.title
         .toLowerCase()
@@ -38,7 +38,7 @@ fetch("privacy.json")
       if (section.intro) {
         const sectionIntro = document.createElement("p");
         sectionIntro.className =
-          "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[0.5rem]";
+          "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[0.5rem]";
         sectionIntro.textContent = section.intro;
         container.appendChild(sectionIntro);
       }
@@ -47,7 +47,7 @@ fetch("privacy.json")
       if (section["sub-intro"]) {
         const subIntro = document.createElement("p");
         subIntro.className =
-          "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[1.5rem]";
+          "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[1.5rem]";
         subIntro.textContent = section["sub-intro"];
         container.appendChild(subIntro);
       }
@@ -60,7 +60,7 @@ fetch("privacy.json")
       ) {
         Object.entries(section.content).forEach(([groupTitle, values]) => {
           const subTitle = document.createElement("h3");
-          subTitle.className = "text-[17px] font-semibold mt-[1rem]";
+          subTitle.className = "text-[16px] md:text-[17px] font-semibold mt-[1rem]";
           subTitle.textContent = groupTitle
             .replace(/([A-Z])/g, " $1")
             .replace(/^./, (str) => str.toUpperCase())
@@ -69,7 +69,7 @@ fetch("privacy.json")
 
           const ul = document.createElement("ul");
           ul.className =
-            "list-disc ml-[55px] mt-[10px] text-[16px] font-[400] text-[#656262]";
+            "list-disc ml-[55px] mt-[10px] text-[14px] md:text-[16px] font-[400] text-[#656262]";
           Object.entries(values).forEach(([key, value]) => {
             const li = document.createElement("li");
             li.innerHTML = `<strong>${key
@@ -86,7 +86,7 @@ fetch("privacy.json")
       if (Array.isArray(listItems)) {
         const ul = document.createElement("ul");
         ul.className =
-          "list-disc ml-[55px] mt-[10px] text-[16px] font-[400] text-[#656262]";
+          "list-disc ml-[55px] mt-[10px] text-[14px] md:text-[16px] font-[400] text-[#656262]";
         listItems.forEach((item) => {
           const li = document.createElement("li");
           li.innerHTML = item;
@@ -100,7 +100,7 @@ fetch("privacy.json")
       if (typeof section.content === "string") {
         const p = document.createElement("p");
         p.className =
-          "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[0.5rem]";
+          "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[0.5rem]";
         p.innerHTML = section.content.replace(/\n/g, "<br>");
         container.appendChild(p);
       }
@@ -110,7 +110,7 @@ fetch("privacy.json")
         const contact = document.createElement("p");
         contact.textContent = `Contact: ${section.contact}`;
         contact.className =
-          "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[10px]";
+          "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[10px]";
         container.appendChild(contact);
       }
 
@@ -120,14 +120,14 @@ fetch("privacy.json")
           const email = document.createElement("p");
           email.textContent = `Email: ${section.contact.email}`;
           email.className =
-            "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[5px]";
+            "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[5px]";
           container.appendChild(email);
         }
         if (section.contact.address) {
           const address = document.createElement("p");
           address.textContent = `Address: ${section.contact.address}`;
           address.className =
-            "text-[16px] font-[400] text-[#656262] leading-[110%] mt-[5px]";
+            "text-[14px] md:text-[16px] font-[400] text-[#656262] leading-[110%] mt-[5px]";
           container.appendChild(address);
         }
       }
@@ -152,3 +152,27 @@ links.forEach((link) => {
     link.classList.add("text-[#1FA2D0]");
   });
 });
+ 
+// toggle menu
+function toggleMenu() {
+  const sidebar = document.getElementById("sidebar");
+
+  if (sidebar.classList.contains("hidden")) {
+    sidebar.classList.remove("hidden");
+    sidebar.classList.add("absolute", "z-50", "top-0", "left-0"); // for mobile overlay
+  } else {
+    sidebar.classList.add("hidden");
+    sidebar.classList.remove("absolute", "z-50", "top-0", "left-0");
+  }
+}
+
+
+//if user click on any link in mobile view then close the menu
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 768) {
+      toggleMenu();
+    }
+  });
+});
+
