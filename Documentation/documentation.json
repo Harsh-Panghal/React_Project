@@ -1,0 +1,197 @@
+{
+  "sections": [
+    {
+      "heading": "Get Started",
+      "content": [
+        {
+          "type": "text",
+          "value": "Welcome to Power Maker AI, your AI assistant for Dynamics 365 CRM. This documentation will guide you through everything you need to know—from getting started to using our AI-powered models to accelerate CRM development, analysis, and automation."
+        },
+        {
+          "type": "text",
+          "value": "Whether you're a CRM developer, consultant, tester, or business manager, this guide is designed to help you get the most out of Power Maker AI."
+        }
+      ]
+    },
+    {
+      "heading": "Overview",
+      "content": [
+        {
+          "type": "text",
+          "value": "Power Maker AI is a web-based AI assistant designed specifically for users working with Microsoft Dynamics 365 CRM. It helps you:"
+        },
+        {
+          "type": "list",
+          "value": [
+            "Design custom entities and fields tailored to new or ongoing CRM projects, allowing seamless prototyping of CRM customizations.",
+            "Analyze plugin trace logs in a human-readable format.",
+            "Interact with CRM through a conversational AI assistant for data operations and diagnostics."
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Power Maker AI leverages cutting-edge language models and CRM-specific logic to interpret your natural language inputs and turn them into meaningful CRM actions."
+        },
+        {
+          "type": "text",
+          "value": "⚠️  Note: Power Maker AI does not directly connect to your CRM environment unless explicitly configured. All data operations and configurations are currently simulated or require manual export/import."
+        }
+      ]
+    },
+    {
+      "heading": "Quickstart",
+      "subsections": [
+        {
+          "subheading": "1. Sign In / Access the App",
+          "content": [
+            {
+              "type": "text",
+              "value": "Visit https://chat.powermaker.ai and log in with your user account. New users may be prompted to create an account."
+            },
+            {
+              "type": "text",
+              "value": "📝 Users can log in using their Google account or sign up manually with an email ID and password."
+            }
+          ]
+        },
+        {
+          "subheading": "2. Choose a Model",
+          "content": [
+            {
+              "type": "text",
+              "value": "You can start working by selecting one of the available models from the sidebar:"
+            },
+            {
+              "type": "list",
+              "value": ["CRM Customizations", "Plugin Tracing", "CRM Expert "]
+            },
+            {
+              "type": "text",
+              "value": "Each model is tailored to solve a different problem—see the next section for a breakdown."
+            }
+          ]
+        },
+        {
+          "subheading": "3. Interact and Generate Output ",
+          "content": [
+            {
+              "type": "text",
+              "value": "Use natural language or UI-based prompts depending on the model."
+            },
+            {
+              "type": "list",
+              "label": "Examples:",
+              "value": [
+                "“Create a custom entity for API Configuration”",
+                "“Show plugin errors from the last 7 days” ",
+                "“Update all contacts in Delhi to Inactive”"
+              ]
+            },
+            {
+              "type": "list",
+              "label": "Outputs can include:",
+              "value": [
+                "CRM schema mock-ups",
+                "Exception trace analysis",
+                "Data operation summaries",
+                "Configuration exports (coming soon)"
+              ]
+            }
+          ]
+        },
+        {
+          "subheading": "4. Export / Apply Outputs ",
+          "content": [
+            {
+              "type": "text",
+              "value": "Most outputs can be copied or downloaded. You’ll soon be able to directly push changes to your CRM (integration in development)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Available Models",
+      "subsections": [
+        {
+          "subheading": "1. CRM Customizations ",
+          "content": [
+            {
+              "type": "text",
+              "value": "Purpose: Helps you quickly design custom entities and fields using simple prompts or structured controls."
+            },
+            {
+              "type": "list",
+              "label": "Capabilities:",
+              "value": [
+                "Create entity prototypes",
+                "Define fields and datatypes",
+                "Preview configurations before exporting"
+              ]
+            },
+            {
+              "type": "list",
+              "label": "Limitations:",
+              "value": [
+                "No live deployment to CRM (yet)",
+                "Does not handle advanced logic (e.g., business rules, workflows)"
+              ]
+            }
+          ]
+        },
+        {
+          "subheading": "2. Plugin Tracing ",
+          "content": [
+            {
+              "type": "text",
+              "value": "Purpose: Use natural language to query plugin trace logs and receive readable diagnostics. "
+            },
+            {
+              "type": "list",
+              "label": "Capabilities:",
+              "value": [
+                "Filter logs by entity, date, error status, etc. ",
+                "Translate raw logs into clean summaries and exceptions ",
+                "View structured trace tables "
+              ]
+            },
+            {
+              "type": "list",
+              "label": "Limitations:",
+              "value": [
+                "Requires logs to be available in the system or uploaded ",
+                "Works best with standard plugin trace formats "
+              ]
+            }
+          ]
+        },
+        {
+          "subheading": "3. CRM Expert ",
+          "content": [
+            {
+              "type": "text",
+              "value": "Purpose: Your all-in-one conversational AI for CRM data tasks, config queries, and error diagnostics. "
+            },
+            {
+              "type": "list",
+              "label": "Capabilities:",
+              "value": [
+                "Perform CRUD-like operations through text (simulation) ",
+                "Suggest configuration steps ",
+                "Answer questions like a Dynamics consultant "
+              ]
+            },
+            {
+              "type": "list",
+              "label": "Limitations:",
+              "value": [
+                "Requires clear CRM context for deeper operations ",
+                "Best for guided exploration, not high-volume automation "
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

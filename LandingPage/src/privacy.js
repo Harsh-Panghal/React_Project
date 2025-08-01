@@ -140,16 +140,23 @@ fetch("privacy.json")
     console.error("Error loading privacy policy:", error);
   });
 
-  // Add active class to the clicked link
-const links = document.querySelectorAll(".nav-link");
+  // Add manually scroll to section and add smooth scroll
+document.querySelectorAll(".sidebar a.nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor jump
 
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    links.forEach((l) => l.classList.remove("text-[#1FA2D0]"));
-    links.forEach((l) => l.classList.add("text-[#828282]"));
+    const targetId = this.getAttribute("href").substring(1); // remove "#"
+    const targetElement = document.getElementById(targetId);
 
-    link.classList.remove("text-[#828282]");
-    link.classList.add("text-[#1FA2D0]");
+    if (targetElement) {
+      const container = document.querySelector("main .flex-1"); // your scrollable container
+      const offsetTop = targetElement.offsetTop;
+
+      container.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
   });
 });
  
