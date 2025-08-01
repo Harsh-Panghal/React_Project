@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="terms.js" defer></script>
 
     <!-- Tailwind Play CDN -->
@@ -31,7 +35,7 @@
               roboto: ['Roboto', 'sans-serif'],
               satoshi: ['Satoshi', 'sans-serif'],
               inter: ['Inter', 'sans-serif'],
-              clash: ['Clash Grotesk', 'sans-serif'],
+              clash: ['"Clash Grotesk"', 'sans-serif'],
             },
 
           },
@@ -43,6 +47,7 @@
       * {
         font-family: "Clash Grotesk", sans-serif;
       }
+      
       @layer utilities {
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
@@ -72,8 +77,8 @@
         ::-webkit-scrollbar-thumb:hover {
           background: rgb(10, 69, 108);
         }
-        @media screen and (max-width: 768px){
-          ::-webkit-scrollbar{
+        @media screen and (max-width: 768px) {
+          ::-webkit-scrollbar {
             width: 6px;
           }
         }
@@ -81,7 +86,7 @@
     </style>
   </head>
   <body class="overflow-hidden h-[100dvh]">
-    <header class="w-full ">
+    <header class="w-full">
       <nav
         class="w-[88%] mx-auto md:!mt-[30px] md:!mx-[60px] flex justify-between items-center"
       >
@@ -150,7 +155,7 @@
       </nav>
     </header>
 
-    <main class=" flex h-[92dvh] md:h-[543px] relative">
+    <main class="flex h-[92dvh] md:h-[543px] relative">
       <!-- sidebar -->
       <div
         id="sidebar"
@@ -228,7 +233,7 @@
         </h1>
         <section
           id="terms-container"
-          class="px-[10px] md:px-[60px] mt-[20px] md:mt-[30px] mb-[16px]"
+          class="px-[10px] md:px-[60px] mt-[20px] md:mt-[30px]"
         ></section>
       </div>
     </main>
@@ -295,7 +300,9 @@
               >
             </div>
             <div class="md:row-start-3">
-              <a href="./privacyPolicy.html" class="cursor-pointer hover:text-[#0E5185]"
+              <a
+                href="./privacyPolicy.html"
+                class="cursor-pointer hover:text-[#0E5185]"
                 >Privacy Policy</a
               >
             </div>

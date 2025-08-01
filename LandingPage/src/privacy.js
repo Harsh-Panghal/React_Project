@@ -25,7 +25,7 @@ fetch("privacy.json")
       // Section Title
       const title = document.createElement("h2");
       title.className =
-        "text-[18px] md:text-[20px] font-semibold text-[#000000] leading-[110%] mt-[0.5rem] md:mt-[1rem]";
+        "text-[18px] md:text-[20px] font-semibold text-[#082343] leading-[110%] mt-[0.5rem] md:mt-[1rem]";
       title.textContent = section.title;
       title.id = section.title
         .toLowerCase()

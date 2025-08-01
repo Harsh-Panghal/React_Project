@@ -14,6 +14,7 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,700&display=swap"
       rel="stylesheet"
     />
+    <script src="documentation.js" type="module"></script>
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind Config -->
@@ -104,86 +105,94 @@
         Get Started
       </button>
     </header>
-    <main class="flex h-full overflow-hidden md:mt-[20px]">
+    <main
+      class="flex h-full overflow-hidden md:mt-[20px] relative"
+    >
+      <!-- sidebar -->
       <div
-        class="hidden sidebar md:w-[250px] md:max-w-[250px] h-full bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px]"
+        id="sidebar"
+        class="sidebar hidden md:block absolute md:static top-0 left-0 z-50 md:h-full w-[250px] bg-[#FAFAFA] rounded-tr-xl px-[25px] py-[27px] transition-all duration-300 ease-in-out "
       >
         <div class="flex flex-col gap-[10px]">
-          <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
-            Get Into Power Maker
-          </h2>
           <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
-            >Lorem ipsum</a
+            href="#get-started"
+            class="nav-link text-[#082343] text-[16px] font-semibold w-fit"
           >
+            Get Started
+          </a>
           <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
+            href="#overview"
+            class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
+            >Overview
+          </a>
+          <div class="flex flex-col gap-1">
+            <a
+              href="#quickstart"
+              class="nav-link text-[#082343] text-[16px] font-semibold w-fit"
+            >
+              Quickstart
+            </a>
+            <a
+              href="#sign-in-access-the-app"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+              >Sign In / Access the App
+            </a>
+            <a
+              href="#choose-a-model"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >
+              Choose a Model
+            </a>
+            <a
+              href="#interact-and-generate-output-"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >
+              Interact and Generate Output
+            </a>
+            <a
+              href="#export-apply-outputs-"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >
+              Export / Apply Outputs
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <a
+              href="#available-models"
+              class="nav-link text-[#082343] text-[16px] font-semibold w-fit"
+            >
+              Available Models
+            </a>
+            <a
+              href="#crm-customizations-"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+              >CRM Customizations
+            </a>
+            <a
+              href="#plugin-tracing-"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >
+              Plugin Tracing
+            </a>
+            <a
+              href="#crm-expert-"
+              class="nav-link text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0] visited:text-[#1FA2D0]"
+            >
+              CRM Expert
+            </a>
+          </div>
+
           <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
+            href="#whats-next-"
+            class="nav-link text-[#082343] text-[16px] font-semibold w-fit"
           >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
+            What’s Next?
+          </a>
         </div>
-        <div class="flex flex-col gap-[10px] mt-[15px]">
-          <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
-            Lorem ipsum
-          </h2>
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-        </div>
-        <div class="flex flex-col gap-[10px] mt-[15px]">
-          <h2 class="text-[#082343] text-[16px] font-semibold w-fit">
-            Lorem ipsum
-          </h2>
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-          <a
-            href=""
-            class="text-[14px] font-normal text-[#828282] hover:text-[#1FA2D0]"
-            >Lorem ipsum</a
-          >
-        </div>
-        <div
+
+        <!-- hide bottom part temporary -->
+        <!-- <div
           class="w-[250px] relative left-[-25px] border border-[#E6E6E6] mt-[80px]"
         ></div>
         <div class="mt-4 flex gap-[5px] items-center">
@@ -193,21 +202,42 @@
             class="w-[18px] h-[18px]"
           />
           <span class="text-[#81817C] text-[16px] font-[400]">Help</span>
-        </div>
+        </div> -->
       </div>
+      <!-- main content -->
       <div
-        class="flex-1 h-full border border-red-500 overflow-y-auto overflow-x-hidden scroll-smooth"
+        class="flex-1 h-[86%] overflow-y-auto overflow-x-hidden scroll-smooth"
       >
         <h1
-          class="outline text-[20px] md:text-[30px]  font-medium text-[#1E1D1D] leading-[100%] w-fit mx-auto mt-[16px] md:mt-[10px]"
+          class="text-[20px] md:text-[30px] font-medium text-[#1E1D1D] leading-[100%] w-fit mx-auto mt-[16px] md:mt-[10px]"
         >
-          Power Maker AI – Model Documentation 
+          Power Maker AI – Model Documentation
         </h1>
         <section
           id="Documentation-container"
-          class="px-[10px] md:px-[60px] mt-[20px] md:mt-[30px] mb-[16px] border border-green-600"
+          class="px-[10px] md:px-[60px] mt-[20px] md:mt-[30px]"
         ></section>
       </div>
     </main>
   </body>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+
+      if (sidebar.classList.contains("hidden")) {
+        sidebar.classList.remove("hidden");
+      } else {
+        sidebar.classList.add("hidden");
+      }
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            toggleMenu();
+          }
+        });
+      });
+    });
+  </script>
 </html>

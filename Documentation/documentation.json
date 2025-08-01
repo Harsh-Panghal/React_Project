@@ -192,6 +192,19 @@
           ]
         }
       ]
+    },
+    {
+      "heading": "What’s Next? ",
+      "content": [
+        {
+          "type": "text",
+          "value": "Once you’re familiar with the models, you can explore each in detail. Use the navigation menu to dive deeper into individual features, input formats, and best practices."
+        },
+        {
+          "type": "text",
+          "value": "💬 Need help? Reach out at support@powermaker.ai or via the in-app chat. "
+        }
+      ]
     }
   ]
 }

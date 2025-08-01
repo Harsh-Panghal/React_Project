@@ -28,7 +28,7 @@ fetch("terms.json")
 
       const title = document.createElement("h2");
       title.className =
-        "text-[18px] md:text-[22px] font-semibold text-[#000000] leading-[110%]";
+        "text-[18px] md:text-[22px] font-semibold text-[#082343] leading-[110%]";
       title.textContent = section.title;
 
       title.id = section.title
